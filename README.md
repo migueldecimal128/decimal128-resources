@@ -18,8 +18,16 @@ telco/          Cowlishaw "telco" benchmark (https://speleotrove.com/decimal/tel
   telco.expected        reference output for the 10-number run
   README.txt            provenance, formats, control totals, computation
 
-rosetta/        conformance corpora — PLANNED (IBM dectest / IBM fptest / Intel / native)
+rosetta/        conformance corpora shared by every port's test suite
+  dectest/              IBM/Cowlishaw decQuad + math dectest vectors (+ doc/*.pdf)
+  fptest/               IBM 754-2019 fptest vectors
+  intel/readtest.in     Intel BID reference vectors (+ LICENSE/eula/sample)
+  native/               hand-authored decimal128 cases (strict: 0 skips)
+  golden/               bit-exact transcendental oracle (ln/log10/exp)
 ```
+
+The `dectest/exp`, `ln`, and `log10` files use LF (the rest of the corpus is
+already LF); all other corpora are stored verbatim.
 
 Reference outputs use CRLF line endings, matching the benchmark programs'
 `"\r\n"` writes; correctness is byte-for-byte against the `*.expected` files.
@@ -47,5 +55,5 @@ These are publicly distributed reference/test data:
   redistributed verbatim; `*.expected` files were generated from the benchmark
   and validated against the published control totals and cross-port agreement.
   See `telco/README.txt`.
-- **rosetta** (planned) — IBM/Cowlishaw `dectest`, IBM `fptest`, Intel test
+- **rosetta** — IBM/Cowlishaw `dectest`, IBM `fptest`, Intel test
   vectors, plus hand-authored `native` cases.
