@@ -25,10 +25,10 @@ rosetta/        conformance corpora shared by every port's test suite
   native/               hand-authored decimal128 cases (strict: 0 skips)
   golden/               bit-exact transcendental oracle (ln/log10/exp)
 
-string_bid128_dpd128/ string <-> BID/DPD interchange vectors (currently the Kotlin port)
-  StringBidDpd100.csv.txt            100-row smoke set
-  StringBidDpdAllCanonical.csv.txt   full canonical cohort/payload sweep
-  StringBidDpdNonCanonical.csv.txt   non-canonical decode-only cases
+string_bid_dpd/ string <-> BID/DPD interchange vectors
+  string_bid128_dpd128_100.csv.txt           100-row smoke set
+  string_bid128_dpd128_canonical.csv.txt     full canonical cohort/payload sweep
+  string_bid128_dpd128_noncanonical.csv.txt  non-canonical decode-only cases
 ```
 
 The `dectest/exp`, `ln`, and `log10` files use LF (the rest of the corpus is
