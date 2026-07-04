@@ -1,0 +1,7 @@
+# This is a byte-exact data repository. Never apply end-of-line conversion to any
+# asset — the *.expected reference outputs use CRLF and the correctness gate is
+# byte-for-byte, so autocrlf on a consumer (e.g. Windows) must not touch them.
+* -text
+
+# Docs remain normal text.
+*.md text
