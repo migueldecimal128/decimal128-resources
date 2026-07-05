@@ -1,0 +1,6 @@
+telco C benchmark; processing 'testGen/bin/Telco.bin.DECNUMBER_FIXED'
+-- telco C benchmark result --
+--
+   sumT = 1004737.58
+   sumB = 57628.30
+   sumD = 25042.17

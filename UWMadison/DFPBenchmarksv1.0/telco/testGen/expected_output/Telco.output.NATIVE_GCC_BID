@@ -1,0 +1,6 @@
+telco C benchmark; processing 'testGen/bin/Telco.bin.NATIVE_GCC_BID'
+-- telco C benchmark result --
+--
+   sumT = +100473758E-2
+   sumB = +5762830E-2
+   sumD = +2504217E-2
