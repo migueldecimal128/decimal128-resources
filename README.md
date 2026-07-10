@@ -26,7 +26,9 @@ rosetta/        conformance corpora shared by every port's test suite
   golden/               bit-exact transcendental oracle (ln/log10/exp)
 
 swept/          cross-port swept-benchmark operand corpus (4096/band, see swept/README.md)
-  P-gen/                digit-length-uniform canonical decimal-string operand pairs
+  P-gen/                general profile: digit-length-uniform coefficients 1..34 (all 12 bands)
+  P-fin/                financial profile: 64-bit coeffs, currency quantum (MIX + mul/div bands)
+  P-max/                full-width stress: 33..34-digit coeffs (wide-path bands only)
 
 string_bid_dpd/ string <-> BID/DPD interchange vectors
   string_bid128_dpd128_100.csv.txt           100-row smoke set
