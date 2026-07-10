@@ -25,6 +25,9 @@ rosetta/        conformance corpora shared by every port's test suite
   native/               hand-authored decimal128 cases (strict: 0 skips)
   golden/               bit-exact transcendental oracle (ln/log10/exp)
 
+swept/          cross-port swept-benchmark operand corpus (4096/band, see swept/README.md)
+  P-gen/                digit-length-uniform canonical decimal-string operand pairs
+
 string_bid_dpd/ string <-> BID/DPD interchange vectors
   string_bid128_dpd128_100.csv.txt           100-row smoke set
   string_bid128_dpd128_canonical.csv.txt     full canonical cohort/payload sweep
