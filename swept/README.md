@@ -25,7 +25,7 @@ conformant decimal128.
 ```
 swept/
   P-gen/        general: digit-length-uniform coefficients 1..34 (log-uniform magnitude)
-    SQ.txt NQ.txt OQ.txt FQ.txt   add/sub alignment bands (§3.1)
+    SQ.txt NQ.txt MQ.txt OQ.txt FQ.txt   add/sub alignment bands (§3.1)
     CP.txt WP.txt XP.txt          mul product-width bands (§3.2)
     CD.txt WD.txt XD.txt          div divisor-width bands (§3.3)
     ET.txt PT.txt                 div value-driven exact/power-of-ten (§3.3)
@@ -47,7 +47,14 @@ distribution: SQ/NQ/OQ/FQ feed add AND sub, CP/WP/XP feed mul, CD/WD/XD/ET/PT fe
 
 **Profiles are not all-12-bands each** — a profile gates band feasibility:
 
-- **P-gen** — all 12 bands; the default headline for the P-gen cross-port sweep.
+- **P-gen** — all 13 bands; the default headline for the P-gen cross-port sweep. The
+  add/sub alignment axis (§3.1) splits the no-round region by exponent gap Δ: **SQ**
+  (Δ=0), **NQ** (1≤Δ≤4, pack-direct path), **MQ** (Δ>4, qAlignDelta>4 path) — all three
+  `trim=0`. SQ/NQ/MQ are the **compact regime**: qExp ∈ [0,−8] and operands sized so
+  the add/sub result stays < 10²⁸, i.e. representable by the 28-digit compact
+  alternatives (rust_decimal / System.Decimal). **OQ** (align + round, `trim≥1`) and
+  **FQ** (fully swamped) keep the full 34-digit / wide-exponent range — no compact
+  alternative there.
 - **P-fin** — the financial reality: 64-bit coefficients, so the aligned add/sub span
   stays < 34 digits and never rounds ⇒ no OQ/FQ. Add/sub is a single realistic
   **`MIX.txt`**: 75% of pairs share a qExp (same-quantum), 25% draw each operand's
