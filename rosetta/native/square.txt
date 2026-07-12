@@ -1,0 +1,23 @@
+// square -- x*x with a single rounding (WrapperLayer.md SS5.9). The op has no
+// dectest/Intel corpus, so these native vectors are its only shared coverage;
+// through the wrapper harness they also exercise the _rnd-vs-_ctx cross-check.
+// Exact cases (no rounding, no flags) + non-finite specials; a signaling NaN
+// raises invalidOperation.
+d128_square_ctx TIES_TO_EVEN 0 -> 0
+d128_square_ctx TIES_TO_EVEN -0 -> 0
+d128_square_ctx TIES_TO_EVEN 2 -> 4
+d128_square_ctx TIES_TO_EVEN 3 -> 9
+d128_square_ctx TIES_TO_EVEN -4 -> 16
+d128_square_ctx TIES_TO_EVEN 12 -> 144
+d128_square_ctx TIES_TO_EVEN 25 -> 625
+d128_square_ctx TIES_TO_EVEN 111111111 -> 12345678987654321
+d128_square_ctx TIES_TO_EVEN 0.5 -> 0.25
+d128_square_ctx TIES_TO_EVEN 1.5 -> 2.25
+d128_square_ctx TIES_TO_EVEN 0.1 -> 0.01
+d128_square_ctx TIES_TO_EVEN 1.1 -> 1.21
+d128_square_ctx TIES_TO_EVEN 1E10 -> 1E20
+d128_square_ctx TIES_TO_EVEN -1E10 -> 1E20
+d128_square_ctx TIES_TO_EVEN Infinity -> Infinity
+d128_square_ctx TIES_TO_EVEN -Infinity -> Infinity
+d128_square_ctx TIES_TO_EVEN NaN -> NaN
+d128_square_ctx TIES_TO_EVEN sNaN -> NaN i
