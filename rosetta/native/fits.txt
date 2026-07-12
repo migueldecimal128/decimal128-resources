@@ -1,0 +1,44 @@
+// fitsInt64 / fitsUInt64 -- rounding-independent range predicates (WrapperLayer.md
+// SS4.8). A RANGE test only, not integrality: a fraction in range still "fits"
+// (3.7 -> 1). The guarantee is conservative and rounding-independent -- a value
+// strictly between MAX and MAX+1 reports false, because its ceil is out of range.
+// NaN / infinity report false; fitsUInt64 also rejects a negative nonzero value
+// but accepts -0. Quiet: never signals, so the rounding token is ignored and the
+// expected flags are always empty.
+//
+// Int64 range = [-9223372036854775808, 9223372036854775807].
+d128_fitsInt64 TIES_TO_EVEN 0 -> 1
+d128_fitsInt64 TIES_TO_EVEN -0 -> 1
+d128_fitsInt64 TIES_TO_EVEN 1 -> 1
+d128_fitsInt64 TIES_TO_EVEN -1 -> 1
+d128_fitsInt64 TIES_TO_EVEN 100 -> 1
+d128_fitsInt64 TIES_TO_EVEN 3.7 -> 1
+d128_fitsInt64 TIES_TO_EVEN -3.7 -> 1
+d128_fitsInt64 TIES_TO_EVEN 9223372036854775807 -> 1
+d128_fitsInt64 TIES_TO_EVEN 9223372036854775808 -> 0
+d128_fitsInt64 TIES_TO_EVEN -9223372036854775808 -> 1
+d128_fitsInt64 TIES_TO_EVEN -9223372036854775809 -> 0
+d128_fitsInt64 TIES_TO_EVEN 9223372036854775807.9 -> 0
+d128_fitsInt64 TIES_TO_EVEN 1E30 -> 0
+d128_fitsInt64 TIES_TO_EVEN -1E30 -> 0
+d128_fitsInt64 TIES_TO_EVEN Infinity -> 0
+d128_fitsInt64 TIES_TO_EVEN -Infinity -> 0
+d128_fitsInt64 TIES_TO_EVEN NaN -> 0
+d128_fitsInt64 TIES_TO_EVEN sNaN -> 0
+//
+// UInt64 range = [0, 18446744073709551615].
+d128_fitsUInt64 TIES_TO_EVEN 0 -> 1
+d128_fitsUInt64 TIES_TO_EVEN -0 -> 1
+d128_fitsUInt64 TIES_TO_EVEN 1 -> 1
+d128_fitsUInt64 TIES_TO_EVEN -1 -> 0
+d128_fitsUInt64 TIES_TO_EVEN 5 -> 1
+d128_fitsUInt64 TIES_TO_EVEN 3.7 -> 1
+d128_fitsUInt64 TIES_TO_EVEN -0.5 -> 0
+d128_fitsUInt64 TIES_TO_EVEN 9223372036854775807 -> 1
+d128_fitsUInt64 TIES_TO_EVEN 18446744073709551615 -> 1
+d128_fitsUInt64 TIES_TO_EVEN 18446744073709551616 -> 0
+d128_fitsUInt64 TIES_TO_EVEN 18446744073709551615.9 -> 0
+d128_fitsUInt64 TIES_TO_EVEN 1E30 -> 0
+d128_fitsUInt64 TIES_TO_EVEN Infinity -> 0
+d128_fitsUInt64 TIES_TO_EVEN NaN -> 0
+d128_fitsUInt64 TIES_TO_EVEN sNaN -> 0
