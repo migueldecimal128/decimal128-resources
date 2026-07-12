@@ -1,0 +1,14 @@
+// from_dpd64 -- decimal64 (DPD) -> decimal128 widening decode (exact subset).
+// Harvested from the Cowlishaw telco corpus: telco.testr holds each duration as
+// a dpd64 word, telco.testb the same value as a big-endian integer (exponent 0).
+// Operand = 16-hex dpd64 in brackets; result = the integer value.
+d128_from_dpd64 TIES_TO_EVEN [2238000000000188] -> 308
+d128_from_dpd64 TIES_TO_EVEN [2238000000000076] -> 76
+d128_from_dpd64 TIES_TO_EVEN [2238000000000068] -> 68
+d128_from_dpd64 TIES_TO_EVEN [22380000000001A3] -> 323
+d128_from_dpd64 TIES_TO_EVEN [223800000000002A] -> 82
+d128_from_dpd64 TIES_TO_EVEN [22380000000001A9] -> 329
+d128_from_dpd64 TIES_TO_EVEN [2238000000000014] -> 14
+d128_from_dpd64 TIES_TO_EVEN [2238000000000081] -> 101
+d128_from_dpd64 TIES_TO_EVEN [22380000000002A2] -> 522
+d128_from_dpd64 TIES_TO_EVEN [2238000000000050] -> 50
