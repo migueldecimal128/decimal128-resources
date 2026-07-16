@@ -1,0 +1,194 @@
+// d128_parse -- decimal character sequence -> decimal128, the STRICT parser
+// (returns a value or fails; never NaN-on-error). Native-only: no dectest/Intel
+// corpus pins the parse grammar as an (op, operand, result) table. Migrated from
+// the hand-written TestParseFinite / TestParseNonFinite.
+//
+// The operand is the RAW input string, taken verbatim (NOT decoded through the
+// dialect -- a failure operand is deliberately un-parseable). The result is:
+//   - a decimal string whose parse reproduces the expected COHORT exactly
+//     (finite success is written <coeff>E<qExp> from the human-verified cohort,
+//     so the check is spelling-of-input vs. reconstructed-cohort, bitwise);
+//   - `Q`/`S` for a payload-0 quiet/signaling NaN, or a NaN spelling for a
+//     signed / payload-bearing NaN;
+//   - `Infinity` / `-Infinity` for the overflow-to-infinity cases;
+//   - the literal token `FAIL` to assert the strict parser REJECTS the input.
+//
+// Rounding is ignored (the strict parse is flag-free); TIES_TO_EVEN is the
+// canonical placeholder, and every line's flag column is empty.
+//
+// NOT here (the space-delimited native grammar cannot carry these operands) --
+// covered by the residual TestParseResidual: the empty string, a trailing space
+// ("1 "), and an embedded space ("nan 1").
+
+// ---- finite success: integers, signs, leading zeros ----
+d128_parse TIES_TO_EVEN 0 -> 0E0
+d128_parse TIES_TO_EVEN 1 -> 1E0
+d128_parse TIES_TO_EVEN 9 -> 9E0
+d128_parse TIES_TO_EVEN 10 -> 10E0
+d128_parse TIES_TO_EVEN 123 -> 123E0
+d128_parse TIES_TO_EVEN 1000000 -> 1000000E0
+d128_parse TIES_TO_EVEN +0 -> 0E0
+d128_parse TIES_TO_EVEN -0 -> -0E0
+d128_parse TIES_TO_EVEN +1 -> 1E0
+d128_parse TIES_TO_EVEN -1 -> -1E0
+d128_parse TIES_TO_EVEN -123 -> -123E0
+d128_parse TIES_TO_EVEN 01 -> 1E0
+d128_parse TIES_TO_EVEN 000123 -> 123E0
+d128_parse TIES_TO_EVEN 000 -> 0E0
+
+// ---- finite success: decimal point (cohort preserved) ----
+d128_parse TIES_TO_EVEN 1.0 -> 10E-1
+d128_parse TIES_TO_EVEN 1.23 -> 123E-2
+d128_parse TIES_TO_EVEN 0.5 -> 5E-1
+d128_parse TIES_TO_EVEN .5 -> 5E-1
+d128_parse TIES_TO_EVEN 5. -> 5E0
+d128_parse TIES_TO_EVEN .0 -> 0E-1
+d128_parse TIES_TO_EVEN 0.000123 -> 123E-6
+d128_parse TIES_TO_EVEN -1.23 -> -123E-2
+
+// ---- finite success: exponent, no point ----
+d128_parse TIES_TO_EVEN 1e0 -> 1E0
+d128_parse TIES_TO_EVEN 1e1 -> 1E1
+d128_parse TIES_TO_EVEN 1e10 -> 1E10
+d128_parse TIES_TO_EVEN 1e-1 -> 1E-1
+d128_parse TIES_TO_EVEN 1e-10 -> 1E-10
+d128_parse TIES_TO_EVEN 1e+5 -> 1E5
+d128_parse TIES_TO_EVEN 1E5 -> 1E5
+d128_parse TIES_TO_EVEN 123e3 -> 123E3
+d128_parse TIES_TO_EVEN -1e5 -> -1E5
+
+// ---- finite success: point + exponent (qExp = statedExp - fractionCount) ----
+d128_parse TIES_TO_EVEN 1.23e2 -> 123E0
+d128_parse TIES_TO_EVEN 1.23e-2 -> 123E-4
+d128_parse TIES_TO_EVEN 0.5e1 -> 5E0
+d128_parse TIES_TO_EVEN 100e-2 -> 100E-2
+
+// ---- finite success: cohort distinctness of "1" (1 / 1.0 / 100e-2 above) ----
+d128_parse TIES_TO_EVEN 1.00 -> 100E-2
+
+// ---- finite success: underscore digit separators ----
+d128_parse TIES_TO_EVEN 1_000 -> 1000E0
+d128_parse TIES_TO_EVEN 1_000_000 -> 1000000E0
+d128_parse TIES_TO_EVEN 1.234_567 -> 1234567E-6
+d128_parse TIES_TO_EVEN 1e1_0 -> 1E10
+
+// ---- finite success: exponent overflow -> infinity ----
+d128_parse TIES_TO_EVEN 1e9999 -> Infinity
+d128_parse TIES_TO_EVEN 1e99999 -> Infinity
+d128_parse TIES_TO_EVEN 1e1000000 -> Infinity
+
+// ---- finite success: 34-digit coefficient ----
+d128_parse TIES_TO_EVEN 1234567890123456789012345678901234 -> 1234567890123456789012345678901234E0
+
+// ---- non-finite success: infinity spellings ----
+d128_parse TIES_TO_EVEN inf -> Infinity
+d128_parse TIES_TO_EVEN INF -> Infinity
+d128_parse TIES_TO_EVEN Inf -> Infinity
+d128_parse TIES_TO_EVEN iNf -> Infinity
+d128_parse TIES_TO_EVEN infinity -> Infinity
+d128_parse TIES_TO_EVEN INFINITY -> Infinity
+d128_parse TIES_TO_EVEN Infinity -> Infinity
+d128_parse TIES_TO_EVEN +inf -> Infinity
+d128_parse TIES_TO_EVEN +Infinity -> Infinity
+d128_parse TIES_TO_EVEN -inf -> -Infinity
+d128_parse TIES_TO_EVEN -infinity -> -Infinity
+d128_parse TIES_TO_EVEN -INF -> -Infinity
+d128_parse TIES_TO_EVEN -Infinity -> -Infinity
+
+// ---- non-finite success: quiet NaN, no payload ----
+d128_parse TIES_TO_EVEN nan -> Q
+d128_parse TIES_TO_EVEN NaN -> Q
+d128_parse TIES_TO_EVEN NAN -> Q
+d128_parse TIES_TO_EVEN qnan -> Q
+d128_parse TIES_TO_EVEN qNaN -> Q
+d128_parse TIES_TO_EVEN QNAN -> Q
+d128_parse TIES_TO_EVEN +nan -> Q
+d128_parse TIES_TO_EVEN -nan -> -nan
+d128_parse TIES_TO_EVEN -qNaN -> -nan
+
+// ---- non-finite success: signaling NaN, no payload ----
+d128_parse TIES_TO_EVEN snan -> S
+d128_parse TIES_TO_EVEN sNaN -> S
+d128_parse TIES_TO_EVEN SNAN -> S
+d128_parse TIES_TO_EVEN +snan -> S
+d128_parse TIES_TO_EVEN -snan -> -snan
+
+// ---- non-finite success: NaN with payload (spelling-agnostic, bitwise) ----
+d128_parse TIES_TO_EVEN nan0 -> Q
+d128_parse TIES_TO_EVEN nan1 -> nan1
+d128_parse TIES_TO_EVEN nan123 -> nan123
+d128_parse TIES_TO_EVEN NaN00042 -> nan42
+d128_parse TIES_TO_EVEN qNaN999 -> nan999
+d128_parse TIES_TO_EVEN snan1 -> snan1
+d128_parse TIES_TO_EVEN sNaN456 -> snan456
+d128_parse TIES_TO_EVEN -NaN777 -> -nan777
+d128_parse TIES_TO_EVEN -sNaN12345 -> -snan12345
+
+// ---- failure: multiple / misplaced decimal points ----
+d128_parse TIES_TO_EVEN 1.2.3 -> FAIL
+d128_parse TIES_TO_EVEN 1..2 -> FAIL
+d128_parse TIES_TO_EVEN 1.. -> FAIL
+d128_parse TIES_TO_EVEN ..5 -> FAIL
+d128_parse TIES_TO_EVEN . -> FAIL
+d128_parse TIES_TO_EVEN .e5 -> FAIL
+d128_parse TIES_TO_EVEN +. -> FAIL
+d128_parse TIES_TO_EVEN -. -> FAIL
+
+// ---- failure: exponent with no digits ----
+d128_parse TIES_TO_EVEN 1e -> FAIL
+d128_parse TIES_TO_EVEN 1E -> FAIL
+d128_parse TIES_TO_EVEN 1e+ -> FAIL
+d128_parse TIES_TO_EVEN 1e- -> FAIL
+
+// ---- failure: underscore in an invalid position ----
+d128_parse TIES_TO_EVEN _1 -> FAIL
+d128_parse TIES_TO_EVEN -_1 -> FAIL
+d128_parse TIES_TO_EVEN 1._5 -> FAIL
+d128_parse TIES_TO_EVEN 1__000 -> FAIL
+d128_parse TIES_TO_EVEN 1_e5 -> FAIL
+d128_parse TIES_TO_EVEN 1e_5 -> FAIL
+d128_parse TIES_TO_EVEN 1e-_5 -> FAIL
+
+// ---- failure: garbage after / within a valid number ----
+d128_parse TIES_TO_EVEN 1abc -> FAIL
+d128_parse TIES_TO_EVEN 1e5x -> FAIL
+d128_parse TIES_TO_EVEN 1a2 -> FAIL
+
+// ---- failure: sign-only ----
+d128_parse TIES_TO_EVEN + -> FAIL
+d128_parse TIES_TO_EVEN - -> FAIL
+
+// ---- failure: truncated / garbage infinity ----
+d128_parse TIES_TO_EVEN in -> FAIL
+d128_parse TIES_TO_EVEN infi -> FAIL
+d128_parse TIES_TO_EVEN infin -> FAIL
+d128_parse TIES_TO_EVEN infini -> FAIL
+d128_parse TIES_TO_EVEN infinit -> FAIL
+d128_parse TIES_TO_EVEN infx -> FAIL
+d128_parse TIES_TO_EVEN infinityy -> FAIL
+d128_parse TIES_TO_EVEN inf123 -> FAIL
+
+// ---- failure: truncated / bad NaN ----
+d128_parse TIES_TO_EVEN n -> FAIL
+d128_parse TIES_TO_EVEN na -> FAIL
+d128_parse TIES_TO_EVEN s -> FAIL
+d128_parse TIES_TO_EVEN sn -> FAIL
+d128_parse TIES_TO_EVEN sna -> FAIL
+d128_parse TIES_TO_EVEN q -> FAIL
+d128_parse TIES_TO_EVEN qn -> FAIL
+d128_parse TIES_TO_EVEN qna -> FAIL
+d128_parse TIES_TO_EVEN nax -> FAIL
+d128_parse TIES_TO_EVEN nazz -> FAIL
+d128_parse TIES_TO_EVEN snax -> FAIL
+d128_parse TIES_TO_EVEN qnax -> FAIL
+
+// ---- failure: non-digit NaN payload ----
+d128_parse TIES_TO_EVEN nanabc -> FAIL
+d128_parse TIES_TO_EVEN nan1.2 -> FAIL
+d128_parse TIES_TO_EVEN nan-1 -> FAIL
+
+// ---- failure: sign + garbage / pure garbage ----
+d128_parse TIES_TO_EVEN +xyz -> FAIL
+d128_parse TIES_TO_EVEN -xyz -> FAIL
+d128_parse TIES_TO_EVEN abc -> FAIL
+d128_parse TIES_TO_EVEN xyz -> FAIL
