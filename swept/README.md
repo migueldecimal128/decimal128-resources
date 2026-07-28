@@ -25,7 +25,8 @@ conformant decimal128.
 ```
 swept/
   P-gen/        general: digit-length-uniform coefficients 1..34 (log-uniform magnitude)
-    SQ.txt NQ.txt MQ.txt OQ.txt FQ.txt   add/sub alignment bands (§3.1)
+    SQ_ss.txt SQ_os.txt NQ_ss.txt NQ_os.txt MQ_ss.txt MQ_os.txt
+    OQ_ss.txt OQ_os.txt FQ_ss.txt FQ_os.txt   add/sub alignment bands (§3.1), sign-split
     CP.txt WP.txt XP.txt          mul product-width bands (§3.2)
     CD.txt WD.txt XD.txt          div divisor-width bands (§3.3)
     ET.txt PT.txt                 div value-driven exact/power-of-ten (§3.3)
@@ -35,7 +36,8 @@ swept/
     CP.txt WP.txt                 mul (XP needs >19-digit operands ⇒ omitted)
     CD.txt WD.txt ET.txt PT.txt   div (XD needs a >19-digit divisor ⇒ omitted)
   P-max/        full-width stress: coefficients pinned 33..34 (wide-path diagnostic)
-    SQ.txt OQ.txt FQ.txt          add/sub (NQ can't be no-round at 34 digits ⇒ omitted)
+    SQ_ss.txt SQ_os.txt OQ_ss.txt OQ_os.txt
+    FQ_ss.txt FQ_os.txt           add/sub, sign-split (NQ can't be no-round at 34 digits ⇒ omitted)
     XP.txt                        mul extra-wide (CP/WP need small operands ⇒ omitted)
     XD.txt                        div extra (CD/WD/ET/PT need small divisors ⇒ omitted)
 ```
@@ -44,6 +46,15 @@ Bands follow `decimal128-www/BenchmarkMatrix.md`. A **band** is a RELATION betwe
 two operands (exponent gap + digit widths); a **profile** (§2.1) is the cross-cutting
 operand-magnitude axis. Each per-band file serves whichever op(s) exercise its
 distribution: SQ/NQ/OQ/FQ feed add AND sub, CP/WP/XP feed mul, CD/WD/XD/ET/PT feed div.
+
+**Add/sub bands are sign-split dataset PAIRS** (AddSubSignSplitWorkOrder): `<band>_ss.txt`
+(same-sign pairs) and `<band>_os.txt` (opposite-sign pairs), identical magnitudes — the
+pair sign is the x operand's draw, y matches (`_ss`) or negates (`_os`) it. Because the
+effective operation is op x sign(x) x sign(y), each variant runs on BOTH add and sub:
+add x ss / sub x os measure the pure add path, add x os / sub x ss the pure magnitude-
+subtract path (the op x path square; the diagonal is a dispatch-symmetry cross-check).
+The retired unsplit `<band>.txt` files were a 50/50-sign blend of both paths. P-fin's
+MIX stays blended by design (workload realism, 15/16-positive signs).
 
 **Profiles are not all-12-bands each** — a profile gates band feasibility:
 
