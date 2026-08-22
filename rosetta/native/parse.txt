@@ -148,6 +148,16 @@ d128_parse TIES_TO_EVEN 1__000 -> FAIL
 d128_parse TIES_TO_EVEN 1_e5 -> FAIL
 d128_parse TIES_TO_EVEN 1e_5 -> FAIL
 d128_parse TIES_TO_EVEN 1e-_5 -> FAIL
+// An underscore must be preceded AND followed by a digit -- the Java 7 /
+// Python PEP 515 / C++14 rule. The cases below are the "followed by" half:
+// a separator at the end of the coefficient, or immediately before the radix
+// point, has no digit after it. They were absent until 2026-08-22, and the
+// coefficient loop had no guard for them, so every port accepted all five.
+d128_parse TIES_TO_EVEN 1_ -> FAIL
+d128_parse TIES_TO_EVEN 1.5_ -> FAIL
+d128_parse TIES_TO_EVEN .5_ -> FAIL
+d128_parse TIES_TO_EVEN 1_.5 -> FAIL
+d128_parse TIES_TO_EVEN 1_. -> FAIL
 
 // ---- failure: garbage after / within a valid number ----
 d128_parse TIES_TO_EVEN 1abc -> FAIL
