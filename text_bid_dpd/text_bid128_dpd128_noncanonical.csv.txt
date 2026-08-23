@@ -11,7 +11,7 @@
 #         Blank lines and surrounding whitespace are ignored.
 #   hex = 0x + 32 UPPERCASE hex digits, most-significant word first.
 #
-# Total: 1262 rows.
+# Total: 1267 rows.
 #
 
 # ================== INFINITY — non-canonical trailing/exponent bits (BID & DPD) (12) ====
@@ -126,7 +126,7 @@ sNaN999999999999999999999999999999999   , 0x7EAAB14DC6448D9338C15B09FFFFFFFF , 0
 sNaN999999999999999999999999999999999   , 0x7F55714DC6448D9338C15B09FFFFFFFF , 0x7E000FF3FCFF3FCFF3FCFF3FCFF3FDFF
 sNaN999999999999999999999999999999999   , 0x7FFFF14DC6448D9338C15B09FFFFFFFF , 0x7EAAAFFBFEFFBFEFFBFEFFBFEFFBFEFF
 
-# ================== NaN / sNaN — oversized BID payload collapses to payload 0 (12) ====
+# ================== NaN / sNaN — oversized BID payload collapses to payload 0 (14) ====
 -NaN                                    , 0xFC003FFFFFFFFFFFFFFFFFFFFFFFFF0F , 0xFDFFC000000000000000000000000000
 -NaN                                    , 0xFC003FFFFFFFFFFFFFFFFFFFFFFFFFFA , 0xFDFFC000000000000000000000000000
 -NaN                                    , 0xFC003FFFFFFFFFFFFFFFFFFFFFFFFFFF , 0xFDFFC000000000000000000000000000
@@ -140,7 +140,11 @@ sNaN                                    , 0x7E003FFFFFFFFFFFFFFFFFFFFFFFFF0F , 0
 sNaN                                    , 0x7E003FFFFFFFFFFFFFFFFFFFFFFFFFFA , 0x7FFFC000000000000000000000000000
 sNaN                                    , 0x7E003FFFFFFFFFFFFFFFFFFFFFFFFFFF , 0x7FFFC000000000000000000000000000
 
-# ================== BID oversized coefficient ('11' form) — decodes to zero (DPD canonical) (680) ====
+# added 2026-08-23: patterns recovered from the ports' own render tables, engine-authored (see the sibling parse table's PROVENANCE).
+NaN                                        , 0x7C00314DC6448D9438C15B09FFFFFFFF , 0x7C000000000000000000000000000000
+NaN                                        , 0x7C00314DC6448D9338C15B0A00000000 , 0x7C000000000000000000000000000000
+
+# ================== BID oversized coefficient ('11' form) — decodes to zero (DPD canonical) (681) ====
 0E+1000                                 , 0x6E044000000000000000000000000000 , 0x23020000000000000000000000000000
 0E+1000                                 , 0x6E047FFFFFFFFFFFFFFFFFFFFFFFFFFF , 0x23020000000000000000000000000000
 0E+1018                                 , 0x6E0D0000000000000000000000000000 , 0x23068000000000000000000000000000
@@ -821,6 +825,17 @@ sNaN                                    , 0x7E003FFFFFFFFFFFFFFFFFFFFFFFFFFF , 0
 0E-4111                                 , 0x6408FFFFFFFFFFFFFFFFFFFFFFFFFFFF , 0x02044000000000000000000000000000
 0E-4128                                 , 0x64000000000000000000000000000000 , 0x02000000000000000000000000000000
 0E-4128                                 , 0x64003FFFFFFFFFFFFFFFFFFFFFFFFFFF , 0x02000000000000000000000000000000
+
+# added 2026-08-23: patterns recovered from the ports' own render tables, engine-authored (see the sibling parse table's PROVENANCE).
+0E+215                                     , 0x6C7B86F26FC100000000000000000000 , 0x223DC000000000000000000000000000
+
+# ================== BID oversized coefficient (normal form, coefficient >= 10^34) — decodes to zero (DPD canonical) (2) ====
+# added 2026-08-23: patterns recovered from the ports' own render tables, engine-authored (see the sibling parse table's PROVENANCE).
+# The 680 rows above are all the '11'-form spelling. A NORMAL-form pattern whose
+# 113-bit coefficient field exceeds 10^34-1 decodes to zero by the same rule, and
+# the corpus carried no example of it until these two.
+0E+6111                                    , 0x5FFFED09BEAD87C10000000000000000 , 0x43FFC000000000000000000000000000
+0E+6111                                    , 0x5FFFED09BEAD87C0378D8E6400000000 , 0x43FFC000000000000000000000000000
 
 # ================== DPD non-canonical declets — decode to real value (BID canonical) (462) ====
 -8.88E-48                               , 0xAFDC0000000000000000000000000378 , 0xA1FB800000000000000000000000016E
