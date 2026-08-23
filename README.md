@@ -34,6 +34,8 @@ text_bid_dpd/   text <-> BID/DPD interchange vectors
   text_bid128_dpd128_100.csv.txt           100-row smoke set
   text_bid128_dpd128_canonical.csv.txt     full canonical cohort/payload sweep
   text_bid128_dpd128_noncanonical.csv.txt  non-canonical decode-only cases
+  text_bid128_dpd128_parse.csv.txt         parse-direction accepts (quoted text column)
+  text_bid128_dpd128_error.csv.txt         parse-direction rejects, each with its status token
 ```
 
 The `dectest/exp`, `ln`, and `log10` files use LF (the rest of the corpus is
