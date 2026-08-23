@@ -30,10 +30,10 @@ swept/          cross-port swept-benchmark operand corpus (4096/band, see swept/
   P-fin/                financial profile: 64-bit coeffs, currency quantum (MIX + mul/div bands)
   P-max/                full-width stress: 33..34-digit coeffs (wide-path bands only)
 
-string_bid_dpd/ string <-> BID/DPD interchange vectors
-  string_bid128_dpd128_100.csv.txt           100-row smoke set
-  string_bid128_dpd128_canonical.csv.txt     full canonical cohort/payload sweep
-  string_bid128_dpd128_noncanonical.csv.txt  non-canonical decode-only cases
+text_bid_dpd/   text <-> BID/DPD interchange vectors
+  text_bid128_dpd128_100.csv.txt           100-row smoke set
+  text_bid128_dpd128_canonical.csv.txt     full canonical cohort/payload sweep
+  text_bid128_dpd128_noncanonical.csv.txt  non-canonical decode-only cases
 ```
 
 The `dectest/exp`, `ln`, and `log10` files use LF (the rest of the corpus is
