@@ -23,6 +23,9 @@ rosetta/        conformance corpora shared by every port's test suite
   fptest/               IBM 754-2019 fptest vectors
   intel/readtest.in     Intel BID reference vectors (+ LICENSE/eula/sample)
   native/               hand-authored decimal128 cases (strict: 0 skips)
+  native.index          every native/ file; ports run these (see below)
+  native.exclude        native files a port does not run, each with a reason
+  check_native.py       checks the index and exclusions against native/ (run by CI)
   golden/               bit-exact transcendental oracle (ln/log10/exp)
 
 swept/          cross-port swept-benchmark operand corpus (4096/band, see swept/README.md)
@@ -43,6 +46,27 @@ already LF); all other corpora are stored verbatim.
 
 Reference outputs use CRLF line endings, matching the benchmark programs'
 `"\r\n"` writes; correctness is byte-for-byte against the `*.expected` files.
+
+## Running and excluding native files
+
+Ports don't list `rosetta/native/` themselves. Each port's Rosetta runner runs the
+files in `rosetta/native.index`, minus its own lines in `rosetta/native.exclude`:
+
+```
+# <port>[:<runner>]  <file>  <reason>
+swift   transcsweep.txt  still on D38; remove at the D48 switch (D48SwiftWorkOrder.md)
+```
+
+- Ports: `c python swift rust go zig java kotlin csharp csharp-bid`. Runners:
+  `core`, `wrapper`, `net11` (C# only). A line without a runner excludes the file
+  from every runner of that port.
+- Every exclusion carries a reason. Remove the line when the reason no longer
+  holds. Excluding or re-enabling a file is a change here only, not in the ports.
+- A new `native/` file must be added to `native.index`, or no port runs it.
+  `rosetta/check_native.py` checks this and the exclusion format; the
+  `check-native` GitHub Action runs it on every push.
+
+Design: `decimal128-workorder/NativeCorpusExclusionWorkOrder.md`.
 
 ## Consuming this repo (submodule)
 

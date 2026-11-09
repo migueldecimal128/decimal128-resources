@@ -1,0 +1,40 @@
+# Rosetta native corpus index: every file in native/, one per line, sorted.
+# Ports run the files listed here, minus their entries in native.exclude
+# (NativeCorpusExclusionWorkOrder.md). A file added to native/ must be added here;
+# rosetta/check_native.py (run by CI) fails when the two disagree.
+add.txt
+add1.txt
+compare.txt
+compound.txt
+div1.txt
+divide.txt
+fits.txt
+fma.txt
+fma2.txt
+formatstyle.txt
+from_bid64.txt
+from_dpd64.txt
+isequal.txt
+isless.txt
+logexp.txt
+minmax.txt
+mul1.txt
+mul2.txt
+mulrounding.txt
+multiply.txt
+nanpayload.txt
+nonfinite.txt
+parse.txt
+pow.txt
+pown.txt
+printauto.txt
+printinfinity.txt
+printnan.txt
+rootn.txt
+roundintegral_ctx.txt
+roundintegral_quiet.txt
+sqrt.txt
+square.txt
+sub1.txt
+subtract.txt
+totalorder.txt

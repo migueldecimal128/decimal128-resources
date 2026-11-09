@@ -1,0 +1,15 @@
+# Rosetta native corpus exclusions: files in native.index that one port does not run.
+#
+#   <port>[:<runner>]  <file>  <reason>
+#
+# port:   c python swift rust go zig java kotlin csharp csharp-bid
+# runner: core wrapper net11 (net11: the csharp / csharp-bid Decimal128.Net11.Rosetta
+#         program). Without a runner, the file is excluded from every runner of
+#         that port.
+# reason: required, the rest of the line. Remove the line when the reason no
+#         longer holds.
+#
+# Example:
+#   swift  transcsweep.txt  still on D38; remove at the D48 switch (D48SwiftWorkOrder.md)
+#
+# Checked by rosetta/check_native.py (run by CI).
