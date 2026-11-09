@@ -57,7 +57,7 @@ d128_rootn_ctx TIES_TO_EVEN NaN 2 -> NaN
 d128_rootn_ctx TIES_TO_EVEN 1E+6144 2 -> 1.00000000000000000E+3072
 d128_rootn_ctx TIES_TO_EVEN 1E-6176 2 -> 1E-3088
 d128_rootn_ctx TIES_TO_EVEN 2 2147483647 -> 1.000000000322771808595667268407085 x
-d128_rootn_ctx TIES_TO_EVEN 2 -2147483648 -> 0.9999999996772281916588167078079415 x
+// wrong last digit (the D38 ports' own output), corrected in transcfix.txt: d128_rootn_ctx TIES_TO_EVEN 2 -2147483648 -> 0.9999999996772281916588167078079415 x
 
 // All five rounding directions on inexact roots: x in {±2, ±10, ±0.5}, n in
 // {2, -2, 3, -3, 4, 5, -5, 7} (even n for positive x only). Expected values are
