@@ -47,3 +47,16 @@ java        transcfix.txt     still on D38 (computes the old wrong value); remov
 kotlin      transcfix.txt     still on D38 (computes the old wrong value); remove at this port's D48 switch (D48SwiftWorkOrder.md)
 csharp      transcfix.txt     still on D38 (computes the old wrong value); remove at this port's D48 switch (D48SwiftWorkOrder.md)
 csharp-bid  transcfix.txt     still on D38 (computes the old wrong value); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+
+# pown / rootn oracle vectors moved out of pown.txt / rootn.txt (D48SwiftWorkOrder.md
+# Phase 6). D38 fails about 309 of the pown lines; each port removes its line at its
+# D48 switch.
+c           transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+python      transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+rust        transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+go          transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+zig         transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+java        transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+kotlin      transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+csharp      transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+csharp-bid  transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
