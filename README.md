@@ -28,6 +28,11 @@ rosetta/        conformance corpora shared by every port's test suite
   check_native.py       checks the index and exclusions against native/ (run by CI)
   golden/               bit-exact transcendental oracle (ln/log10/exp)
 
+d48/            internal D48 (48-digit transcendental domain) vectors (see d48/README.md)
+  ops.txt               D48 arithmetic vectors, 48-digit results
+  transc_truth.txt      130-digit true values for the kernel error bounds
+  bench_pool.txt        transcendental benchmark pools, 64 inputs per op
+
 swept/          cross-port swept-benchmark operand corpus (4096/band, see swept/README.md)
   P-gen/                general profile: digit-length-uniform coefficients 1..34 (all 12 bands)
   P-fin/                financial profile: 64-bit coeffs, currency quantum (MIX + mul/div bands)

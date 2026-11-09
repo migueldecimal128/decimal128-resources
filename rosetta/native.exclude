@@ -13,3 +13,27 @@
 #   swift  transcsweep.txt  still on D38; remove at the D48 switch (D48SwiftWorkOrder.md)
 #
 # Checked by rosetta/check_native.py (run by CI).
+
+# D48 transcendental sweeps (D48SwiftWorkOrder.md D-6). Every port is still on the
+# 38-digit D38 domain, which fails ~2,800 of these lines; each port removes its two
+# lines in the commit that switches it to D48 (D48SwiftWorkOrder.md D-7).
+c           transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+c           transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+python      transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+python      transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+swift       transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+swift       transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+rust        transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+rust        transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+go          transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+go          transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+zig         transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+zig         transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+java        transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+java        transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+kotlin      transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+kotlin      transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+csharp      transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+csharp      transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+csharp-bid  transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
+csharp-bid  transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
