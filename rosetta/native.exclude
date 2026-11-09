@@ -17,8 +17,6 @@
 # D48 transcendental sweeps (D48SwiftWorkOrder.md D-6). The D38 domain fails ~2,800
 # of these lines; each port removes its two lines in the commit that switches it to
 # D48 (D48SwiftWorkOrder.md D-7). Swift switched in Phase 4.
-c           transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
-c           transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
 python      transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
 python      transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
 rust        transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
@@ -38,7 +36,6 @@ csharp-bid  transcsweep.txt   still on D38; remove at this port's D48 switch (D4
 
 # Corrected compound/rootn vectors (D48SwiftWorkOrder.md Phase 4). Every D38 port
 # computes the old, wrong last digit; each removes its line at its D48 switch.
-c           transcfix.txt     still on D38 (computes the old wrong value); remove at this port's D48 switch (D48SwiftWorkOrder.md)
 python      transcfix.txt     still on D38 (computes the old wrong value); remove at this port's D48 switch (D48SwiftWorkOrder.md)
 rust        transcfix.txt     still on D38 (computes the old wrong value); remove at this port's D48 switch (D48SwiftWorkOrder.md)
 go          transcfix.txt     still on D38 (computes the old wrong value); remove at this port's D48 switch (D48SwiftWorkOrder.md)
@@ -51,7 +48,6 @@ csharp-bid  transcfix.txt     still on D38 (computes the old wrong value); remov
 # pown / rootn oracle vectors moved out of pown.txt / rootn.txt (D48SwiftWorkOrder.md
 # Phase 6). D38 fails about 309 of the pown lines; each port removes its line at its
 # D48 switch.
-c           transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
 python      transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
 rust        transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
 go          transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
