@@ -30,7 +30,6 @@ csharp-bid:net11 transcoracle.txt runs .NET 11's own Decimal128, not this port's
 # transccompound.txt (CompoundD48OnePlusXWorkOrder.md CX-6): compound lines a port
 # that rounds 1 + x to 34 digits before the power gets wrong. Remove a port's line
 # in that port's compound commit; the net11 runners then keep a `:net11` line.
-c                transccompound.txt compound still rounds 1 + x to 34 digits (CompoundD48OnePlusXWorkOrder.md)
 python           transccompound.txt compound still rounds 1 + x to 34 digits (CompoundD48OnePlusXWorkOrder.md)
 rust             transccompound.txt compound still rounds 1 + x to 34 digits (CompoundD48OnePlusXWorkOrder.md)
 go               transccompound.txt compound still rounds 1 + x to 34 digits (CompoundD48OnePlusXWorkOrder.md)
