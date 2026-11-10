@@ -10,25 +10,19 @@
 #         longer holds.
 #
 # Example:
-#   swift  transcsweep.txt  still on D38; remove at the D48 switch (D48SwiftWorkOrder.md)
+#   csharp:net11  transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48
 #
 # Checked by rosetta/check_native.py (run by CI).
 
-# D48 transcendental sweeps (D48SwiftWorkOrder.md D-6). The D38 domain fails ~2,800
-# of these lines; each port removes its two lines in the commit that switches it to
-# D48 (D48SwiftWorkOrder.md D-7). Swift switched in Phase 4.
-csharp:net11 transcstress.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
-csharp:net11 transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
-csharp-bid  transcstress.txt  still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
-csharp-bid  transcsweep.txt   still on D38; remove at this port's D48 switch (D48SwiftWorkOrder.md)
-
-# Corrected compound/rootn vectors (D48SwiftWorkOrder.md Phase 4). Every D38 port
-# computes the old, wrong last digit; each removes its line at its D48 switch.
-csharp:net11 transcfix.txt    runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
-csharp-bid  transcfix.txt     still on D38 (computes the old wrong value); remove at this port's D48 switch (D48SwiftWorkOrder.md)
-
-# pown / rootn oracle vectors moved out of pown.txt / rootn.txt (D48SwiftWorkOrder.md
-# Phase 6). D38 fails about 309 of the pown lines; each port removes its line at its
-# D48 switch.
-csharp:net11 transcoracle.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
-csharp-bid  transcoracle.txt  still on D38 (fails ~309 pown lines); remove at this port's D48 switch (D48SwiftWorkOrder.md)
+# The D48 files (D48SwiftWorkOrder.md D-6, Phase 4, Phase 6): the transcendental
+# sweeps, the corrected compound/rootn vectors and the pown/rootn oracle vectors.
+# Every port runs them since its D48 switch (D-7). Only the net11 runners exclude
+# them: they drive .NET 11's own Decimal128, not the port's D48.
+csharp:net11     transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
+csharp:net11     transcstress.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
+csharp:net11     transcfix.txt    runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
+csharp:net11     transcoracle.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
+csharp-bid:net11 transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
+csharp-bid:net11 transcstress.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
+csharp-bid:net11 transcfix.txt    runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
+csharp-bid:net11 transcoracle.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)

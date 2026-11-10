@@ -59,11 +59,11 @@ files in `rosetta/native.index`, minus its own lines in `rosetta/native.exclude`
 
 ```
 # <port>[:<runner>]  <file>  <reason>
-swift   transcsweep.txt  still on D38; remove at the D48 switch (D48SwiftWorkOrder.md)
+csharp:net11  transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48
 ```
 
 - Ports: `c python swift rust go zig java kotlin csharp csharp-bid`. Runners:
-  `core`, `wrapper`, `net11` (C# only). A line without a runner excludes the file
+  `core`, `wrapper`, `net11` (csharp and csharp-bid only). A line without a runner excludes the file
   from every runner of that port.
 - Every exclusion carries a reason. Remove the line when the reason no longer
   holds. Excluding or re-enabling a file is a change here only, not in the ports.
