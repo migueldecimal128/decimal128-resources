@@ -25,8 +25,11 @@ decimal strings (`bench_pool.txt`).
 - `transccompound.txt`: the sweep's 1,330 compound lines that a port rounding
   1 + x to 34 digits gets wrong, split out of `transcsweep.txt` by
   `split_compound.py` (CompoundD48OnePlusXWorkOrder.md CX-6).
+- `translargen.txt`: pown and compound at |n| > 2^31, 6,619 active lines and 21
+  gap lines (seed 29), written by `pown_largen_phase0.py gen-rosetta`
+  (PownLargeNWorkOrder.md LN-7). Ports with a 32-bit n exclude it.
 
-Both were written by `widesweep.py gen-rosetta`. Expected results are Python
+The sweeps were written by `widesweep.py gen-rosetta`. Expected results are Python
 decimal's correctly rounded values, with flags. An exact result takes its op's
 preferred exponent. Lines the D48 configuration doesn't get right are commented
 out with a reason:
