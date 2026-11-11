@@ -1,6 +1,6 @@
-// transcoracle -- pown / rootn oracle vectors that need the D48 domain
-// (D48SwiftWorkOrder.md Phase 6). Moved from pown.txt (the 615 negative-n lines)
-// and rootn.txt (24 lines). Expected values are NOT port output (see each block).
+// transcendental_pown_rootn -- pown / rootn oracle vectors that need the D48 domain
+// (D48SwiftWorkOrder.md Phase 6). Moved from transcendental_pown.txt (the 615 negative-n lines)
+// and transcendental_rootn.txt (24 lines). Expected values are NOT port output (see each block).
 // Ports still on D38 fail about 309 of the pown lines, so they exclude this file in
 // native.exclude until their D48 switch. Lines D48 still misses are commented with
 // the reason and the D48 answer every port must give:
@@ -641,7 +641,7 @@ d128_pown_ctx TOWARD_ZERO 4E+2 -2 -> 0.00000625
 d128_pown_ctx TOWARD_POSITIVE 4E+2 -2 -> 0.00000625
 d128_pown_ctx TOWARD_NEGATIVE 4E+2 -2 -> 0.00000625
 
-// rootn under all five rounding directions (moved from rootn.txt): x in {±2, ±10,
+// rootn under all five rounding directions (moved from transcendental_rootn.txt): x in {±2, ±10,
 // ±0.5}, n in {2, -2, 3, -3, 4, 5, -5, 7}. Expected values are NOT port output:
 // Python decimal exp(ln|x|/n) at 120 and 160 digits (both must round alike),
 // rounded to 34 digits per direction; inexact results carry 34 digits.

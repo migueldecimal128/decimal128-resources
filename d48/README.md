@@ -4,7 +4,7 @@ Test data for the D48 extended-precision domain that the transcendentals (exp,
 exp10, ln, log10, pow, pown, rootn) compute in: a 48-digit coefficient with
 96-digit exact intermediates (`workorder/D48SwiftWorkOrder.md`). These files test
 D48 internals and drive its benchmark. The public-API sweeps live in
-`rosetta/native/transcsweep.txt` and `transcstress.txt`.
+`rosetta/native/transcendental_sweep.txt` and `transcendental_stress.txt`.
 
 All files are LF. Generators are in `decimal128-workorder/d48-prototype/`.
 
@@ -20,12 +20,12 @@ decimal strings (`bench_pool.txt`).
 
 ## Related files in `rosetta/native/`
 
-- `transcsweep.txt`: the 14,000-line differential sweep (seed 3).
-- `transcstress.txt`: the 16,180-line boundary-stress sweep (seed 6).
-- `transccompound.txt`: the sweep's 1,330 compound lines that a port rounding
-  1 + x to 34 digits gets wrong, split out of `transcsweep.txt` by
+- `transcendental_sweep.txt`: the 14,000-line differential sweep (seed 3).
+- `transcendental_stress.txt`: the 16,180-line boundary-stress sweep (seed 6).
+- `transcendental_compound.txt`: the sweep's 1,330 compound lines that a port rounding
+  1 + x to 34 digits gets wrong, split out of `transcendental_sweep.txt` by
   `split_compound.py` (CompoundD48OnePlusXWorkOrder.md CX-6).
-- `translargen.txt`: pown and compound at |n| > 2^31, 6,619 active lines and 21
+- `transcendental_large_n.txt`: pown and compound at |n| > 2^31, 6,619 active lines and 21
   gap lines (seed 29), written by `pown_largen_phase0.py gen-rosetta`
   (PownLargeNWorkOrder.md LN-7). Ports with a 32-bit n exclude it.
 

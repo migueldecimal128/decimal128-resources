@@ -59,7 +59,7 @@ files in `rosetta/native.index`, minus its own lines in `rosetta/native.exclude`
 
 ```
 # <port>[:<runner>]  <file>  <reason>
-csharp:net11  transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48
+csharp:net11  transcendental_sweep.txt  runs .NET 11's own Decimal128, not this port's D48
 ```
 
 - Ports: `c python swift rust go zig java kotlin csharp csharp-bid`. Runners:
