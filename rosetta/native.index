@@ -5,7 +5,6 @@
 add.txt
 add1.txt
 compare.txt
-compound.txt
 div1.txt
 divide.txt
 fits.txt
@@ -16,7 +15,6 @@ from_bid64.txt
 from_dpd64.txt
 isequal.txt
 isless.txt
-logexp.txt
 minmax.txt
 mul1.txt
 mul2.txt
@@ -25,12 +23,9 @@ multiply.txt
 nanpayload.txt
 nonfinite.txt
 parse.txt
-pow.txt
-pown.txt
 printauto.txt
 printinfinity.txt
 printnan.txt
-rootn.txt
 roundintegral_ctx.txt
 roundintegral_quiet.txt
 sqrt.txt
@@ -38,9 +33,12 @@ square.txt
 sub1.txt
 subtract.txt
 totalorder.txt
-transccompound.txt
-transcfix.txt
-transcoracle.txt
-transcstress.txt
-transcsweep.txt
-translargen.txt
+transcendental_compound.txt
+transcendental_large_n.txt
+transcendental_logexp.txt
+transcendental_pow.txt
+transcendental_pown.txt
+transcendental_pown_rootn.txt
+transcendental_rootn.txt
+transcendental_stress.txt
+transcendental_sweep.txt

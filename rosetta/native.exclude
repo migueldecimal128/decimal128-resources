@@ -10,35 +10,33 @@
 #         longer holds.
 #
 # Example:
-#   csharp:net11  transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48
+#   csharp:net11  transcendental_sweep.txt  runs .NET 11's own Decimal128, not this port's D48
 #
 # Checked by rosetta/check_native.py (run by CI).
 
 # The D48 files (D48SwiftWorkOrder.md D-6, Phase 4, Phase 6): the transcendental
-# sweeps, the corrected compound/rootn vectors and the pown/rootn oracle vectors.
+# sweeps and the pown/rootn oracle vectors.
 # Every port runs them since its D48 switch (D-7). Only the net11 runners exclude
 # them: they drive .NET 11's own Decimal128, not the port's D48.
-csharp:net11     transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
-csharp:net11     transcstress.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
-csharp:net11     transcfix.txt    runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
-csharp:net11     transcoracle.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
-csharp-bid:net11 transcsweep.txt  runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
-csharp-bid:net11 transcstress.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
-csharp-bid:net11 transcfix.txt    runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
-csharp-bid:net11 transcoracle.txt runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
+csharp:net11     transcendental_sweep.txt          runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
+csharp:net11     transcendental_stress.txt         runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
+csharp:net11     transcendental_pown_rootn.txt     runs .NET 11's own Decimal128, not this port's D48 (D48CsharpWorkOrder.md CS-18)
+csharp-bid:net11 transcendental_sweep.txt          runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
+csharp-bid:net11 transcendental_stress.txt         runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
+csharp-bid:net11 transcendental_pown_rootn.txt     runs .NET 11's own Decimal128, not this port's D48 (D48CsharpBidWorkOrder.md CB-7)
 
-# transccompound.txt (CompoundD48OnePlusXWorkOrder.md CX-6): compound lines a port
+# transcendental_compound.txt (CompoundD48OnePlusXWorkOrder.md CX-6): compound lines a port
 # that rounds 1 + x to 34 digits before the power gets wrong. Every port runs it
 # since its compound commit; only the net11 runners exclude it.
-csharp:net11     transccompound.txt runs .NET 11's own Decimal128, not this port's compound (CompoundD48OnePlusXWorkOrder.md)
-csharp-bid:net11 transccompound.txt runs .NET 11's own Decimal128, not this port's compound (CompoundD48OnePlusXWorkOrder.md)
+csharp:net11     transcendental_compound.txt       runs .NET 11's own Decimal128, not this port's compound (CompoundD48OnePlusXWorkOrder.md)
+csharp-bid:net11 transcendental_compound.txt       runs .NET 11's own Decimal128, not this port's compound (CompoundD48OnePlusXWorkOrder.md)
 
-# translargen.txt (PownLargeNWorkOrder.md LN-7): pown / compound at |n| > 2^31. Ports
+# transcendental_large_n.txt (PownLargeNWorkOrder.md LN-7): pown / compound at |n| > 2^31. Ports
 # whose n is 32-bit cannot take these arguments (LN-1); the 64-bit-n ports (swift,
 # rust, zig, go) run it.
-c                translargen.txt  n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
-python           translargen.txt  n is a 32-bit int (the C engine's): |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
-java             translargen.txt  n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
-kotlin           translargen.txt  n is a 32-bit Int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
-csharp           translargen.txt  n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
-csharp-bid       translargen.txt  n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+c                transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+python           transcendental_large_n.txt        n is a 32-bit int (the C engine's): |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+java             transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+kotlin           transcendental_large_n.txt        n is a 32-bit Int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+csharp           transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+csharp-bid       transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)

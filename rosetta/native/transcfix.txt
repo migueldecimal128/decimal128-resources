@@ -1,8 +1,0 @@
-// transcfix -- corrected transcendental vectors (D48SwiftWorkOrder.md Phase 4).
-// Two lines whose expected value was the D38 ports' own output and is wrong in
-// the last digit; the correct values come from Python decimal (identical at 120,
-// 160 and 400 digits), not from a port. The wrong lines stay commented in
-// compound.txt and rootn.txt. Ports still on D38 compute the old value, so they
-// exclude this file in native.exclude until their D48 switch.
-d128_compound_ctx TIES_TO_EVEN 0.01 -1000000 -> 4.228802060756949496317010804879089E-4322 x
-d128_rootn_ctx TIES_TO_EVEN 2 -2147483648 -> 0.9999999996772281916588167078079417 x

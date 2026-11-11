@@ -57,14 +57,15 @@ d128_rootn_ctx TIES_TO_EVEN NaN 2 -> NaN
 d128_rootn_ctx TIES_TO_EVEN 1E+6144 2 -> 1.00000000000000000E+3072
 d128_rootn_ctx TIES_TO_EVEN 1E-6176 2 -> 1E-3088
 d128_rootn_ctx TIES_TO_EVEN 2 2147483647 -> 1.000000000322771808595667268407085 x
-// wrong last digit (the D38 ports' own output), corrected in transcfix.txt: d128_rootn_ctx TIES_TO_EVEN 2 -2147483648 -> 0.9999999996772281916588167078079415 x
+// corrected 2026-11-10 (was ...8079415, the D38 ports' own output; Python decimal at 120, 160, 400 digits):
+d128_rootn_ctx TIES_TO_EVEN 2 -2147483648 -> 0.9999999996772281916588167078079417 x
 
 // All five rounding directions on inexact roots: x in {±2, ±10, ±0.5}, n in
 // {2, -2, 3, -3, 4, 5, -5, 7} (even n for positive x only). Expected values are
 // NOT port output: computed with Python decimal as exp(ln|x|/n) at 120 and 160
 // digits (both must round alike), then rounded to 34 digits per direction.
 // Inexact results carry the full 34-digit coefficient (IEEE 754-2019 5.2).
-// 24 more lines of this block are in transcoracle.txt (D48SwiftWorkOrder.md Phase
+// 24 more lines of this block are in transcendental_pown_rootn.txt (D48SwiftWorkOrder.md Phase
 // 6): the n=-2 rows need the D48 rootn chain (D38 rounds sqrt then 1/z twice), and
 // 16 rows hit pow's applyPreferredScale cohort bug (punchlist), noted there.
 d128_rootn_ctx TIES_TO_EVEN 2 2 -> 1.414213562373095048801688724209698 x

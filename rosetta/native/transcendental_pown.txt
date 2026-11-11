@@ -145,5 +145,5 @@ d128_pown_ctx TIES_TO_EVEN NaN123 5 -> NaN123
 d128_pown_ctx TIES_TO_EVEN NaN 0 -> 1
 
 // The 615 negative-n oracle vectors (all five rounding directions) moved to
-// transcoracle.txt: they need the D48 domain, so ports still on D38 exclude that
+// transcendental_pown_rootn.txt: they need the D48 domain, so ports still on D38 exclude that
 // file (D48SwiftWorkOrder.md Phase 6).
