@@ -27,7 +27,11 @@ decimal strings (`bench_pool.txt`).
   `split_compound.py` (CompoundD48OnePlusXWorkOrder.md CX-6).
 - `transcendental_large_n.txt`: pown and compound at |n| > 2^31, 6,619 active lines and 21
   gap lines (seed 29), written by `pown_largen_phase0.py gen-rosetta`
-  (PownLargeNWorkOrder.md LN-7). Ports with a 32-bit n exclude it.
+  (PownLargeNWorkOrder.md LN-7). Ports with a 32-bit n exclude it. Its last block is
+  rootn at |n| > 2^31 (1,000 lines), written by `rootn_phase0.py gen-rosetta`.
+- `transcendental_rootn_sweep.txt`: rootn for |n| not a power of two, n in ±[3, 2^31),
+  9,946 active lines and 54 gap lines (seed 41), written by `rootn_phase0.py
+  gen-rosetta` (RootnGeneralNWorkOrder.md RN-7).
 
 The sweeps were written by `widesweep.py gen-rosetta`. Expected results are Python
 decimal's correctly rounded values, with flags. An exact result takes its op's
