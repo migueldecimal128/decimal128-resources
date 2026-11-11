@@ -34,8 +34,10 @@ sub1.txt
 subtract.txt
 totalorder.txt
 transcendental_compound.txt
+transcendental_expm1.txt
 transcendental_large_n.txt
 transcendental_logexp.txt
+transcendental_logp1.txt
 transcendental_pow.txt
 transcendental_pown.txt
 transcendental_pown_rootn.txt
