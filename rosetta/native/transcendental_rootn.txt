@@ -6,7 +6,7 @@
 d128_rootn_ctx TIES_TO_EVEN 1 1 -> 1
 d128_rootn_ctx TIES_TO_EVEN 1 2 -> 1
 d128_rootn_ctx TIES_TO_EVEN 1 -1 -> 1
-d128_rootn_ctx TIES_TO_EVEN 8 3 -> 2 x
+d128_rootn_ctx TIES_TO_EVEN 8 3 -> 2
 d128_rootn_ctx TIES_TO_EVEN 16 4 -> 2
 d128_rootn_ctx TIES_TO_EVEN 1 0 -> NaN i
 d128_rootn_ctx TIES_TO_EVEN 0 0 -> NaN i
@@ -17,17 +17,18 @@ d128_rootn_ctx TIES_TO_EVEN -1 4 -> NaN i
 d128_rootn_ctx TIES_TO_EVEN -1 -2 -> NaN i
 d128_rootn_ctx TIES_TO_EVEN -1 1 -> -1
 d128_rootn_ctx TIES_TO_EVEN -1 3 -> -1
-d128_rootn_ctx TIES_TO_EVEN -27 3 -> -3 x
+d128_rootn_ctx TIES_TO_EVEN -27 3 -> -3
 d128_rootn_ctx TIES_TO_EVEN -1 -1 -> -1
 d128_rootn_ctx TIES_TO_EVEN 4 2 -> 2
 d128_rootn_ctx TIES_TO_EVEN 9 2 -> 3
-d128_rootn_ctx TIES_TO_EVEN 27 3 -> 3 x
+d128_rootn_ctx TIES_TO_EVEN 27 3 -> 3
 d128_rootn_ctx TIES_TO_EVEN 100 2 -> 10
 d128_rootn_ctx TIES_TO_EVEN 2 -1 -> 0.5
 d128_rootn_ctx TIES_TO_EVEN 4 -1 -> 0.25
 d128_rootn_ctx TIES_TO_EVEN 0.5 -1 -> 2
-d128_rootn_ctx TIES_TO_EVEN 8 -3 -> 0.5 x
-d128_rootn_ctx TIES_TO_EVEN 27 -3 -> 0.3333333333333333333333333333333334 x
+d128_rootn_ctx TIES_TO_EVEN 8 -3 -> 0.5
+// corrected 2026-11-10 (was ...3334, the ports' own output; true 1/3; RootnGeneralNWorkOrder.md RN-7):
+d128_rootn_ctx TIES_TO_EVEN 27 -3 -> 0.3333333333333333333333333333333333 x
 d128_rootn_ctx TIES_TO_EVEN 0 1 -> 0
 d128_rootn_ctx TIES_TO_EVEN 0 2 -> 0
 d128_rootn_ctx TIES_TO_EVEN 0 3 -> 0
@@ -67,7 +68,8 @@ d128_rootn_ctx TIES_TO_EVEN 2 -2147483648 -> 0.999999999677228191658816707807941
 // Inexact results carry the full 34-digit coefficient (IEEE 754-2019 5.2).
 // 24 more lines of this block are in transcendental_pown_rootn.txt (D48SwiftWorkOrder.md Phase
 // 6): the n=-2 rows need the D48 rootn chain (D38 rounds sqrt then 1/z twice), and
-// 16 rows hit pow's applyPreferredScale cohort bug (punchlist), noted there.
+// 16 rows once hit pow's applyPreferredScale cohort bug (active since
+// RootnGeneralNWorkOrder.md: general-n rootn no longer goes through pow).
 d128_rootn_ctx TIES_TO_EVEN 2 2 -> 1.414213562373095048801688724209698 x
 d128_rootn_ctx TIES_TO_AWAY 2 2 -> 1.414213562373095048801688724209698 x
 d128_rootn_ctx TOWARD_ZERO 2 2 -> 1.414213562373095048801688724209698 x
