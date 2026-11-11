@@ -32,3 +32,16 @@ csharp-bid:net11 transcoracle.txt runs .NET 11's own Decimal128, not this port's
 # since its compound commit; only the net11 runners exclude it.
 csharp:net11     transccompound.txt runs .NET 11's own Decimal128, not this port's compound (CompoundD48OnePlusXWorkOrder.md)
 csharp-bid:net11 transccompound.txt runs .NET 11's own Decimal128, not this port's compound (CompoundD48OnePlusXWorkOrder.md)
+
+# translargen.txt (PownLargeNWorkOrder.md LN-7): pown / compound at |n| > 2^31. Ports
+# whose n is 32-bit cannot take these arguments (LN-1); the 64-bit-n ports run it from
+# their large-n commit (temporary lines below until then).
+c                translargen.txt  n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+python           translargen.txt  n is a 32-bit int (the C engine's): |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+java             translargen.txt  n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+kotlin           translargen.txt  n is a 32-bit Int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+csharp           translargen.txt  n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+csharp-bid       translargen.txt  n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
+rust             translargen.txt  temporary: until the Rust large-n commit (PownLargeNWorkOrder.md Phase 3)
+zig              translargen.txt  temporary: until the Zig large-n commit (PownLargeNWorkOrder.md Phase 3)
+go               translargen.txt  temporary: until the Go large-n commit (PownLargeNWorkOrder.md Phase 3)
