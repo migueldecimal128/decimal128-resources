@@ -1,0 +1,26 @@
+# Rosetta per-runner operator exclusions (RosettaHarnessAlignmentWorkOrder.md §4.4):
+# corpus operators that one port's runner does not run. File-level native
+# exclusions stay in native.exclude.
+#
+#   <port>[:<runner>]  <source>  <token>  <reason>
+#
+# port:   c python swift rust go zig java kotlin csharp csharp-bid
+# runner: core wrapper (without a runner, every runner of the port)
+# source: dectest fptest intel
+# token:  a token the <source>.map includes
+# reason: required, the rest of the line. Remove the line when it no longer holds.
+# Fields are tab-separated. Checked by rosetta/check_rosetta.py.
+
+# Java's public API has no unsigned integer type, so it exposes signed
+# conversions only (decimal128-workorder WrapperLayer.md §4.8, §7.1(4)). The Java
+# core runs these; the wrapper cannot.
+java:wrapper	intel	bid128_to_uint64_ceil	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_floor	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_int	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_rnint	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_rninta	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_xceil	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_xfloor	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_xint	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_xrnint	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
+java:wrapper	intel	bid128_to_uint64_xrninta	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)

@@ -1,0 +1,20 @@
+# Rosetta fptest operator map (RosettaHarnessAlignmentWorkOrder.md §4.2).
+# Every port reads this file; no port keeps its own copy.
+#
+#   scope    <rule>  <value>        pre-filter applied before the partition
+#   include  <token> <canonical op> the token runs, dispatched as that op
+#   exclude  <token> <reason>       the token is not run, for that reason
+#
+# Fields are tab-separated. Every in-scope corpus token is in exactly one of
+# include / exclude (checked by rosetta/check_rosetta.py).
+# Transcribed from Swift's RosettaFptestMaps.swift on 2026-11-12.
+#
+# A line runs only when its format prefix (the first token, before the
+# operator symbol) is d128.
+scope	format	d128
+
+include	*	d128_multiply_ctx
+include	+	d128_add_ctx
+include	-	d128_subtract_ctx
+include	/	d128_divide_ctx
+

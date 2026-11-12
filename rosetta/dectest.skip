@@ -1,0 +1,180 @@
+# Rosetta dectest per-line skips (RosettaHarnessAlignmentWorkOrder.md §4.3).
+# Every port reads this file; no port keeps its own copy.
+#
+#   =<tag>  <reason>                  defines a reason once
+#   line    <tag>  <exact line>       skips the case whose trimmed line text matches
+#   attr    <tag>  <ops>  <attribute> skips lines of the comma-separated ops that
+#                                     carry the attribute token
+#
+# Fields are tab-separated (no corpus line contains a tab). Every entry must
+# match at least one corpus line (checked by rosetta/check_rosetta.py).
+# Transcribed from Swift's RosettaDectestSkips.swift on 2026-11-12.
+
+=abs-sign-bit	GDAS abs quiets a signaling NaN and keeps a NaN's sign; IEEE 754-2019 abs is a sign-bit operation (clears the sign, never signals)
+=minus-sign-bit	GDAS minus is 0 - x (quiets a signaling NaN, keeps a NaN's sign, 0 - 0 is +0); IEEE 754-2019 negate is a sign-bit operation (flips the sign, never signals)
+=tosci-syntax	toSci conversion-syntax: dectest reports Conversion_syntax where the core parse differs
+=minmax-snan	max/min/maxmag/minmag *Number with a signaling NaN: dectest's pre-2019 file still quiets a signaling NaN to NaN, but 754-2019 maxNumber/minNumber returns the number (+ invalid)
+=remainder-exact	remainder/remaindernear: IEEE 754-2019 §5.3.1 exact; GDAS signals Division_impossible (RemainderExactWorkOrder.md RX-1/RX-2)
+=scaleb-op2	scaleB second operand is not an in-range integer (non-integer, out of range, or a NaN); the core takes an integer exponent
+=over-precision	the operand has 35 significant digits: it exceeds decimal128 precision and rounds to exactly 1 on input, so log10 is 0, whereas decNumber computes log10 of the unrounded operand
+
+line	abs-sign-bit	dqabs523 abs  sNaN    ->  NaN   Invalid_operation
+line	abs-sign-bit	dqabs525 abs  sNaN33  ->  NaN33 Invalid_operation
+line	abs-sign-bit	dqabs526 abs  -NaN22  -> -NaN22
+line	abs-sign-bit	dqabs527 abs -sNaN33  -> -NaN33 Invalid_operation
+line	tosci-syntax	dqbas561 toSci "qNaN"            -> NaN Conversion_syntax
+line	tosci-syntax	dqbas725 toSci 'NaN1234567890123456781234567890123456' -> NaN Conversion_syntax
+line	tosci-syntax	dqbas745 toSci 'sNaN1234567890123456787234561234567890' -> NaN Conversion_syntax
+line	minmax-snan	dqmax161 max  sNaN -Inf   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax162 max  sNaN -1000  ->  NaN  Invalid_operation
+line	minmax-snan	dqmax163 max  sNaN -1     ->  NaN  Invalid_operation
+line	minmax-snan	dqmax164 max  sNaN -0     ->  NaN  Invalid_operation
+line	minmax-snan	dqmax165 max  sNaN  0     ->  NaN  Invalid_operation
+line	minmax-snan	dqmax166 max  sNaN  1     ->  NaN  Invalid_operation
+line	minmax-snan	dqmax167 max  sNaN  1000  ->  NaN  Invalid_operation
+line	minmax-snan	dqmax171 max -Inf  sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax172 max -1000 sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax173 max -1    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax174 max -0    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax175 max  0    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax176 max  1    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax177 max  1000 sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax178 max  Inf  sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmax191 max  sNaN99 -Inf    ->  NaN99 Invalid_operation
+line	minmax-snan	dqmax192 max  sNaN98 -1      ->  NaN98 Invalid_operation
+line	minmax-snan	dqmax196 max -Inf    sNaN92  ->  NaN92 Invalid_operation
+line	minmax-snan	dqmax197 max  0      sNaN91  ->  NaN91 Invalid_operation
+line	minmax-snan	dqmax198 max  Inf   -sNaN90  -> -NaN90 Invalid_operation
+line	minmax-snan	dqmin161 min  sNaN -Inf   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin162 min  sNaN -1000  ->  NaN  Invalid_operation
+line	minmax-snan	dqmin163 min  sNaN -1     ->  NaN  Invalid_operation
+line	minmax-snan	dqmin164 min  sNaN -0     ->  NaN  Invalid_operation
+line	minmax-snan	dqmin165 min -sNaN  0     -> -NaN  Invalid_operation
+line	minmax-snan	dqmin166 min -sNaN  1     -> -NaN  Invalid_operation
+line	minmax-snan	dqmin167 min  sNaN  1000  ->  NaN  Invalid_operation
+line	minmax-snan	dqmin171 min -Inf  sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin172 min -1000 sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin173 min -1    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin174 min -0    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin175 min  0    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin176 min  1    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin177 min  1000 sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin178 min  Inf  sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmin191 min  sNaN99 -Inf    ->  NaN99 Invalid_operation
+line	minmax-snan	dqmin192 min  sNaN98 -11     ->  NaN98 Invalid_operation
+line	minmax-snan	dqmin196 min -Inf    sNaN92  ->  NaN92 Invalid_operation
+line	minmax-snan	dqmin197 min  088    sNaN91  ->  NaN91 Invalid_operation
+line	minmax-snan	dqmin198 min  Inf   -sNaN90  -> -NaN90 Invalid_operation
+line	minmax-snan	dqmng161 minmag  sNaN -Inf   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng162 minmag  sNaN -1000  ->  NaN  Invalid_operation
+line	minmax-snan	dqmng163 minmag  sNaN -1     ->  NaN  Invalid_operation
+line	minmax-snan	dqmng164 minmag  sNaN -0     ->  NaN  Invalid_operation
+line	minmax-snan	dqmng165 minmag -sNaN  0     -> -NaN  Invalid_operation
+line	minmax-snan	dqmng166 minmag -sNaN  1     -> -NaN  Invalid_operation
+line	minmax-snan	dqmng167 minmag  sNaN  1000  ->  NaN  Invalid_operation
+line	minmax-snan	dqmng171 minmag -Inf  sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng172 minmag -1000 sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng173 minmag -1    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng174 minmag -0    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng175 minmag  0    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng176 minmag  1    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng177 minmag  1000 sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng178 minmag  Inf  sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmng191 minmag  sNaN99 -Inf    ->  NaN99 Invalid_operation
+line	minmax-snan	dqmng192 minmag  sNaN98 -11     ->  NaN98 Invalid_operation
+line	minmax-snan	dqmng196 minmag -Inf    sNaN92  ->  NaN92 Invalid_operation
+line	minmax-snan	dqmng197 minmag  088    sNaN91  ->  NaN91 Invalid_operation
+line	minmax-snan	dqmng198 minmag  Inf   -sNaN90  -> -NaN90 Invalid_operation
+line	minus-sign-bit	dqmns021 minus         NaN  -> NaN
+line	minus-sign-bit	dqmns022 minus        -NaN  -> -NaN
+line	minus-sign-bit	dqmns023 minus        sNaN  -> NaN  Invalid_operation
+line	minus-sign-bit	dqmns024 minus       -sNaN  -> -NaN Invalid_operation
+line	minus-sign-bit	dqmns031 minus       NaN13  -> NaN13
+line	minus-sign-bit	dqmns032 minus      -NaN13  -> -NaN13
+line	minus-sign-bit	dqmns033 minus      sNaN13  -> NaN13   Invalid_operation
+line	minus-sign-bit	dqmns034 minus     -sNaN13  -> -NaN13  Invalid_operation
+line	minus-sign-bit	dqmns035 minus       NaN70  -> NaN70
+line	minus-sign-bit	dqmns036 minus      -NaN70  -> -NaN70
+line	minus-sign-bit	dqmns037 minus      sNaN101 -> NaN101  Invalid_operation
+line	minus-sign-bit	dqmns038 minus     -sNaN101 -> -NaN101 Invalid_operation
+line	minus-sign-bit	dqmns111 minus          0   -> 0
+line	minus-sign-bit	dqmns113 minus       0E+4   -> 0E+4
+line	minus-sign-bit	dqmns115 minus     0.0000   -> 0.0000
+line	minus-sign-bit	dqmns117 minus      0E-141  -> 0E-141
+line	minmax-snan	dqmxg161 maxmag  sNaN -Inf   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg162 maxmag  sNaN -1000  ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg163 maxmag  sNaN -1     ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg164 maxmag  sNaN -0     ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg165 maxmag  sNaN  0     ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg166 maxmag  sNaN  1     ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg167 maxmag  sNaN  1000  ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg171 maxmag -Inf  sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg172 maxmag -1000 sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg173 maxmag -1    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg174 maxmag -0    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg175 maxmag  0    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg176 maxmag  1    sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg177 maxmag  1000 sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg178 maxmag  Inf  sNaN   ->  NaN  Invalid_operation
+line	minmax-snan	dqmxg191 maxmag  sNaN99 -Inf    ->  NaN99 Invalid_operation
+line	minmax-snan	dqmxg192 maxmag  sNaN98 -1      ->  NaN98 Invalid_operation
+line	minmax-snan	dqmxg196 maxmag -Inf    sNaN92  ->  NaN92 Invalid_operation
+line	minmax-snan	dqmxg197 maxmag  0      sNaN91  ->  NaN91 Invalid_operation
+line	minmax-snan	dqmxg198 maxmag  Inf   -sNaN90  -> -NaN90 Invalid_operation
+line	remainder-exact	dqrem1051 remainder  1e+277  1e-311 ->  NaN Division_impossible
+line	remainder-exact	dqrem1052 remainder  1e+277 -1e-311 ->  NaN Division_impossible
+line	remainder-exact	dqrem1053 remainder -1e+277  1e-311 ->  NaN Division_impossible
+line	remainder-exact	dqrem1054 remainder -1e+277 -1e-311 ->  NaN Division_impossible
+line	remainder-exact	dqrem421 remainder   1E+6144        1  ->   NaN Division_impossible
+line	remainder-exact	dqrem772  remainder  1234568888888887777777777890123456   0.1  ->  NaN Division_impossible
+line	remainder-exact	dqrem773  remainder  1234568888888887777777777890123456   0.01 ->  NaN Division_impossible
+line	remainder-exact	dqrmn1051 remaindernear  1e+277  1e-311 ->  NaN Division_impossible
+line	remainder-exact	dqrmn1052 remaindernear  1e+277 -1e-311 ->  NaN Division_impossible
+line	remainder-exact	dqrmn1053 remaindernear -1e+277  1e-311 ->  NaN Division_impossible
+line	remainder-exact	dqrmn1054 remaindernear -1e+277 -1e-311 ->  NaN Division_impossible
+line	remainder-exact	dqrmn421 remaindernear   1E+6144        1  ->   NaN Division_impossible
+line	remainder-exact	dqrmn772  remaindernear  1234500000000000000000067890123456   0.1  ->  NaN Division_impossible
+line	remainder-exact	dqrmn773  remaindernear  1234500000000000000000067890123456   0.01 ->  NaN Division_impossible
+line	scaleb-op2	dqscb018 scaleb  10  Infinity -> NaN Invalid_operation
+line	scaleb-op2	dqscb019 scaleb  10 -Infinity -> NaN Invalid_operation
+line	scaleb-op2	dqscb025 scaleb    4    NaN    -> NaN
+line	scaleb-op2	dqscb026 scaleb -Inf   -NaN    -> -NaN
+line	scaleb-op2	dqscb027 scaleb    4   sNaN    -> NaN Invalid_operation
+line	scaleb-op2	dqscb028 scaleb  Inf  -sNaN    -> -NaN Invalid_operation
+line	scaleb-op2	dqscb031 scaleb  1.23    1.00 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb032 scaleb  1.23    1.1  ->  NaN Invalid_operation
+line	scaleb-op2	dqscb033 scaleb  1.23    1.01 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb034 scaleb  1.23    0.01 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb035 scaleb  1.23    0.11 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb036 scaleb  1.23    0.999999999 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb039 scaleb  1.23   -1.1  ->  NaN Invalid_operation
+line	scaleb-op2	dqscb040 scaleb  1.23   -1.01 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb041 scaleb  1.23   -0.01 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb042 scaleb  1.23   -0.11 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb043 scaleb  1.23   -0.999999999 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb044 scaleb  1.23    0.1         ->  NaN Invalid_operation
+line	scaleb-op2	dqscb045 scaleb  1.23    1E+1        ->  NaN Invalid_operation
+line	scaleb-op2	dqscb046 scaleb  1.23    1.1234E+6   ->  NaN Invalid_operation
+line	scaleb-op2	dqscb047 scaleb  1.23    1.123E+4    ->  NaN Invalid_operation
+line	scaleb-op2	dqscb0614 scaleb  1.23   -1.00 ->  NaN Invalid_operation
+line	scaleb-op2	dqscb122 scaleb  1.23    12357       ->  NaN Invalid_operation
+line	scaleb-op2	dqscb123 scaleb  1.23    12358       ->  NaN Invalid_operation
+line	scaleb-op2	dqscb126 scaleb  1.23   -12357       ->  NaN Invalid_operation
+line	scaleb-op2	dqscb127 scaleb  1.23   -12358       ->  NaN Invalid_operation
+line	scaleb-op2	dqscb861 scaleb  NaN01   -Inf     ->  NaN1
+line	scaleb-op2	dqscb864 scaleb  NaN04    Inf     ->  NaN4
+line	scaleb-op2	dqscb865 scaleb  NaN05    NaN61   ->  NaN5
+line	scaleb-op2	dqscb866 scaleb -Inf     -NaN71   -> -NaN71
+line	scaleb-op2	dqscb867 scaleb -1000     NaN81   ->  NaN81
+line	scaleb-op2	dqscb868 scaleb  1000     NaN91   ->  NaN91
+line	scaleb-op2	dqscb869 scaleb  Inf      NaN101  ->  NaN101
+line	scaleb-op2	dqscb871 scaleb  sNaN011  -Inf    ->  NaN11  Invalid_operation
+line	scaleb-op2	dqscb874 scaleb  sNaN014   NaN171 ->  NaN14  Invalid_operation
+line	scaleb-op2	dqscb875 scaleb  sNaN015  sNaN181 ->  NaN15  Invalid_operation
+line	scaleb-op2	dqscb876 scaleb  NaN016   sNaN191 ->  NaN191 Invalid_operation
+line	scaleb-op2	dqscb877 scaleb -Inf      sNaN201 ->  NaN201 Invalid_operation
+line	scaleb-op2	dqscb878 scaleb -1000     sNaN211 ->  NaN211 Invalid_operation
+line	scaleb-op2	dqscb879 scaleb  1000    -sNaN221 -> -NaN221 Invalid_operation
+line	scaleb-op2	dqscb880 scaleb  Inf      sNaN231 ->  NaN231 Invalid_operation
+line	scaleb-op2	dqscb881 scaleb  NaN025   sNaN241 ->  NaN241 Invalid_operation
+line	over-precision	logx1308 log10 1.0000000000000000000000000000000001 -> 4.342944819032518276511289189166051E-35 Inexact Rounded
