@@ -26,6 +26,7 @@ parse.txt
 printauto.txt
 printinfinity.txt
 printnan.txt
+remainder.txt
 roundintegral_ctx.txt
 roundintegral_quiet.txt
 sqrt.txt
