@@ -40,4 +40,5 @@ out with a reason:
 
 - `// gap:` the documented 1-ulp gap near 1, with the D48 answer every port must
   match;
-- `// pow-cohort:` a known punchlist bug, not D48.
+- `// pow-cohort:` pow stripped a trailing zero from an inexact result (not D48); none
+  left since PowInexactCohortWorkOrder.md re-enabled them.
