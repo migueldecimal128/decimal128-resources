@@ -1,0 +1,63 @@
+# Rosetta Intel per-line skips (RosettaHarnessAlignmentWorkOrder.md §4.3).
+# Every port reads this file; no port keeps its own copy.
+#
+#   =<tag>  <reason>                  defines a reason once
+#   line    <tag>  <exact line>       skips the case whose trimmed line text matches
+#   attr    <tag>  <ops>  <attribute> skips lines of the comma-separated ops that
+#                                     carry the attribute token
+#
+# Fields are tab-separated (no corpus line contains a tab). Every entry must
+# match at least one corpus line (checked by rosetta/check_rosetta.py).
+# Transcribed from Swift's RosettaIntelSkips.swift on 2026-11-12.
+
+=fma-qnan	fma: Intel expects a canonical -qNaN(0) that matches neither Intel's first-NaN-wins rule nor GDAS sNaN-prefers
+=exp-flags	exp/exp10: Intel marks certain tiny-input results EXACT (flag 00); they are actually inexact
+=minmax-qnan	maxnum/maxnum_mag/minnum_mag: a canonical -qNaN(0) case that matches neither Intel's rule nor GDAS
+=from-string-malformed	from_string, malformed string: we return NaN and raise invalid (conversion syntax); Intel returns NaN with no flag, and reads the valid prefix of a string with trailing garbage ("1.1E-2E" → 0.011)
+=longint32	lrint/lround with a 32-bit `long` result: a 32-bit integer conversion, out of scope like the excluded bid128_to_int32_* ops (the longintsize=64 lines run)
+
+attr	longint32	bid128_lrint,bid128_lround	longintsize=32
+line	fma-qnan	bid128_fma 0 [7f06536efdedf3ef,a00d0c0a84122060] [0008101000000000,8c6de2c3707e636c] [fd1f7eefdffff377,023b4c28d1de82a0] [fc000000000000000000000000000000] 01
+line	exp-flags	bid128_exp 0 [00000000000000000000000000000001] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 0 [00000000000000000000000000000003] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 0 [0000106F4216D9DBBD95C90355555555] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 0 [00420000000000000000000000000001] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 0 [00420000000000000000000000000003] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 1 [00000000000000000000000000000001] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 1 [00000000000000000000000000000003] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 1 [0000106F4216D9DBBD95C90355555555] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 1 [00420000000000000000000000000001] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 1 [00420000000000000000000000000003] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 2 [00000000000000000000000000000001] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 2 [00000000000000000000000000000003] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 2 [0000106F4216D9DBBD95C90355555555] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 2 [00420000000000000000000000000001] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 2 [00420000000000000000000000000003] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 3 [00000000000000000000000000000001] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 3 [00000000000000000000000000000003] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 3 [0000106F4216D9DBBD95C90355555556] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 3 [00420000000000000000000000000001] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp 3 [00420000000000000000000000000003] [2FFE314DC6448D9338C15B0A00000000] 00 ulp=0.0000000000e-01
+line	exp-flags	bid128_exp10 0 [b0058bf72fa4eea6e98489819368194d] [00000000000000000000000000000000] 20
+line	exp-flags	bid128_exp10 0 [b005db5e877e758bfe53dd5e06733086] [00000000000000000000000000000000] 20
+line	exp-flags	bid128_exp10 0 [b005b1d75299a5aa378acaa543a24b82] [00000000000000000000000000000000] 20
+line	exp-flags	bid128_exp10 0 [b0053af01b8a0125ac5437185b9f74bb] [00000000000000000000000000000000] 20
+line	exp-flags	bid128_exp10 0 [b0057e657e0fef7b8b7572acc164e1f3] [00000000000000000000000000000000] 20
+line	exp-flags	bid128_exp10 0 [b00552f25788a4e163d781ec08d2be04] [00000000000000000000000000000000] 20
+line	exp-flags	bid128_exp10 0 [3005da8d9306b37a08cd74840506b073] [78000000000000000000000000000000] 20
+line	exp-flags	bid128_exp10 0 [30059144adac675798f2764aabb361f2] [78000000000000000000000000000000] 20
+line	exp-flags	bid128_exp10 0 [3005967f3b6dc2b69607e01ce2a77a34] [78000000000000000000000000000000] 20
+line	minmax-qnan	bid128_maxnum 0 [dbf2000000000000,0000000000000000] [9e06000000000000,0000000000000000] [dbf20000000000000000000000000000] 00
+line	minmax-qnan	bid128_maxnum_mag 0 [0ad6000000000000,0000000000000000] [a3f2000000000000,0000000000000000] [a3f20000000000000000000000000000] 00
+line	minmax-qnan	bid128_minnum_mag 0 [4a29fdd3add4507a,b6884d65b20ee626] [ed47f4a2ed981eb5,fe78fff8fbfd7fed] [4a280000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 1.. [7c000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 1.1P2 [7c000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 1.1EE [7c000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 1.1P-2 [7c000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 1.1E-2E [303a000000000000000000000000000b] 00
+line	from-string-malformed	bid128_from_string 0 +INFi [7c000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 +SNANi [7e000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 +INFINITYi [7c000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 INFi [7c000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 SNANi [7e000000000000000000000000000000] 00
+line	from-string-malformed	bid128_from_string 0 INFINITYi [7c000000000000000000000000000000] 00

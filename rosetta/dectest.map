@@ -1,0 +1,62 @@
+# Rosetta dectest operator map (RosettaHarnessAlignmentWorkOrder.md §4.2).
+# Every port reads this file; no port keeps its own copy.
+#
+#   scope    <rule>  <value>        pre-filter applied before the partition
+#   include  <token> <canonical op> the token runs, dispatched as that op
+#   exclude  <token> <reason>       the token is not run, for that reason
+#
+# Fields are tab-separated. Every in-scope corpus token is in exactly one of
+# include / exclude (checked by rosetta/check_rosetta.py).
+# Transcribed from Swift's RosettaDectestMaps.swift on 2026-11-12.
+#
+# dectest tokens are matched lower-cased. A case runs only in a block whose
+# `precision:` directive is 34 and whose `rounding:` directive is one of the
+# listed GDAS modes (up / 05up / half_down have no IEEE 754 counterpart).
+# A case with a bare `#` operand is dropped: `#` is decNumber's "operand not
+# given" placeholder (a null-argument API test), not a value. (`#` followed by
+# hex digits is a DPD encoding and runs.)
+scope	precision	34
+scope	rounding	half_even,half_up,ceiling,floor,down
+scope	null-operand	#
+
+include	abs	d128_abs
+include	add	d128_add_ctx
+include	apply	d128_apply_ctx
+include	canonical	d128_copy
+include	class	d128_ieeeClass
+include	compare	d128_compare_ctx
+include	comparesig	d128_compareSignaling_ctx
+include	comparetotal	d128_compareTotal
+include	comparetotmag	d128_compareTotalMag
+include	copy	d128_copy
+include	copyabs	d128_abs
+include	copynegate	d128_negate
+include	copysign	d128_copySign
+include	divide	d128_divide_ctx
+include	divideint	d128_divideInteger_ctx
+include	exp	d128_exp_ctx
+include	fma	d128_fma_ctx
+include	ln	d128_ln_ctx
+include	log10	d128_log10_ctx
+include	logb	d128_logB_ctxnull
+include	max	d128_maximumNumber_ctx
+include	maxmag	d128_maximumMagnitudeNumber_ctx
+include	min	d128_minimumNumber_ctx
+include	minmag	d128_minimumMagnitudeNumber_ctx
+include	minus	d128_negate
+include	multiply	d128_multiply_ctx
+include	nextminus	d128_nextDown_ctxnull
+include	nextplus	d128_nextUp_ctxnull
+include	quantize	d128_quantize_ctxnull
+include	reduce	d128_stripTrailingZeros
+include	remainder	d128_remainderTrunc_ctx
+include	remaindernear	d128_remainderNear_ctx
+include	samequantum	d128_sameQuantum
+include	scaleb	d128_scaleB_ctxnull
+include	subtract	d128_subtract_ctx
+include	toeng	d128_toEngString
+include	tointegralx	d128_roundToIntegralSignalInexact
+include	tosci	d128_toString
+
+exclude	plus	plus (unary 0+x) — not an IEEE 754-2019 operation (Cowlishaw GDAS only); see dq-coverage decision log
+exclude	shift	shift (coefficient digit shift) — not an IEEE 754-2019 operation (Cowlishaw GDAS only); see dq-coverage decision log

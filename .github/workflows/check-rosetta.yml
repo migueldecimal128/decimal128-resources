@@ -1,0 +1,20 @@
+name: check-rosetta
+
+# The shared Rosetta data in rosetta/ must agree with the corpora: native.index /
+# native.exclude (decimal128-workorder NativeCorpusExclusionWorkOrder.md D-5),
+# files.index, the <source>.map and <source>.skip files, runner.exclude, and
+# the generated expected.tsv (RosettaHarnessAlignmentWorkOrder.md R-6).
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-rosetta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 rosetta/check_rosetta.py

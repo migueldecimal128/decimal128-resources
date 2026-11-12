@@ -1,0 +1,58 @@
+# Rosetta corpus file lists (RosettaHarnessAlignmentWorkOrder.md §4.1).
+# Every port runs exactly these files; rosetta/check_rosetta.py fails when
+# this list and the dectest/, fptest/, intel/ directories disagree.
+# native/ is listed in native.index.
+#
+#   <source>	<file>
+
+dectest	_754_2019.dectest
+dectest	decQuad.decTest
+dectest	dqAbs.decTest
+dectest	dqAdd.decTest
+dectest	dqBase.decTest
+dectest	dqCanonical.decTest
+dectest	dqClass.decTest
+dectest	dqCompare.decTest
+dectest	dqCompareSig.decTest
+dectest	dqCompareTotal.decTest
+dectest	dqCompareTotalMag.decTest
+dectest	dqCopy.decTest
+dectest	dqCopyAbs.decTest
+dectest	dqCopyNegate.decTest
+dectest	dqCopySign.decTest
+dectest	dqDivide.decTest
+dectest	dqDivideInt.decTest
+dectest	dqEncode.decTest
+dectest	dqFMA.decTest
+dectest	dqLogB.decTest
+dectest	dqMax.decTest
+dectest	dqMaxMag.decTest
+dectest	dqMin.decTest
+dectest	dqMinMag.decTest
+dectest	dqMinus.decTest
+dectest	dqMultiply.decTest
+dectest	dqNextMinus.decTest
+dectest	dqNextPlus.decTest
+dectest	dqPlus.decTest
+dectest	dqQuantize.decTest
+dectest	dqReduce.decTest
+dectest	dqRemainder.decTest
+dectest	dqRemainderNear.decTest
+dectest	dqSameQuantum.decTest
+dectest	dqScaleB.decTest
+dectest	dqShift.decTest
+dectest	dqSubtract.decTest
+dectest	dqToIntegral.decTest
+dectest	exp.decTest
+dectest	ln.decTest
+dectest	log10.decTest
+fptest	Decimal-Basic-Types-Inputs.fptest
+fptest	Decimal-Basic-Types-Intermediate.fptest
+fptest	Decimal-Clamping.fptest
+fptest	Decimal-Mul-Trailing-Zeros.fptest
+fptest	Decimal-Overflow-correctedByMTH.fptest
+fptest	Decimal-Rounding.fptest
+fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest
+fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest
+fptest	Decimal-Underflow.fptest
+intel	readtest.in

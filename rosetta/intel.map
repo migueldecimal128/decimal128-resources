@@ -1,0 +1,215 @@
+# Rosetta intel operator map (RosettaHarnessAlignmentWorkOrder.md §4.2).
+# Every port reads this file; no port keeps its own copy.
+#
+#   scope    <rule>  <value>        pre-filter applied before the partition
+#   include  <token> <canonical op> the token runs, dispatched as that op
+#   exclude  <token> <reason>       the token is not run, for that reason
+#
+# Fields are tab-separated. Every in-scope corpus token is in exactly one of
+# include / exclude (checked by rosetta/check_rosetta.py).
+# Transcribed from Swift's RosettaIntelMaps.swift on 2026-11-12.
+#
+# Only bid128_ tokens are partitioned; every other width and the binary
+# interchange conversions are out of scope before the partition.
+scope	prefix	bid128_
+
+include	bid128_abs	d128_abs
+include	bid128_add	d128_add_ctx
+include	bid128_class	d128_ieeeClass
+include	bid128_copy	d128_copy
+include	bid128_copySign	d128_copySign
+include	bid128_div	d128_divide_ctx
+include	bid128_exp	d128_exp_ctx
+include	bid128_exp10	d128_exp10_ctx
+include	bid128_expm1	d128_expm1_ctx
+include	bid128_fma	d128_fma_ctx
+include	bid128_fmod	d128_remainderTrunc_ctx
+include	bid128_from_int32	d128_fromInt64
+include	bid128_from_int64	d128_fromInt64
+include	bid128_from_string	d128_parse_ctx
+include	bid128_from_uint32	d128_fromUInt64
+include	bid128_from_uint64	d128_fromUInt64
+include	bid128_isFinite	d128_isFinite
+include	bid128_isInf	d128_isInf
+include	bid128_isNaN	d128_isNaN
+include	bid128_isNormal	d128_isNormal
+include	bid128_isSignaling	d128_isSignaling
+include	bid128_isSigned	d128_isSigned
+include	bid128_isSubnormal	d128_isSubnormal
+include	bid128_isZero	d128_isZero
+include	bid128_ldexp	d128_scaleB_ctxnull
+include	bid128_llquantexp	d128_quantexp
+include	bid128_llrint	d128_toInt64SignalInexact_ctx
+include	bid128_llround	d128_to_int64_rninta
+include	bid128_log	d128_ln_ctx
+include	bid128_log10	d128_log10_ctx
+include	bid128_log1p	d128_lnp1_ctx
+include	bid128_logb	d128_logB_ctxnull
+include	bid128_lrint	d128_toInt64SignalInexact_ctx
+include	bid128_lround	d128_to_int64_rninta
+include	bid128_maxnum	d128_maximumNumber_ctx
+include	bid128_maxnum_mag	d128_maximumMagnitudeNumber_ctx
+include	bid128_minnum	d128_minimumNumber_ctx
+include	bid128_minnum_mag	d128_minimumMagnitudeNumber_ctx
+include	bid128_mul	d128_multiply_ctx
+include	bid128_nearbyint	d128_roundToIntegral_ctx
+include	bid128_negate	d128_negate
+include	bid128_nextdown	d128_nextDown_ctxnull
+include	bid128_nextup	d128_nextUp_ctxnull
+include	bid128_quantexp	d128_quantexp
+include	bid128_quantize	d128_quantize_ctxnull
+include	bid128_quiet_equal	d128_isEqual_ctx
+include	bid128_quiet_greater	d128_isGreater_ctx
+include	bid128_quiet_greater_equal	d128_isGreaterEqual_ctx
+include	bid128_quiet_greater_unordered	d128_isGreaterUnordered_ctx
+include	bid128_quiet_less	d128_isLess_ctx
+include	bid128_quiet_less_equal	d128_isLessEqual_ctx
+include	bid128_quiet_less_unordered	d128_isLessUnordered_ctx
+include	bid128_quiet_not_equal	d128_isNotEqual_ctx
+include	bid128_quiet_not_greater	d128_isNotGreater_ctx
+include	bid128_quiet_not_less	d128_isNotLess_ctx
+include	bid128_quiet_ordered	d128_isOrdered_ctx
+include	bid128_quiet_unordered	d128_isUnordered_ctx
+include	bid128_rem	d128_remainderNear_ctx
+include	bid128_round_integral_exact	d128_roundToIntegralSignalInexact
+include	bid128_round_integral_nearest_away	d128_round_integral_nearest_away
+include	bid128_round_integral_nearest_even	d128_round_integral_nearest_even
+include	bid128_round_integral_negative	d128_round_integral_negative
+include	bid128_round_integral_positive	d128_round_integral_positive
+include	bid128_round_integral_zero	d128_round_integral_zero
+include	bid128_sameQuantum	d128_sameQuantum
+include	bid128_scalbln	d128_scaleB_ctxnull
+include	bid128_scalbn	d128_scaleB_ctxnull
+include	bid128_signaling_greater	d128_isGreaterSignaling_ctx
+include	bid128_signaling_greater_equal	d128_isGreaterEqualSignaling_ctx
+include	bid128_signaling_greater_unordered	d128_isGreaterUnorderedSignaling_ctx
+include	bid128_signaling_less	d128_isLessSignaling_ctx
+include	bid128_signaling_less_equal	d128_isLessEqualSignaling_ctx
+include	bid128_signaling_less_unordered	d128_isLessUnorderedSignaling_ctx
+include	bid128_signaling_not_greater	d128_isNotGreaterSignaling_ctx
+include	bid128_signaling_not_less	d128_isNotLessSignaling_ctx
+include	bid128_sqrt	d128_sqrt_ctx
+include	bid128_sub	d128_subtract_ctx
+include	bid128_to_int64_ceil	d128_to_int64_ceil
+include	bid128_to_int64_floor	d128_to_int64_floor
+include	bid128_to_int64_int	d128_to_int64_int
+include	bid128_to_int64_rnint	d128_to_int64_rnint
+include	bid128_to_int64_rninta	d128_to_int64_rninta
+include	bid128_to_int64_xceil	d128_to_int64_xceil
+include	bid128_to_int64_xfloor	d128_to_int64_xfloor
+include	bid128_to_int64_xint	d128_to_int64_xint
+include	bid128_to_int64_xrnint	d128_to_int64_xrnint
+include	bid128_to_int64_xrninta	d128_to_int64_xrninta
+include	bid128_to_uint64_ceil	d128_to_uint64_ceil
+include	bid128_to_uint64_floor	d128_to_uint64_floor
+include	bid128_to_uint64_int	d128_to_uint64_int
+include	bid128_to_uint64_rnint	d128_to_uint64_rnint
+include	bid128_to_uint64_rninta	d128_to_uint64_rninta
+include	bid128_to_uint64_xceil	d128_to_uint64_xceil
+include	bid128_to_uint64_xfloor	d128_to_uint64_xfloor
+include	bid128_to_uint64_xint	d128_to_uint64_xint
+include	bid128_to_uint64_xrnint	d128_to_uint64_xrnint
+include	bid128_to_uint64_xrninta	d128_to_uint64_xrninta
+include	bid128_totalOrder	d128_totalOrder
+include	bid128_totalOrderMag	d128_totalOrderMag
+
+exclude	bid128_acos	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_acosh	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_asin	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_asinh	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_atan	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_atan2	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_atanh	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_cbrt	not an IEEE 754-2019 operation (rootn covers cube roots)
+exclude	bid128_cos	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_cosh	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_erf	not an IEEE 754-2019 operation
+exclude	bid128_erfc	not an IEEE 754-2019 operation
+exclude	bid128_exp2	IEEE 754-2019 §9.2 recommended operation, not implemented
+exclude	bid128_fdim	C99 <math.h> helper with no IEEE 754 counterpart in the core
+exclude	bid128_frexp	C99 <math.h> helper with no IEEE 754 counterpart in the core (two results)
+exclude	bid128_hypot	IEEE 754-2019 §9.2 recommended operation, not implemented
+exclude	bid128_ilogb	integer-result logB — not implemented; bid128_logb covers the value
+exclude	bid128_inf	special-value constructor — out of scope (library builds these directly)
+exclude	bid128_isCanonical	isCanonical over a UBD value is always true (754-conformant: UBD admits only canonical representations). Intel tests BID-encoding canonicality, which is normalized away at decode per 754-2019 — not a property of a decoded value, so not expressible through d128_isCanonical (which is correctly a `{ true }` stub).
+exclude	bid128_lgamma	not an IEEE 754-2019 operation
+exclude	bid128_log2	IEEE 754-2019 §9.2 recommended operation, not implemented (log2p1 is)
+exclude	bid128_modf	C99 <math.h> helper with no IEEE 754 counterpart in the core (two results)
+exclude	bid128_nan	special-value constructor — out of scope (library builds these directly)
+exclude	bid128_nextafter	nextafter/nexttoward — declined (not in IEEE 754-2019; see decision log)
+exclude	bid128_nexttoward	nextafter/nexttoward — declined (not in IEEE 754-2019; see decision log)
+exclude	bid128_pow	not yet passing (134/168 in Phase 0): inexact-result cohort (punchlist: pow drops a trailing zero), x < 0 with a huge integer y (punchlist), and Intel conventions; include when fixed
+exclude	bid128_quantum	754 quantum as a decimal (1E q) — not implemented; quantexp covers the exponent
+exclude	bid128_radix	radix() constant accessor — trivially 10; not a test-worthy operation
+exclude	bid128_sin	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_sinh	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_tan	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_tanh	trig/inverse-trig — not required by IEEE 754-2019 decimal
+exclude	bid128_tgamma	not an IEEE 754-2019 operation
+exclude	bid128_to_bid32	narrowing to other decimal width — out of scope (this library is decimal128 only)
+exclude	bid128_to_bid64	narrowing to other decimal width — out of scope (this library is decimal128 only)
+exclude	bid128_to_binary128	decimal→binary interchange conversion — out of scope
+exclude	bid128_to_binary32	decimal→binary interchange conversion — out of scope
+exclude	bid128_to_binary64	decimal→binary interchange conversion — out of scope
+exclude	bid128_to_binary80	decimal→binary interchange conversion — out of scope
+exclude	bid128_to_int16_ceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_floor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_int	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_rnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_rninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_xceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_xfloor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_xint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_xrnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int16_xrninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_ceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_floor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_int	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_rnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_rninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_xceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_xfloor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_xint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_xrnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int32_xrninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_ceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_floor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_int	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_rnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_rninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_xceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_xfloor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_xint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_xrnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_int8_xrninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_string	Intel's own text format (+cccE±q, +Inf, +NaN); our raw format differs only in sign and special-value spelling
+exclude	bid128_to_uint16_ceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_floor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_int	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_rnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_rninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_xceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_xfloor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_xint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_xrnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint16_xrninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_ceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_floor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_int	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_rnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_rninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_xceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_xfloor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_xint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_xrnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint32_xrninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_ceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_floor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_int	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_rnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_rninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_xceil	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_xfloor	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_xint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_xrnint	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
+exclude	bid128_to_uint8_xrninta	8/16/32-bit integer conversion — out of scope (int64 and uint64 are in scope)
