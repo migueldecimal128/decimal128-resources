@@ -910,7 +910,7 @@ java	wrapper	native	add1.txt	118	0
 java	wrapper	native	compare.txt	56	0
 java	wrapper	native	div1.txt	40	0
 java	wrapper	native	divide.txt	146	0
-java	wrapper	native	fits.txt	33	0
+java	wrapper	native	fits.txt	18	0
 java	wrapper	native	fma.txt	26	0
 java	wrapper	native	fma2.txt	45	0
 java	wrapper	native	formatstyle.txt	188	0
