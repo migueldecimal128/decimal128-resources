@@ -93,7 +93,6 @@ c	core	native	transcendental_compound.txt	1379	0
 c	core	native	transcendental_expm1.txt	19327	0
 c	core	native	transcendental_logexp.txt	44	0
 c	core	native	transcendental_logp1.txt	21290	0
-c	core	native	transcendental_pow.txt	426	0
 c	core	native	transcendental_pown.txt	94	0
 c	core	native	transcendental_pown_rootn.txt	634	0
 c	core	native	transcendental_rootn.txt	226	0
@@ -187,7 +186,6 @@ c	wrapper	native	transcendental_compound.txt	1379	0
 c	wrapper	native	transcendental_expm1.txt	19327	0
 c	wrapper	native	transcendental_logexp.txt	44	0
 c	wrapper	native	transcendental_logp1.txt	21290	0
-c	wrapper	native	transcendental_pow.txt	426	0
 c	wrapper	native	transcendental_pown.txt	94	0
 c	wrapper	native	transcendental_pown_rootn.txt	634	0
 c	wrapper	native	transcendental_rootn.txt	226	0
@@ -281,7 +279,6 @@ csharp	core	native	transcendental_compound.txt	1379	0
 csharp	core	native	transcendental_expm1.txt	19327	0
 csharp	core	native	transcendental_logexp.txt	44	0
 csharp	core	native	transcendental_logp1.txt	21290	0
-csharp	core	native	transcendental_pow.txt	426	0
 csharp	core	native	transcendental_pown.txt	94	0
 csharp	core	native	transcendental_pown_rootn.txt	634	0
 csharp	core	native	transcendental_rootn.txt	226	0
@@ -375,7 +372,6 @@ csharp	wrapper	native	transcendental_compound.txt	1379	0
 csharp	wrapper	native	transcendental_expm1.txt	19327	0
 csharp	wrapper	native	transcendental_logexp.txt	44	0
 csharp	wrapper	native	transcendental_logp1.txt	21290	0
-csharp	wrapper	native	transcendental_pow.txt	426	0
 csharp	wrapper	native	transcendental_pown.txt	94	0
 csharp	wrapper	native	transcendental_pown_rootn.txt	634	0
 csharp	wrapper	native	transcendental_rootn.txt	226	0
@@ -469,7 +465,6 @@ csharp-bid	core	native	transcendental_compound.txt	1379	0
 csharp-bid	core	native	transcendental_expm1.txt	19327	0
 csharp-bid	core	native	transcendental_logexp.txt	44	0
 csharp-bid	core	native	transcendental_logp1.txt	21290	0
-csharp-bid	core	native	transcendental_pow.txt	426	0
 csharp-bid	core	native	transcendental_pown.txt	94	0
 csharp-bid	core	native	transcendental_pown_rootn.txt	634	0
 csharp-bid	core	native	transcendental_rootn.txt	226	0
@@ -563,7 +558,6 @@ csharp-bid	wrapper	native	transcendental_compound.txt	1379	0
 csharp-bid	wrapper	native	transcendental_expm1.txt	19327	0
 csharp-bid	wrapper	native	transcendental_logexp.txt	44	0
 csharp-bid	wrapper	native	transcendental_logp1.txt	21290	0
-csharp-bid	wrapper	native	transcendental_pow.txt	426	0
 csharp-bid	wrapper	native	transcendental_pown.txt	94	0
 csharp-bid	wrapper	native	transcendental_pown_rootn.txt	634	0
 csharp-bid	wrapper	native	transcendental_rootn.txt	226	0
@@ -658,7 +652,6 @@ go	core	native	transcendental_expm1.txt	19327	0
 go	core	native	transcendental_large_n.txt	7619	0
 go	core	native	transcendental_logexp.txt	44	0
 go	core	native	transcendental_logp1.txt	21290	0
-go	core	native	transcendental_pow.txt	426	0
 go	core	native	transcendental_pown.txt	94	0
 go	core	native	transcendental_pown_rootn.txt	634	0
 go	core	native	transcendental_rootn.txt	226	0
@@ -753,7 +746,6 @@ go	wrapper	native	transcendental_expm1.txt	19327	0
 go	wrapper	native	transcendental_large_n.txt	7619	0
 go	wrapper	native	transcendental_logexp.txt	44	0
 go	wrapper	native	transcendental_logp1.txt	21290	0
-go	wrapper	native	transcendental_pow.txt	426	0
 go	wrapper	native	transcendental_pown.txt	94	0
 go	wrapper	native	transcendental_pown_rootn.txt	634	0
 go	wrapper	native	transcendental_rootn.txt	226	0
@@ -847,7 +839,6 @@ java	core	native	transcendental_compound.txt	1379	0
 java	core	native	transcendental_expm1.txt	19327	0
 java	core	native	transcendental_logexp.txt	44	0
 java	core	native	transcendental_logp1.txt	21290	0
-java	core	native	transcendental_pow.txt	426	0
 java	core	native	transcendental_pown.txt	94	0
 java	core	native	transcendental_pown_rootn.txt	634	0
 java	core	native	transcendental_rootn.txt	226	0
@@ -941,7 +932,6 @@ java	wrapper	native	transcendental_compound.txt	1379	0
 java	wrapper	native	transcendental_expm1.txt	19327	0
 java	wrapper	native	transcendental_logexp.txt	44	0
 java	wrapper	native	transcendental_logp1.txt	21290	0
-java	wrapper	native	transcendental_pow.txt	426	0
 java	wrapper	native	transcendental_pown.txt	94	0
 java	wrapper	native	transcendental_pown_rootn.txt	634	0
 java	wrapper	native	transcendental_rootn.txt	226	0
@@ -1035,7 +1025,6 @@ kotlin	core	native	transcendental_compound.txt	1379	0
 kotlin	core	native	transcendental_expm1.txt	19327	0
 kotlin	core	native	transcendental_logexp.txt	44	0
 kotlin	core	native	transcendental_logp1.txt	21290	0
-kotlin	core	native	transcendental_pow.txt	426	0
 kotlin	core	native	transcendental_pown.txt	94	0
 kotlin	core	native	transcendental_pown_rootn.txt	634	0
 kotlin	core	native	transcendental_rootn.txt	226	0
@@ -1129,7 +1118,6 @@ kotlin	wrapper	native	transcendental_compound.txt	1379	0
 kotlin	wrapper	native	transcendental_expm1.txt	19327	0
 kotlin	wrapper	native	transcendental_logexp.txt	44	0
 kotlin	wrapper	native	transcendental_logp1.txt	21290	0
-kotlin	wrapper	native	transcendental_pow.txt	426	0
 kotlin	wrapper	native	transcendental_pown.txt	94	0
 kotlin	wrapper	native	transcendental_pown_rootn.txt	634	0
 kotlin	wrapper	native	transcendental_rootn.txt	226	0
@@ -1223,7 +1211,6 @@ python	wrapper	native	transcendental_compound.txt	1379	0
 python	wrapper	native	transcendental_expm1.txt	19327	0
 python	wrapper	native	transcendental_logexp.txt	44	0
 python	wrapper	native	transcendental_logp1.txt	21290	0
-python	wrapper	native	transcendental_pow.txt	426	0
 python	wrapper	native	transcendental_pown.txt	94	0
 python	wrapper	native	transcendental_pown_rootn.txt	634	0
 python	wrapper	native	transcendental_rootn.txt	226	0
@@ -1318,7 +1305,6 @@ rust	core	native	transcendental_expm1.txt	19327	0
 rust	core	native	transcendental_large_n.txt	7619	0
 rust	core	native	transcendental_logexp.txt	44	0
 rust	core	native	transcendental_logp1.txt	21290	0
-rust	core	native	transcendental_pow.txt	426	0
 rust	core	native	transcendental_pown.txt	94	0
 rust	core	native	transcendental_pown_rootn.txt	634	0
 rust	core	native	transcendental_rootn.txt	226	0
@@ -1413,7 +1399,6 @@ rust	wrapper	native	transcendental_expm1.txt	19327	0
 rust	wrapper	native	transcendental_large_n.txt	7619	0
 rust	wrapper	native	transcendental_logexp.txt	44	0
 rust	wrapper	native	transcendental_logp1.txt	21290	0
-rust	wrapper	native	transcendental_pow.txt	426	0
 rust	wrapper	native	transcendental_pown.txt	94	0
 rust	wrapper	native	transcendental_pown_rootn.txt	634	0
 rust	wrapper	native	transcendental_rootn.txt	226	0
@@ -1470,7 +1455,7 @@ swift	core	fptest	Decimal-Rounding.fptest	196	0
 swift	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 swift	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 swift	core	fptest	Decimal-Underflow.fptest	1160	0
-swift	core	intel	readtest.in	27980	3266
+swift	core	intel	readtest.in	28149	3274
 swift	core	native	add.txt	22	0
 swift	core	native	add1.txt	118	0
 swift	core	native	compare.txt	56	0
@@ -1508,7 +1493,7 @@ swift	core	native	transcendental_expm1.txt	19327	0
 swift	core	native	transcendental_large_n.txt	7619	0
 swift	core	native	transcendental_logexp.txt	44	0
 swift	core	native	transcendental_logp1.txt	21290	0
-swift	core	native	transcendental_pow.txt	426	0
+swift	core	native	transcendental_pow.txt	2915	0
 swift	core	native	transcendental_pown.txt	94	0
 swift	core	native	transcendental_pown_rootn.txt	634	0
 swift	core	native	transcendental_rootn.txt	226	0
@@ -1565,7 +1550,7 @@ swift	wrapper	fptest	Decimal-Rounding.fptest	196	0
 swift	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 swift	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 swift	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-swift	wrapper	intel	readtest.in	27980	3266
+swift	wrapper	intel	readtest.in	28149	3274
 swift	wrapper	native	add.txt	22	0
 swift	wrapper	native	add1.txt	118	0
 swift	wrapper	native	compare.txt	56	0
@@ -1603,7 +1588,7 @@ swift	wrapper	native	transcendental_expm1.txt	19327	0
 swift	wrapper	native	transcendental_large_n.txt	7619	0
 swift	wrapper	native	transcendental_logexp.txt	44	0
 swift	wrapper	native	transcendental_logp1.txt	21290	0
-swift	wrapper	native	transcendental_pow.txt	426	0
+swift	wrapper	native	transcendental_pow.txt	2915	0
 swift	wrapper	native	transcendental_pown.txt	94	0
 swift	wrapper	native	transcendental_pown_rootn.txt	634	0
 swift	wrapper	native	transcendental_rootn.txt	226	0
@@ -1698,7 +1683,6 @@ zig	core	native	transcendental_expm1.txt	19327	0
 zig	core	native	transcendental_large_n.txt	7619	0
 zig	core	native	transcendental_logexp.txt	44	0
 zig	core	native	transcendental_logp1.txt	21290	0
-zig	core	native	transcendental_pow.txt	426	0
 zig	core	native	transcendental_pown.txt	94	0
 zig	core	native	transcendental_pown_rootn.txt	634	0
 zig	core	native	transcendental_rootn.txt	226	0
@@ -1793,7 +1777,6 @@ zig	wrapper	native	transcendental_expm1.txt	19327	0
 zig	wrapper	native	transcendental_large_n.txt	7619	0
 zig	wrapper	native	transcendental_logexp.txt	44	0
 zig	wrapper	native	transcendental_logp1.txt	21290	0
-zig	wrapper	native	transcendental_pow.txt	426	0
 zig	wrapper	native	transcendental_pown.txt	94	0
 zig	wrapper	native	transcendental_pown_rootn.txt	634	0
 zig	wrapper	native	transcendental_rootn.txt	226	0
