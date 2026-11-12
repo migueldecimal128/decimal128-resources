@@ -10,7 +10,7 @@ c	core	dectest	_754_2019.dectest	100	0
 c	core	dectest	decQuad.decTest	0	0
 c	core	dectest	dqAbs.decTest	74	4
 c	core	dectest	dqAdd.decTest	976	0
-c	core	dectest	dqBase.decTest	904	3
+c	core	dectest	dqBase.decTest	906	3
 c	core	dectest	dqCanonical.decTest	244	0
 c	core	dectest	dqClass.decTest	42	0
 c	core	dectest	dqCompare.decTest	657	0
@@ -104,7 +104,7 @@ c	wrapper	dectest	_754_2019.dectest	100	0
 c	wrapper	dectest	decQuad.decTest	0	0
 c	wrapper	dectest	dqAbs.decTest	74	4
 c	wrapper	dectest	dqAdd.decTest	976	0
-c	wrapper	dectest	dqBase.decTest	904	3
+c	wrapper	dectest	dqBase.decTest	906	3
 c	wrapper	dectest	dqCanonical.decTest	244	0
 c	wrapper	dectest	dqClass.decTest	42	0
 c	wrapper	dectest	dqCompare.decTest	657	0
@@ -198,7 +198,7 @@ csharp	core	dectest	_754_2019.dectest	100	0
 csharp	core	dectest	decQuad.decTest	0	0
 csharp	core	dectest	dqAbs.decTest	74	4
 csharp	core	dectest	dqAdd.decTest	976	0
-csharp	core	dectest	dqBase.decTest	904	3
+csharp	core	dectest	dqBase.decTest	906	3
 csharp	core	dectest	dqCanonical.decTest	244	0
 csharp	core	dectest	dqClass.decTest	42	0
 csharp	core	dectest	dqCompare.decTest	657	0
@@ -292,7 +292,7 @@ csharp	wrapper	dectest	_754_2019.dectest	100	0
 csharp	wrapper	dectest	decQuad.decTest	0	0
 csharp	wrapper	dectest	dqAbs.decTest	74	4
 csharp	wrapper	dectest	dqAdd.decTest	976	0
-csharp	wrapper	dectest	dqBase.decTest	904	3
+csharp	wrapper	dectest	dqBase.decTest	906	3
 csharp	wrapper	dectest	dqCanonical.decTest	244	0
 csharp	wrapper	dectest	dqClass.decTest	42	0
 csharp	wrapper	dectest	dqCompare.decTest	657	0
@@ -386,7 +386,7 @@ csharp-bid	core	dectest	_754_2019.dectest	100	0
 csharp-bid	core	dectest	decQuad.decTest	0	0
 csharp-bid	core	dectest	dqAbs.decTest	74	4
 csharp-bid	core	dectest	dqAdd.decTest	976	0
-csharp-bid	core	dectest	dqBase.decTest	904	3
+csharp-bid	core	dectest	dqBase.decTest	906	3
 csharp-bid	core	dectest	dqCanonical.decTest	244	0
 csharp-bid	core	dectest	dqClass.decTest	42	0
 csharp-bid	core	dectest	dqCompare.decTest	657	0
@@ -480,7 +480,7 @@ csharp-bid	wrapper	dectest	_754_2019.dectest	100	0
 csharp-bid	wrapper	dectest	decQuad.decTest	0	0
 csharp-bid	wrapper	dectest	dqAbs.decTest	74	4
 csharp-bid	wrapper	dectest	dqAdd.decTest	976	0
-csharp-bid	wrapper	dectest	dqBase.decTest	904	3
+csharp-bid	wrapper	dectest	dqBase.decTest	906	3
 csharp-bid	wrapper	dectest	dqCanonical.decTest	244	0
 csharp-bid	wrapper	dectest	dqClass.decTest	42	0
 csharp-bid	wrapper	dectest	dqCompare.decTest	657	0
@@ -574,7 +574,7 @@ go	core	dectest	_754_2019.dectest	100	0
 go	core	dectest	decQuad.decTest	0	0
 go	core	dectest	dqAbs.decTest	74	4
 go	core	dectest	dqAdd.decTest	976	0
-go	core	dectest	dqBase.decTest	904	3
+go	core	dectest	dqBase.decTest	906	3
 go	core	dectest	dqCanonical.decTest	244	0
 go	core	dectest	dqClass.decTest	42	0
 go	core	dectest	dqCompare.decTest	657	0
@@ -669,7 +669,7 @@ go	wrapper	dectest	_754_2019.dectest	100	0
 go	wrapper	dectest	decQuad.decTest	0	0
 go	wrapper	dectest	dqAbs.decTest	74	4
 go	wrapper	dectest	dqAdd.decTest	976	0
-go	wrapper	dectest	dqBase.decTest	904	3
+go	wrapper	dectest	dqBase.decTest	906	3
 go	wrapper	dectest	dqCanonical.decTest	244	0
 go	wrapper	dectest	dqClass.decTest	42	0
 go	wrapper	dectest	dqCompare.decTest	657	0
@@ -764,7 +764,7 @@ java	core	dectest	_754_2019.dectest	100	0
 java	core	dectest	decQuad.decTest	0	0
 java	core	dectest	dqAbs.decTest	74	4
 java	core	dectest	dqAdd.decTest	976	0
-java	core	dectest	dqBase.decTest	904	3
+java	core	dectest	dqBase.decTest	906	3
 java	core	dectest	dqCanonical.decTest	244	0
 java	core	dectest	dqClass.decTest	42	0
 java	core	dectest	dqCompare.decTest	657	0
@@ -858,7 +858,7 @@ java	wrapper	dectest	_754_2019.dectest	100	0
 java	wrapper	dectest	decQuad.decTest	0	0
 java	wrapper	dectest	dqAbs.decTest	74	4
 java	wrapper	dectest	dqAdd.decTest	976	0
-java	wrapper	dectest	dqBase.decTest	904	3
+java	wrapper	dectest	dqBase.decTest	906	3
 java	wrapper	dectest	dqCanonical.decTest	244	0
 java	wrapper	dectest	dqClass.decTest	42	0
 java	wrapper	dectest	dqCompare.decTest	657	0
@@ -952,7 +952,7 @@ kotlin	core	dectest	_754_2019.dectest	100	0
 kotlin	core	dectest	decQuad.decTest	0	0
 kotlin	core	dectest	dqAbs.decTest	74	4
 kotlin	core	dectest	dqAdd.decTest	976	0
-kotlin	core	dectest	dqBase.decTest	904	3
+kotlin	core	dectest	dqBase.decTest	906	3
 kotlin	core	dectest	dqCanonical.decTest	244	0
 kotlin	core	dectest	dqClass.decTest	42	0
 kotlin	core	dectest	dqCompare.decTest	657	0
@@ -1046,7 +1046,7 @@ kotlin	wrapper	dectest	_754_2019.dectest	100	0
 kotlin	wrapper	dectest	decQuad.decTest	0	0
 kotlin	wrapper	dectest	dqAbs.decTest	74	4
 kotlin	wrapper	dectest	dqAdd.decTest	976	0
-kotlin	wrapper	dectest	dqBase.decTest	904	3
+kotlin	wrapper	dectest	dqBase.decTest	906	3
 kotlin	wrapper	dectest	dqCanonical.decTest	244	0
 kotlin	wrapper	dectest	dqClass.decTest	42	0
 kotlin	wrapper	dectest	dqCompare.decTest	657	0
@@ -1140,7 +1140,7 @@ python	wrapper	dectest	_754_2019.dectest	100	0
 python	wrapper	dectest	decQuad.decTest	0	0
 python	wrapper	dectest	dqAbs.decTest	74	4
 python	wrapper	dectest	dqAdd.decTest	976	0
-python	wrapper	dectest	dqBase.decTest	904	3
+python	wrapper	dectest	dqBase.decTest	906	3
 python	wrapper	dectest	dqCanonical.decTest	244	0
 python	wrapper	dectest	dqClass.decTest	42	0
 python	wrapper	dectest	dqCompare.decTest	657	0
@@ -1234,7 +1234,7 @@ rust	core	dectest	_754_2019.dectest	100	0
 rust	core	dectest	decQuad.decTest	0	0
 rust	core	dectest	dqAbs.decTest	74	4
 rust	core	dectest	dqAdd.decTest	976	0
-rust	core	dectest	dqBase.decTest	904	3
+rust	core	dectest	dqBase.decTest	906	3
 rust	core	dectest	dqCanonical.decTest	244	0
 rust	core	dectest	dqClass.decTest	42	0
 rust	core	dectest	dqCompare.decTest	657	0
@@ -1329,7 +1329,7 @@ rust	wrapper	dectest	_754_2019.dectest	100	0
 rust	wrapper	dectest	decQuad.decTest	0	0
 rust	wrapper	dectest	dqAbs.decTest	74	4
 rust	wrapper	dectest	dqAdd.decTest	976	0
-rust	wrapper	dectest	dqBase.decTest	904	3
+rust	wrapper	dectest	dqBase.decTest	906	3
 rust	wrapper	dectest	dqCanonical.decTest	244	0
 rust	wrapper	dectest	dqClass.decTest	42	0
 rust	wrapper	dectest	dqCompare.decTest	657	0
@@ -1424,7 +1424,7 @@ swift	core	dectest	_754_2019.dectest	100	0
 swift	core	dectest	decQuad.decTest	0	0
 swift	core	dectest	dqAbs.decTest	74	4
 swift	core	dectest	dqAdd.decTest	976	0
-swift	core	dectest	dqBase.decTest	904	3
+swift	core	dectest	dqBase.decTest	906	3
 swift	core	dectest	dqCanonical.decTest	244	0
 swift	core	dectest	dqClass.decTest	42	0
 swift	core	dectest	dqCompare.decTest	657	0
@@ -1519,7 +1519,7 @@ swift	wrapper	dectest	_754_2019.dectest	100	0
 swift	wrapper	dectest	decQuad.decTest	0	0
 swift	wrapper	dectest	dqAbs.decTest	74	4
 swift	wrapper	dectest	dqAdd.decTest	976	0
-swift	wrapper	dectest	dqBase.decTest	904	3
+swift	wrapper	dectest	dqBase.decTest	906	3
 swift	wrapper	dectest	dqCanonical.decTest	244	0
 swift	wrapper	dectest	dqClass.decTest	42	0
 swift	wrapper	dectest	dqCompare.decTest	657	0
@@ -1614,7 +1614,7 @@ zig	core	dectest	_754_2019.dectest	100	0
 zig	core	dectest	decQuad.decTest	0	0
 zig	core	dectest	dqAbs.decTest	74	4
 zig	core	dectest	dqAdd.decTest	976	0
-zig	core	dectest	dqBase.decTest	904	3
+zig	core	dectest	dqBase.decTest	906	3
 zig	core	dectest	dqCanonical.decTest	244	0
 zig	core	dectest	dqClass.decTest	42	0
 zig	core	dectest	dqCompare.decTest	657	0
@@ -1709,7 +1709,7 @@ zig	wrapper	dectest	_754_2019.dectest	100	0
 zig	wrapper	dectest	decQuad.decTest	0	0
 zig	wrapper	dectest	dqAbs.decTest	74	4
 zig	wrapper	dectest	dqAdd.decTest	976	0
-zig	wrapper	dectest	dqBase.decTest	904	3
+zig	wrapper	dectest	dqBase.decTest	906	3
 zig	wrapper	dectest	dqCanonical.decTest	244	0
 zig	wrapper	dectest	dqClass.decTest	42	0
 zig	wrapper	dectest	dqCompare.decTest	657	0

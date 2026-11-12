@@ -209,11 +209,20 @@ def applies(port, runner, line_port, line_runner):
 # ---------------------------------------------------------------------------
 
 def strip_comment(line):
-    # Rosetta.md §8: `--` starts a comment. (Not quote-aware yet: the two dqBase
-    # vectors with `--` inside a quoted operand drop here in every port;
-    # RosettaHarnessAlignmentWorkOrder.md Phase 4.)
-    i = line.find("--")
-    return line[:i] if i >= 0 else line
+    # Rosetta.md §8: `--` starts a comment, but not inside a single- or
+    # double-quoted operand (dqbas504 toSci '--1', dqbas555 toSci '1E--1';
+    # RosettaHarnessAlignmentWorkOrder.md Phase 4). A doubled quote inside a
+    # quoted operand toggles twice, so it needs no special case.
+    quote = None
+    for i, c in enumerate(line):
+        if quote is None:
+            if c in "'\"":
+                quote = c
+            elif line.startswith("--", i):
+                return line[:i]
+        elif c == quote:
+            quote = None
+    return line
 
 
 def _quoted_operands(text, maximum):
