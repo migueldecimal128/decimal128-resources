@@ -56,6 +56,7 @@ include	bid128_nearbyint	d128_roundToIntegral_ctx
 include	bid128_negate	d128_negate
 include	bid128_nextdown	d128_nextDown_ctxnull
 include	bid128_nextup	d128_nextUp_ctxnull
+include	bid128_pow	d128_pow_ctx
 include	bid128_quantexp	d128_quantexp
 include	bid128_quantize	d128_quantize_ctx
 include	bid128_quiet_equal	d128_isEqual_ctx
@@ -138,7 +139,6 @@ exclude	bid128_modf	C99 <math.h> helper with no IEEE 754 counterpart in the core
 exclude	bid128_nan	special-value constructor — out of scope (library builds these directly)
 exclude	bid128_nextafter	nextafter/nexttoward — declined (not in IEEE 754-2019; see decision log)
 exclude	bid128_nexttoward	nextafter/nexttoward — declined (not in IEEE 754-2019; see decision log)
-exclude	bid128_pow	not yet passing (134/168 in Phase 0): inexact-result cohort (punchlist: pow drops a trailing zero), x < 0 with a huge integer y (punchlist), and Intel conventions; include when fixed
 exclude	bid128_quantum	754 quantum as a decimal (1E q) — not implemented; quantexp covers the exponent
 exclude	bid128_radix	radix() constant accessor — trivially 10; not a test-worthy operation
 exclude	bid128_sin	trig/inverse-trig — not required by IEEE 754-2019 decimal

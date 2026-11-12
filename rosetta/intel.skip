@@ -15,6 +15,10 @@
 =minmax-qnan	maxnum/maxnum_mag/minnum_mag: a canonical -qNaN(0) case that matches neither Intel's rule nor GDAS
 =from-string-malformed	from_string, malformed string: we return NaN and raise invalid (conversion syntax); Intel returns NaN with no flag, and reads the valid prefix of a string with trailing garbage ("1.1E-2E" → 0.011)
 =longint32	lrint/lround with a 32-bit `long` result: a 32-bit integer conversion, out of scope like the excluded bid128_to_int32_* ops (the longintsize=64 lines run)
+=pow-exact-inexact	pow: Intel flags an exact result inexact (pow(-1, -3) = -1.0 with flag 20); the result is exact
+=pow-short-result	pow: Intel's expected value has 20 digits, not 34 (pow(-0.875, -3))
+=pow-zero-cohort	pow: a zero power from a non-canonical (zero) x and y = 1.0: Intel gives exponent 0; we keep pown's / the GDAS preferred exponent y·Q(x)
+=pow-malformed	pow: a one-operand line (Intel readtest.c splits by token count); not a valid pow case
 
 attr	longint32	bid128_lrint,bid128_lround	longintsize=32
 line	fma-qnan	bid128_fma 0 [7f06536efdedf3ef,a00d0c0a84122060] [0008101000000000,8c6de2c3707e636c] [fd1f7eefdffff377,023b4c28d1de82a0] [fc000000000000000000000000000000] 01
@@ -61,3 +65,11 @@ line	from-string-malformed	bid128_from_string 0 +INFINITYi [7c000000000000000000
 line	from-string-malformed	bid128_from_string 0 INFi [7c000000000000000000000000000000] 00
 line	from-string-malformed	bid128_from_string 0 SNANi [7e000000000000000000000000000000] 00
 line	from-string-malformed	bid128_from_string 0 INFINITYi [7c000000000000000000000000000000] 00
+line	pow-exact-inexact	bid128_pow 0 -1 -3 -1.0 20
+line	pow-short-result	bid128_pow 0 -0.875 -3 -1.4927113702623906706 20
+line	pow-zero-cohort	bid128_pow 0 [0001ed09bead87c0378d8e64ffffffff] [303e000000000000000000000000000a] [30400000000000000000000000000000] 00
+line	pow-zero-cohort	bid128_pow 0 [6003b75d7734cd9e1234567890123456] [303e000000000000000000000000000a] [30400000000000000000000000000000] 00
+line	pow-zero-cohort	bid128_pow 0 [69dbb75d7734cd9e1234567890123456] [303e000000000000000000000000000a] [30400000000000000000000000000000] 00
+line	pow-zero-cohort	bid128_pow 0 [e003b75d7734cd9e1234567890123456] [303e000000000000000000000000000a] [b0400000000000000000000000000000] 00
+line	pow-zero-cohort	bid128_pow 0 [e9dbb75d7734cd9e1234567890123456] [303e000000000000000000000000000a] [b0400000000000000000000000000000] 00
+line	pow-malformed	bid128_pow 0 [7c00314dc6448d9338c15b0a00000000] [7c000000000000000000000000000000] 00

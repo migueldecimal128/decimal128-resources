@@ -27,3 +27,16 @@ java:wrapper	intel	bid128_to_uint64_xint	no public unsigned type: Java exposes s
 java:wrapper	intel	bid128_to_uint64_xrnint	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
 java:wrapper	intel	bid128_to_uint64_xrninta	no public unsigned type: Java exposes signed integer conversions only (WrapperLayer.md §4.8)
 java:wrapper	native	d128_fitsUInt64	no public unsigned type: Java exposes fitsInLong only (WrapperLayer.md §4.8)
+
+# TEMPORARY (PowHugeIntegerExponentWorkOrder.md Phase 2): bid128_pow is included
+# for every port; its huge-integer-y lines need the fix. Each line goes when its
+# port takes the fix (Phase 3).
+c	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
+python	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
+rust	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
+zig	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
+go	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
+java	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
+kotlin	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
+csharp	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
+csharp-bid	intel	bid128_pow	TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
