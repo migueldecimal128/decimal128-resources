@@ -40,16 +40,3 @@ java             transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31
 kotlin           transcendental_large_n.txt        n is a 32-bit Int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
 csharp           transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
 csharp-bid       transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
-
-# remainder.txt (RemainderExactWorkOrder.md RX-7): remainderTrunc / remainderNear exact for
-# every finite operand pair. TEMPORARY: each line goes with that port's Phase 3 commit;
-# Swift runs it since Phase 1.
-c                remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
-python           remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
-rust             remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
-zig              remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
-go               remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
-java             remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
-kotlin           remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
-csharp           remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
-csharp-bid       remainder.txt                     remainder not yet exact in this port (RemainderExactWorkOrder.md Phase 3; temporary)
