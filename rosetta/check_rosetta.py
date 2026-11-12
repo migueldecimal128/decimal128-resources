@@ -24,7 +24,7 @@ native files, NativeCorpusExclusionWorkOrder.md). Fails (exit 1) when:
 
   runner.exclude
   - unknown port, runner or source; no reason; a token the source's map does
-    not include; a repeated line.
+    not include (native: an op no native line has); a repeated line.
 
   corpus
   - a line of an included operator has a shape no runner can parse.
@@ -181,7 +181,10 @@ def check_shared(root):
             errors.append(f"{where}: unknown port {port!r}")
         elif runner and runner not in gen.PORT_RUNNERS[port]:
             errors.append(f"{where}: {port} has no {runner!r} runner")
-        if src not in gen.MAPPED:
+        if src == "native":
+            if tok not in corpus.native_tokens:
+                errors.append(f"{where}: {tok} is the op of no native line")
+        elif src not in gen.MAPPED:
             errors.append(f"{where}: unknown source {src!r}")
         elif tok not in corpus.maps[src].include:
             errors.append(f"{where}: {tok} is not included by {src}.map")

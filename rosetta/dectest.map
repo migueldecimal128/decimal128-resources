@@ -47,7 +47,7 @@ include	minus	d128_negate
 include	multiply	d128_multiply_ctx
 include	nextminus	d128_nextDown_ctxnull
 include	nextplus	d128_nextUp_ctxnull
-include	quantize	d128_quantize_ctxnull
+include	quantize	d128_quantize_ctx
 include	reduce	d128_stripTrailingZeros
 include	remainder	d128_remainderTrunc_ctx
 include	remaindernear	d128_remainderNear_ctx

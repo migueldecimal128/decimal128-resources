@@ -8,7 +8,8 @@ port x runner x source x file:
 
 `cases` is every case the runner parses from the file after the scope filters,
 the operator map (<source>.map) and the per-runner exclusions (runner.exclude,
-native.exclude). `skipped` is how many of those the per-line skips
+by operator token, or for native by canonical op name; native.exclude, by
+file). `skipped` is how many of those the per-line skips
 (<source>.skip) drop. A runner passes a file when it reports
 passed == cases - skipped, skipped as given, failed == 0.
 
@@ -372,14 +373,17 @@ class Corpus:
                 with open(path, encoding="utf-8", errors="replace") as f:
                     text = f.read()
                 self.cases[(s, name)] = self._cases(s, name, text)
-        self.native_counts = {}
+        # Per native file: the op token (canonical op name) of each active line.
+        self.native_ops = {}
+        self.native_tokens = set()
         for name in self.native_index:
             path = os.path.join(root, "native", name)
             if os.path.isfile(path):
                 with open(path, encoding="utf-8") as f:
-                    self.native_counts[name] = sum(
-                        1 for line in f
-                        if line.strip() and not line.strip().startswith("//"))
+                    ops = [line.split()[0] for line in f
+                           if line.strip() and not line.strip().startswith("//")]
+                self.native_ops[name] = ops
+                self.native_tokens.update(ops)
 
     def _cases(self, source, name, text):
         m = self.maps[source]
@@ -425,8 +429,10 @@ class Corpus:
                         cs = [c for c in self.cases.get((s, name), []) if c[0] not in gone]
                         out.append((port, runner, s, name, len(cs),
                                     sum(1 for c in cs if c[1] is not None)))
+                gone = self.excluded_tokens(port, runner, "native")
                 for name in self.native_files(port, runner):
-                    out.append((port, runner, "native", name, self.native_counts.get(name, 0), 0))
+                    ops = self.native_ops.get(name, [])
+                    out.append((port, runner, "native", name, sum(1 for o in ops if o not in gone), 0))
         return out
 
 

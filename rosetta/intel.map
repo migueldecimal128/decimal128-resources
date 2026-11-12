@@ -57,7 +57,7 @@ include	bid128_negate	d128_negate
 include	bid128_nextdown	d128_nextDown_ctxnull
 include	bid128_nextup	d128_nextUp_ctxnull
 include	bid128_quantexp	d128_quantexp
-include	bid128_quantize	d128_quantize_ctxnull
+include	bid128_quantize	d128_quantize_ctx
 include	bid128_quiet_equal	d128_isEqual_ctx
 include	bid128_quiet_greater	d128_isGreater_ctx
 include	bid128_quiet_greater_equal	d128_isGreaterEqual_ctx
