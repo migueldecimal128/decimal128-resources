@@ -40,16 +40,3 @@ java             transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31
 kotlin           transcendental_large_n.txt        n is a 32-bit Int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
 csharp           transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
 csharp-bid       transcendental_large_n.txt        n is a 32-bit int: |n| > 2^31 is unreachable (PownLargeNWorkOrder.md LN-1)
-
-# TEMPORARY (PowHugeIntegerExponentWorkOrder.md Phase 2): the HY-7 block in
-# transcendental_pow.txt needs the huge-integer-y fix; each line goes when its port
-# takes the fix (Phase 3). Port-wide, so the net11 runners skip the file too.
-c                transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
-python           transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
-rust             transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
-zig              transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
-go               transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
-java             transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
-kotlin           transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
-csharp           transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
-csharp-bid       transcendental_pow.txt            TEMPORARY: pow huge-integer-y fix not yet in this port (PowHugeIntegerExponentWorkOrder.md Phase 3)
