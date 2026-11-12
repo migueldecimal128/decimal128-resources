@@ -56,7 +56,7 @@ c	core	fptest	Decimal-Rounding.fptest	196	0
 c	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 c	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 c	core	fptest	Decimal-Underflow.fptest	1160	0
-c	core	intel	readtest.in	27980	3266
+c	core	intel	readtest.in	28149	3274
 c	core	native	add.txt	22	0
 c	core	native	add1.txt	118	0
 c	core	native	compare.txt	56	0
@@ -93,6 +93,7 @@ c	core	native	transcendental_compound.txt	1379	0
 c	core	native	transcendental_expm1.txt	19327	0
 c	core	native	transcendental_logexp.txt	44	0
 c	core	native	transcendental_logp1.txt	21290	0
+c	core	native	transcendental_pow.txt	2915	0
 c	core	native	transcendental_pown.txt	94	0
 c	core	native	transcendental_pown_rootn.txt	634	0
 c	core	native	transcendental_rootn.txt	226	0
@@ -149,7 +150,7 @@ c	wrapper	fptest	Decimal-Rounding.fptest	196	0
 c	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 c	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 c	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-c	wrapper	intel	readtest.in	27980	3266
+c	wrapper	intel	readtest.in	28149	3274
 c	wrapper	native	add.txt	22	0
 c	wrapper	native	add1.txt	118	0
 c	wrapper	native	compare.txt	56	0
@@ -186,6 +187,7 @@ c	wrapper	native	transcendental_compound.txt	1379	0
 c	wrapper	native	transcendental_expm1.txt	19327	0
 c	wrapper	native	transcendental_logexp.txt	44	0
 c	wrapper	native	transcendental_logp1.txt	21290	0
+c	wrapper	native	transcendental_pow.txt	2915	0
 c	wrapper	native	transcendental_pown.txt	94	0
 c	wrapper	native	transcendental_pown_rootn.txt	634	0
 c	wrapper	native	transcendental_rootn.txt	226	0
@@ -242,7 +244,7 @@ csharp	core	fptest	Decimal-Rounding.fptest	196	0
 csharp	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 csharp	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 csharp	core	fptest	Decimal-Underflow.fptest	1160	0
-csharp	core	intel	readtest.in	27980	3266
+csharp	core	intel	readtest.in	28149	3274
 csharp	core	native	add.txt	22	0
 csharp	core	native	add1.txt	118	0
 csharp	core	native	compare.txt	56	0
@@ -279,6 +281,7 @@ csharp	core	native	transcendental_compound.txt	1379	0
 csharp	core	native	transcendental_expm1.txt	19327	0
 csharp	core	native	transcendental_logexp.txt	44	0
 csharp	core	native	transcendental_logp1.txt	21290	0
+csharp	core	native	transcendental_pow.txt	2915	0
 csharp	core	native	transcendental_pown.txt	94	0
 csharp	core	native	transcendental_pown_rootn.txt	634	0
 csharp	core	native	transcendental_rootn.txt	226	0
@@ -335,7 +338,7 @@ csharp	wrapper	fptest	Decimal-Rounding.fptest	196	0
 csharp	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 csharp	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 csharp	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-csharp	wrapper	intel	readtest.in	27980	3266
+csharp	wrapper	intel	readtest.in	28149	3274
 csharp	wrapper	native	add.txt	22	0
 csharp	wrapper	native	add1.txt	118	0
 csharp	wrapper	native	compare.txt	56	0
@@ -372,6 +375,7 @@ csharp	wrapper	native	transcendental_compound.txt	1379	0
 csharp	wrapper	native	transcendental_expm1.txt	19327	0
 csharp	wrapper	native	transcendental_logexp.txt	44	0
 csharp	wrapper	native	transcendental_logp1.txt	21290	0
+csharp	wrapper	native	transcendental_pow.txt	2915	0
 csharp	wrapper	native	transcendental_pown.txt	94	0
 csharp	wrapper	native	transcendental_pown_rootn.txt	634	0
 csharp	wrapper	native	transcendental_rootn.txt	226	0
@@ -428,7 +432,7 @@ csharp-bid	core	fptest	Decimal-Rounding.fptest	196	0
 csharp-bid	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 csharp-bid	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 csharp-bid	core	fptest	Decimal-Underflow.fptest	1160	0
-csharp-bid	core	intel	readtest.in	27980	3266
+csharp-bid	core	intel	readtest.in	28149	3274
 csharp-bid	core	native	add.txt	22	0
 csharp-bid	core	native	add1.txt	118	0
 csharp-bid	core	native	compare.txt	56	0
@@ -465,6 +469,7 @@ csharp-bid	core	native	transcendental_compound.txt	1379	0
 csharp-bid	core	native	transcendental_expm1.txt	19327	0
 csharp-bid	core	native	transcendental_logexp.txt	44	0
 csharp-bid	core	native	transcendental_logp1.txt	21290	0
+csharp-bid	core	native	transcendental_pow.txt	2915	0
 csharp-bid	core	native	transcendental_pown.txt	94	0
 csharp-bid	core	native	transcendental_pown_rootn.txt	634	0
 csharp-bid	core	native	transcendental_rootn.txt	226	0
@@ -521,7 +526,7 @@ csharp-bid	wrapper	fptest	Decimal-Rounding.fptest	196	0
 csharp-bid	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 csharp-bid	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 csharp-bid	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-csharp-bid	wrapper	intel	readtest.in	27980	3266
+csharp-bid	wrapper	intel	readtest.in	28149	3274
 csharp-bid	wrapper	native	add.txt	22	0
 csharp-bid	wrapper	native	add1.txt	118	0
 csharp-bid	wrapper	native	compare.txt	56	0
@@ -558,6 +563,7 @@ csharp-bid	wrapper	native	transcendental_compound.txt	1379	0
 csharp-bid	wrapper	native	transcendental_expm1.txt	19327	0
 csharp-bid	wrapper	native	transcendental_logexp.txt	44	0
 csharp-bid	wrapper	native	transcendental_logp1.txt	21290	0
+csharp-bid	wrapper	native	transcendental_pow.txt	2915	0
 csharp-bid	wrapper	native	transcendental_pown.txt	94	0
 csharp-bid	wrapper	native	transcendental_pown_rootn.txt	634	0
 csharp-bid	wrapper	native	transcendental_rootn.txt	226	0
@@ -614,7 +620,7 @@ go	core	fptest	Decimal-Rounding.fptest	196	0
 go	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 go	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 go	core	fptest	Decimal-Underflow.fptest	1160	0
-go	core	intel	readtest.in	27980	3266
+go	core	intel	readtest.in	28149	3274
 go	core	native	add.txt	22	0
 go	core	native	add1.txt	118	0
 go	core	native	compare.txt	56	0
@@ -652,6 +658,7 @@ go	core	native	transcendental_expm1.txt	19327	0
 go	core	native	transcendental_large_n.txt	7619	0
 go	core	native	transcendental_logexp.txt	44	0
 go	core	native	transcendental_logp1.txt	21290	0
+go	core	native	transcendental_pow.txt	2915	0
 go	core	native	transcendental_pown.txt	94	0
 go	core	native	transcendental_pown_rootn.txt	634	0
 go	core	native	transcendental_rootn.txt	226	0
@@ -708,7 +715,7 @@ go	wrapper	fptest	Decimal-Rounding.fptest	196	0
 go	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 go	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 go	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-go	wrapper	intel	readtest.in	27980	3266
+go	wrapper	intel	readtest.in	28149	3274
 go	wrapper	native	add.txt	22	0
 go	wrapper	native	add1.txt	118	0
 go	wrapper	native	compare.txt	56	0
@@ -746,6 +753,7 @@ go	wrapper	native	transcendental_expm1.txt	19327	0
 go	wrapper	native	transcendental_large_n.txt	7619	0
 go	wrapper	native	transcendental_logexp.txt	44	0
 go	wrapper	native	transcendental_logp1.txt	21290	0
+go	wrapper	native	transcendental_pow.txt	2915	0
 go	wrapper	native	transcendental_pown.txt	94	0
 go	wrapper	native	transcendental_pown_rootn.txt	634	0
 go	wrapper	native	transcendental_rootn.txt	226	0
@@ -802,7 +810,7 @@ java	core	fptest	Decimal-Rounding.fptest	196	0
 java	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 java	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 java	core	fptest	Decimal-Underflow.fptest	1160	0
-java	core	intel	readtest.in	27980	3266
+java	core	intel	readtest.in	28149	3274
 java	core	native	add.txt	22	0
 java	core	native	add1.txt	118	0
 java	core	native	compare.txt	56	0
@@ -839,6 +847,7 @@ java	core	native	transcendental_compound.txt	1379	0
 java	core	native	transcendental_expm1.txt	19327	0
 java	core	native	transcendental_logexp.txt	44	0
 java	core	native	transcendental_logp1.txt	21290	0
+java	core	native	transcendental_pow.txt	2915	0
 java	core	native	transcendental_pown.txt	94	0
 java	core	native	transcendental_pown_rootn.txt	634	0
 java	core	native	transcendental_rootn.txt	226	0
@@ -895,7 +904,7 @@ java	wrapper	fptest	Decimal-Rounding.fptest	196	0
 java	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 java	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 java	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-java	wrapper	intel	readtest.in	22256	3266
+java	wrapper	intel	readtest.in	22425	3274
 java	wrapper	native	add.txt	22	0
 java	wrapper	native	add1.txt	118	0
 java	wrapper	native	compare.txt	56	0
@@ -932,6 +941,7 @@ java	wrapper	native	transcendental_compound.txt	1379	0
 java	wrapper	native	transcendental_expm1.txt	19327	0
 java	wrapper	native	transcendental_logexp.txt	44	0
 java	wrapper	native	transcendental_logp1.txt	21290	0
+java	wrapper	native	transcendental_pow.txt	2915	0
 java	wrapper	native	transcendental_pown.txt	94	0
 java	wrapper	native	transcendental_pown_rootn.txt	634	0
 java	wrapper	native	transcendental_rootn.txt	226	0
@@ -988,7 +998,7 @@ kotlin	core	fptest	Decimal-Rounding.fptest	196	0
 kotlin	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 kotlin	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 kotlin	core	fptest	Decimal-Underflow.fptest	1160	0
-kotlin	core	intel	readtest.in	27980	3266
+kotlin	core	intel	readtest.in	28149	3274
 kotlin	core	native	add.txt	22	0
 kotlin	core	native	add1.txt	118	0
 kotlin	core	native	compare.txt	56	0
@@ -1025,6 +1035,7 @@ kotlin	core	native	transcendental_compound.txt	1379	0
 kotlin	core	native	transcendental_expm1.txt	19327	0
 kotlin	core	native	transcendental_logexp.txt	44	0
 kotlin	core	native	transcendental_logp1.txt	21290	0
+kotlin	core	native	transcendental_pow.txt	2915	0
 kotlin	core	native	transcendental_pown.txt	94	0
 kotlin	core	native	transcendental_pown_rootn.txt	634	0
 kotlin	core	native	transcendental_rootn.txt	226	0
@@ -1081,7 +1092,7 @@ kotlin	wrapper	fptest	Decimal-Rounding.fptest	196	0
 kotlin	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 kotlin	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 kotlin	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-kotlin	wrapper	intel	readtest.in	27980	3266
+kotlin	wrapper	intel	readtest.in	28149	3274
 kotlin	wrapper	native	add.txt	22	0
 kotlin	wrapper	native	add1.txt	118	0
 kotlin	wrapper	native	compare.txt	56	0
@@ -1118,6 +1129,7 @@ kotlin	wrapper	native	transcendental_compound.txt	1379	0
 kotlin	wrapper	native	transcendental_expm1.txt	19327	0
 kotlin	wrapper	native	transcendental_logexp.txt	44	0
 kotlin	wrapper	native	transcendental_logp1.txt	21290	0
+kotlin	wrapper	native	transcendental_pow.txt	2915	0
 kotlin	wrapper	native	transcendental_pown.txt	94	0
 kotlin	wrapper	native	transcendental_pown_rootn.txt	634	0
 kotlin	wrapper	native	transcendental_rootn.txt	226	0
@@ -1174,7 +1186,7 @@ python	wrapper	fptest	Decimal-Rounding.fptest	196	0
 python	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 python	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 python	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-python	wrapper	intel	readtest.in	27980	3266
+python	wrapper	intel	readtest.in	28149	3274
 python	wrapper	native	add.txt	22	0
 python	wrapper	native	add1.txt	118	0
 python	wrapper	native	compare.txt	56	0
@@ -1211,6 +1223,7 @@ python	wrapper	native	transcendental_compound.txt	1379	0
 python	wrapper	native	transcendental_expm1.txt	19327	0
 python	wrapper	native	transcendental_logexp.txt	44	0
 python	wrapper	native	transcendental_logp1.txt	21290	0
+python	wrapper	native	transcendental_pow.txt	2915	0
 python	wrapper	native	transcendental_pown.txt	94	0
 python	wrapper	native	transcendental_pown_rootn.txt	634	0
 python	wrapper	native	transcendental_rootn.txt	226	0
@@ -1267,7 +1280,7 @@ rust	core	fptest	Decimal-Rounding.fptest	196	0
 rust	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 rust	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 rust	core	fptest	Decimal-Underflow.fptest	1160	0
-rust	core	intel	readtest.in	27980	3266
+rust	core	intel	readtest.in	28149	3274
 rust	core	native	add.txt	22	0
 rust	core	native	add1.txt	118	0
 rust	core	native	compare.txt	56	0
@@ -1305,6 +1318,7 @@ rust	core	native	transcendental_expm1.txt	19327	0
 rust	core	native	transcendental_large_n.txt	7619	0
 rust	core	native	transcendental_logexp.txt	44	0
 rust	core	native	transcendental_logp1.txt	21290	0
+rust	core	native	transcendental_pow.txt	2915	0
 rust	core	native	transcendental_pown.txt	94	0
 rust	core	native	transcendental_pown_rootn.txt	634	0
 rust	core	native	transcendental_rootn.txt	226	0
@@ -1361,7 +1375,7 @@ rust	wrapper	fptest	Decimal-Rounding.fptest	196	0
 rust	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 rust	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 rust	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-rust	wrapper	intel	readtest.in	27980	3266
+rust	wrapper	intel	readtest.in	28149	3274
 rust	wrapper	native	add.txt	22	0
 rust	wrapper	native	add1.txt	118	0
 rust	wrapper	native	compare.txt	56	0
@@ -1399,6 +1413,7 @@ rust	wrapper	native	transcendental_expm1.txt	19327	0
 rust	wrapper	native	transcendental_large_n.txt	7619	0
 rust	wrapper	native	transcendental_logexp.txt	44	0
 rust	wrapper	native	transcendental_logp1.txt	21290	0
+rust	wrapper	native	transcendental_pow.txt	2915	0
 rust	wrapper	native	transcendental_pown.txt	94	0
 rust	wrapper	native	transcendental_pown_rootn.txt	634	0
 rust	wrapper	native	transcendental_rootn.txt	226	0
@@ -1645,7 +1660,7 @@ zig	core	fptest	Decimal-Rounding.fptest	196	0
 zig	core	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 zig	core	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 zig	core	fptest	Decimal-Underflow.fptest	1160	0
-zig	core	intel	readtest.in	27980	3266
+zig	core	intel	readtest.in	28149	3274
 zig	core	native	add.txt	22	0
 zig	core	native	add1.txt	118	0
 zig	core	native	compare.txt	56	0
@@ -1683,6 +1698,7 @@ zig	core	native	transcendental_expm1.txt	19327	0
 zig	core	native	transcendental_large_n.txt	7619	0
 zig	core	native	transcendental_logexp.txt	44	0
 zig	core	native	transcendental_logp1.txt	21290	0
+zig	core	native	transcendental_pow.txt	2915	0
 zig	core	native	transcendental_pown.txt	94	0
 zig	core	native	transcendental_pown_rootn.txt	634	0
 zig	core	native	transcendental_rootn.txt	226	0
@@ -1739,7 +1755,7 @@ zig	wrapper	fptest	Decimal-Rounding.fptest	196	0
 zig	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Input.fptest	4624	0
 zig	wrapper	fptest	Decimal-Trailing-And-Leading-Zeros-Result.fptest	1890	0
 zig	wrapper	fptest	Decimal-Underflow.fptest	1160	0
-zig	wrapper	intel	readtest.in	27980	3266
+zig	wrapper	intel	readtest.in	28149	3274
 zig	wrapper	native	add.txt	22	0
 zig	wrapper	native	add1.txt	118	0
 zig	wrapper	native	compare.txt	56	0
@@ -1777,6 +1793,7 @@ zig	wrapper	native	transcendental_expm1.txt	19327	0
 zig	wrapper	native	transcendental_large_n.txt	7619	0
 zig	wrapper	native	transcendental_logexp.txt	44	0
 zig	wrapper	native	transcendental_logp1.txt	21290	0
+zig	wrapper	native	transcendental_pow.txt	2915	0
 zig	wrapper	native	transcendental_pown.txt	94	0
 zig	wrapper	native	transcendental_pown_rootn.txt	634	0
 zig	wrapper	native	transcendental_rootn.txt	226	0
