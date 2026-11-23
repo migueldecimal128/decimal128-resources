@@ -11,10 +11,10 @@ native files, NativeCorpusExclusionWorkOrder.md). Fails (exit 1) when:
   - an exclusion names a file that is not in the index, or repeats another line.
 
   files.index
-  - a dectest/fptest/intel corpus file is missing from it, or it lists a file
+  - a cairo/dectest/fptest/intel corpus file is missing from it, or it lists a file
     that does not exist; it is not sorted, or lists a file twice.
 
-  <source>.map (dectest, fptest, intel)
+  <source>.map (cairo, dectest, fptest, intel)
   - a token is both included and excluded; a corpus token is in neither; a map
     key is not in the corpus; the source yields no in-scope tokens.
 
@@ -112,7 +112,7 @@ def check_native(root):
     return errors, len(index), len(seen)
 
 
-CORPUS_EXT = {"dectest": (".decTest", ".dectest"), "fptest": (".fptest",), "intel": (".in",)}
+CORPUS_EXT = {"cairo": (".txt",), "dectest": (".decTest", ".dectest"), "fptest": (".fptest",), "intel": (".in",)}
 
 
 def check_shared(root):
@@ -219,7 +219,7 @@ def main():
     print(f"check_rosetta: OK (native: {n_index} indexed files, {n_exclude} exclusions; "
           + ", ".join(f"{s}: {len(corpus.files[s])} files, {len(corpus.maps[s].include)} include + "
                       f"{len(corpus.maps[s].exclude)} exclude, {len(corpus.skips[s].entries)} skips"
-                      for s in ("dectest", "fptest", "intel"))
+                      for s in corpus.maps)
           + f"; {len(corpus.runner_exclude)} runner exclusions)")
     return 0
 

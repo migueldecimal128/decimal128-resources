@@ -1,0 +1,23 @@
+# Rosetta Cairo operator map (cairo/README.md; same scheme as fptest.map).
+# Every port reads this file; no port keeps its own copy.
+#
+#   scope    <rule>  <value>        pre-filter applied before the partition
+#   include  <token> <canonical op> the token runs, dispatched as that op
+#   exclude  <token> <reason>       the token is not run, for that reason
+#
+# Fields are tab-separated. Every in-scope corpus token is in exactly one of
+# include / exclude (checked by rosetta/check_rosetta.py).
+#
+# The line syntax is fptest's, with two additions a runner must handle:
+#   - rounding token `h>` is ties-to-away (fptest spells it `=^`);
+#   - `*-` is the fused a*b - c. d128_fms_ctx is not a core entry point: the
+#     runner composes it as d128_fma_ctx(a, b, d128_negate(c)).
+scope	format	d128
+
+include	*	d128_multiply_ctx
+include	*+	d128_fma_ctx
+include	*-	d128_fms_ctx
+include	+	d128_add_ctx
+include	-	d128_subtract_ctx
+include	/	d128_divide_ctx
+include	V	d128_sqrt_ctx

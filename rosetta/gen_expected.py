@@ -29,8 +29,8 @@ PORTS = ["c", "csharp", "csharp-bid", "go", "java", "kotlin", "python", "rust", 
 RUNNERS = {"core", "wrapper"}
 # Python runs the wrapper variant only (its core is the vendored C).
 PORT_RUNNERS = {p: (["wrapper"] if p == "python" else ["core", "wrapper"]) for p in PORTS}
-SOURCES = ["dectest", "fptest", "intel", "native"]
-MAPPED = ["dectest", "fptest", "intel"]
+SOURCES = ["cairo", "dectest", "fptest", "intel", "native"]
+MAPPED = ["cairo", "dectest", "fptest", "intel"]
 
 
 class DataError(Exception):
@@ -344,8 +344,9 @@ def parse_intel(text, m):
         yield ("case", tokens[0], line.strip(), line.split())
 
 
-PARSERS = {"dectest": parse_dectest, "fptest": parse_fptest, "intel": parse_intel}
-SOURCE_DIRS = {"dectest": "dectest", "fptest": "fptest", "intel": "intel"}
+# cairo is FPgen syntax, the fptest family (cairo/README.md).
+PARSERS = {"cairo": parse_fptest, "dectest": parse_dectest, "fptest": parse_fptest, "intel": parse_intel}
+SOURCE_DIRS = {"cairo": "cairo", "dectest": "dectest", "fptest": "fptest", "intel": "intel"}
 
 
 # ---------------------------------------------------------------------------

@@ -19,15 +19,17 @@ telco/          Cowlishaw "telco" benchmark (https://speleotrove.com/decimal/tel
   README.txt            provenance, formats, control totals, computation
 
 rosetta/        conformance corpora shared by every port's test suite
+  cairo/                Cairo University decimal128 FPgen vectors, 8.9M (+ doc/2011_06_vdfp.pdf; see cairo/README.md)
   dectest/              IBM/Cowlishaw decQuad + math dectest vectors (+ doc/*.pdf)
   fptest/               IBM 754-2019 fptest vectors
   intel/readtest.in     Intel BID reference vectors (+ LICENSE/eula/sample)
   native/               hand-authored decimal128 cases (strict: 0 skips)
   native.index          every native/ file; ports run these (see below)
   native.exclude        native files a port does not run, each with a reason
-  files.index           the dectest / fptest / intel files every port runs
+  files.index           the cairo / dectest / fptest / intel files every port runs
   dectest.map           scope filters + operator include/exclude, per source
   fptest.map              (include: token -> canonical op; exclude: token -> reason)
+  cairo.map
   intel.map
   dectest.skip          per-line skips, each with a reason, per source
   intel.skip
@@ -84,13 +86,13 @@ Design: `decimal128-workorder/NativeCorpusExclusionWorkOrder.md`.
 
 ## What every port runs: the shared Rosetta data
 
-What a port runs from the dectest, fptest and Intel corpora is data here, not
+What a port runs from the Cairo, dectest, fptest and Intel corpora is data here, not
 code in each port. Each port reads these files and keeps only one table of its
 own: canonical op name -> its dispatch arm.
 
 - `files.index`: the corpus files, `<source>\t<file>`.
 - `<source>.map`: `scope` filters (dectest precision 34, the five IEEE rounding
-  modes, no bare `#` operand; fptest `d128` lines; Intel `bid128_` tokens), then
+  modes, no bare `#` operand; fptest and Cairo `d128` lines; Intel `bid128_` tokens), then
   `include <token> <canonical op>` or `exclude <token> <reason>`. Every in-scope
   corpus token is in exactly one of the two.
 - `<source>.skip`: `=<tag> <reason>` defines a reason; `line <tag> <exact line>`
@@ -136,3 +138,10 @@ These are publicly distributed reference/test data:
   See `telco/README.txt`.
 - **rosetta** — IBM/Cowlishaw `dectest`, IBM `fptest`, Intel test
   vectors, plus hand-authored `native` cases.
+- **rosetta/cairo** — decimal128 vectors by Amr Sayed-Ahmed and Hossam A. H.
+  Fahmy, Cairo University (`http://eece.cu.edu.eg/~hfahmy/arith_debug/`):
+  free to use for any purpose, as is, no warranty, credit requested.
+  Documented by Sayed-Ahmed's 2011 MSc thesis,
+  `http://www.eece.cu.edu.eg/~hfahmy/thesis/2011_06_vdfp.pdf` (copy in
+  `rosetta/cairo/doc/`). Three upstream-damaged lines removed; see
+  `rosetta/cairo/README.md`.
