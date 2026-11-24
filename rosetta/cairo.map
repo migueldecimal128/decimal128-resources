@@ -11,7 +11,10 @@
 # The line syntax is fptest's, with two additions a runner must handle:
 #   - rounding token `h>` is ties-to-away (fptest spells it `=^`);
 #   - `*-` is the fused a*b - c. d128_fms_ctx is not a core entry point: the
-#     runner composes it as d128_fma_ctx(a, b, d128_negate(c)).
+#     runner composes it as d128_fma_ctx(a, b, isNaN(c) ? c : d128_negate(c)).
+#     A NaN c propagates unchanged: the corpus expects the operand's sign, and
+#     754-2019 §6.3 leaves a NaN result's sign unspecified
+#     (CairoVectorsWorkOrder.md D-1).
 scope	format	d128
 
 include	*	d128_multiply_ctx
