@@ -11,12 +11,13 @@
 #
 # dectest tokens are matched lower-cased. A case runs only in a block whose
 # `precision:` directive is 34 and whose `rounding:` directive is one of the
-# listed GDAS modes (up / 05up / half_down have no IEEE 754 counterpart).
+# listed GDAS modes. up and 05up are the GDAS extensions ROUND_AWAY_FROM_ZERO
+# and ROUND_05_UP (GdasRoundingModesWorkOrder.md); half_down is not implemented.
 # A case with a bare `#` operand is dropped: `#` is decNumber's "operand not
 # given" placeholder (a null-argument API test), not a value. (`#` followed by
 # hex digits is a DPD encoding and runs.)
 scope	precision	34
-scope	rounding	half_even,half_up,ceiling,floor,down
+scope	rounding	half_even,half_up,ceiling,floor,down,up,05up
 scope	null-operand	#
 
 include	abs	d128_abs

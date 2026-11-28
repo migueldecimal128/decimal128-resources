@@ -13,6 +13,8 @@ fma2.txt
 formatstyle.txt
 from_bid64.txt
 from_dpd64.txt
+gdas_rounding.txt
+gdas_rounding_transcendental.txt
 isequal.txt
 isless.txt
 minmax.txt

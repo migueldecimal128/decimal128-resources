@@ -119,8 +119,8 @@ c	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 c	core	dectest	_754_2019.dectest	100	0
 c	core	dectest	decQuad.decTest	0	0
 c	core	dectest	dqAbs.decTest	74	4
-c	core	dectest	dqAdd.decTest	976	0
-c	core	dectest	dqBase.decTest	906	3
+c	core	dectest	dqAdd.decTest	1002	0
+c	core	dectest	dqBase.decTest	916	3
 c	core	dectest	dqCanonical.decTest	244	0
 c	core	dectest	dqClass.decTest	42	0
 c	core	dectest	dqCompare.decTest	657	0
@@ -134,7 +134,7 @@ c	core	dectest	dqCopySign.decTest	107	0
 c	core	dectest	dqDivide.decTest	685	0
 c	core	dectest	dqDivideInt.decTest	372	0
 c	core	dectest	dqEncode.decTest	368	0
-c	core	dectest	dqFMA.decTest	1373	0
+c	core	dectest	dqFMA.decTest	1437	0
 c	core	dectest	dqLogB.decTest	108	0
 c	core	dectest	dqMax.decTest	255	20
 c	core	dectest	dqMaxMag.decTest	241	20
@@ -145,7 +145,7 @@ c	core	dectest	dqMultiply.decTest	471	0
 c	core	dectest	dqNextMinus.decTest	83	0
 c	core	dectest	dqNextPlus.decTest	83	0
 c	core	dectest	dqPlus.decTest	0	0
-c	core	dectest	dqQuantize.decTest	609	0
+c	core	dectest	dqQuantize.decTest	674	0
 c	core	dectest	dqReduce.decTest	133	0
 c	core	dectest	dqRemainder.decTest	498	7
 c	core	dectest	dqRemainderNear.decTest	528	7
@@ -153,7 +153,7 @@ c	core	dectest	dqSameQuantum.decTest	333	0
 c	core	dectest	dqScaleB.decTest	202	42
 c	core	dectest	dqShift.decTest	0	0
 c	core	dectest	dqSubtract.decTest	518	0
-c	core	dectest	dqToIntegral.decTest	166	0
+c	core	dectest	dqToIntegral.decTest	172	0
 c	core	dectest	exp.decTest	41	0
 c	core	dectest	ln.decTest	42	0
 c	core	dectest	log10.decTest	51	1
@@ -178,6 +178,8 @@ c	core	native	fma2.txt	45	0
 c	core	native	formatstyle.txt	188	0
 c	core	native	from_bid64.txt	152	0
 c	core	native	from_dpd64.txt	10	0
+c	core	native	gdas_rounding.txt	2320	0
+c	core	native	gdas_rounding_transcendental.txt	3794	0
 c	core	native	isequal.txt	32	0
 c	core	native	isless.txt	34	0
 c	core	native	minmax.txt	63	0
@@ -323,8 +325,8 @@ c	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 c	wrapper	dectest	_754_2019.dectest	100	0
 c	wrapper	dectest	decQuad.decTest	0	0
 c	wrapper	dectest	dqAbs.decTest	74	4
-c	wrapper	dectest	dqAdd.decTest	976	0
-c	wrapper	dectest	dqBase.decTest	906	3
+c	wrapper	dectest	dqAdd.decTest	1002	0
+c	wrapper	dectest	dqBase.decTest	916	3
 c	wrapper	dectest	dqCanonical.decTest	244	0
 c	wrapper	dectest	dqClass.decTest	42	0
 c	wrapper	dectest	dqCompare.decTest	657	0
@@ -338,7 +340,7 @@ c	wrapper	dectest	dqCopySign.decTest	107	0
 c	wrapper	dectest	dqDivide.decTest	685	0
 c	wrapper	dectest	dqDivideInt.decTest	372	0
 c	wrapper	dectest	dqEncode.decTest	368	0
-c	wrapper	dectest	dqFMA.decTest	1373	0
+c	wrapper	dectest	dqFMA.decTest	1437	0
 c	wrapper	dectest	dqLogB.decTest	108	0
 c	wrapper	dectest	dqMax.decTest	255	20
 c	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -349,7 +351,7 @@ c	wrapper	dectest	dqMultiply.decTest	471	0
 c	wrapper	dectest	dqNextMinus.decTest	83	0
 c	wrapper	dectest	dqNextPlus.decTest	83	0
 c	wrapper	dectest	dqPlus.decTest	0	0
-c	wrapper	dectest	dqQuantize.decTest	609	0
+c	wrapper	dectest	dqQuantize.decTest	674	0
 c	wrapper	dectest	dqReduce.decTest	133	0
 c	wrapper	dectest	dqRemainder.decTest	498	7
 c	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -357,7 +359,7 @@ c	wrapper	dectest	dqSameQuantum.decTest	333	0
 c	wrapper	dectest	dqScaleB.decTest	202	42
 c	wrapper	dectest	dqShift.decTest	0	0
 c	wrapper	dectest	dqSubtract.decTest	518	0
-c	wrapper	dectest	dqToIntegral.decTest	166	0
+c	wrapper	dectest	dqToIntegral.decTest	172	0
 c	wrapper	dectest	exp.decTest	41	0
 c	wrapper	dectest	ln.decTest	42	0
 c	wrapper	dectest	log10.decTest	51	1
@@ -382,6 +384,8 @@ c	wrapper	native	fma2.txt	45	0
 c	wrapper	native	formatstyle.txt	188	0
 c	wrapper	native	from_bid64.txt	152	0
 c	wrapper	native	from_dpd64.txt	10	0
+c	wrapper	native	gdas_rounding.txt	2320	0
+c	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 c	wrapper	native	isequal.txt	32	0
 c	wrapper	native	isless.txt	34	0
 c	wrapper	native	minmax.txt	63	0
@@ -527,8 +531,8 @@ csharp	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 csharp	core	dectest	_754_2019.dectest	100	0
 csharp	core	dectest	decQuad.decTest	0	0
 csharp	core	dectest	dqAbs.decTest	74	4
-csharp	core	dectest	dqAdd.decTest	976	0
-csharp	core	dectest	dqBase.decTest	906	3
+csharp	core	dectest	dqAdd.decTest	1002	0
+csharp	core	dectest	dqBase.decTest	916	3
 csharp	core	dectest	dqCanonical.decTest	244	0
 csharp	core	dectest	dqClass.decTest	42	0
 csharp	core	dectest	dqCompare.decTest	657	0
@@ -542,7 +546,7 @@ csharp	core	dectest	dqCopySign.decTest	107	0
 csharp	core	dectest	dqDivide.decTest	685	0
 csharp	core	dectest	dqDivideInt.decTest	372	0
 csharp	core	dectest	dqEncode.decTest	368	0
-csharp	core	dectest	dqFMA.decTest	1373	0
+csharp	core	dectest	dqFMA.decTest	1437	0
 csharp	core	dectest	dqLogB.decTest	108	0
 csharp	core	dectest	dqMax.decTest	255	20
 csharp	core	dectest	dqMaxMag.decTest	241	20
@@ -553,7 +557,7 @@ csharp	core	dectest	dqMultiply.decTest	471	0
 csharp	core	dectest	dqNextMinus.decTest	83	0
 csharp	core	dectest	dqNextPlus.decTest	83	0
 csharp	core	dectest	dqPlus.decTest	0	0
-csharp	core	dectest	dqQuantize.decTest	609	0
+csharp	core	dectest	dqQuantize.decTest	674	0
 csharp	core	dectest	dqReduce.decTest	133	0
 csharp	core	dectest	dqRemainder.decTest	498	7
 csharp	core	dectest	dqRemainderNear.decTest	528	7
@@ -561,7 +565,7 @@ csharp	core	dectest	dqSameQuantum.decTest	333	0
 csharp	core	dectest	dqScaleB.decTest	202	42
 csharp	core	dectest	dqShift.decTest	0	0
 csharp	core	dectest	dqSubtract.decTest	518	0
-csharp	core	dectest	dqToIntegral.decTest	166	0
+csharp	core	dectest	dqToIntegral.decTest	172	0
 csharp	core	dectest	exp.decTest	41	0
 csharp	core	dectest	ln.decTest	42	0
 csharp	core	dectest	log10.decTest	51	1
@@ -586,6 +590,8 @@ csharp	core	native	fma2.txt	45	0
 csharp	core	native	formatstyle.txt	188	0
 csharp	core	native	from_bid64.txt	152	0
 csharp	core	native	from_dpd64.txt	10	0
+csharp	core	native	gdas_rounding.txt	2320	0
+csharp	core	native	gdas_rounding_transcendental.txt	3794	0
 csharp	core	native	isequal.txt	32	0
 csharp	core	native	isless.txt	34	0
 csharp	core	native	minmax.txt	63	0
@@ -731,8 +737,8 @@ csharp	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 csharp	wrapper	dectest	_754_2019.dectest	100	0
 csharp	wrapper	dectest	decQuad.decTest	0	0
 csharp	wrapper	dectest	dqAbs.decTest	74	4
-csharp	wrapper	dectest	dqAdd.decTest	976	0
-csharp	wrapper	dectest	dqBase.decTest	906	3
+csharp	wrapper	dectest	dqAdd.decTest	1002	0
+csharp	wrapper	dectest	dqBase.decTest	916	3
 csharp	wrapper	dectest	dqCanonical.decTest	244	0
 csharp	wrapper	dectest	dqClass.decTest	42	0
 csharp	wrapper	dectest	dqCompare.decTest	657	0
@@ -746,7 +752,7 @@ csharp	wrapper	dectest	dqCopySign.decTest	107	0
 csharp	wrapper	dectest	dqDivide.decTest	685	0
 csharp	wrapper	dectest	dqDivideInt.decTest	372	0
 csharp	wrapper	dectest	dqEncode.decTest	368	0
-csharp	wrapper	dectest	dqFMA.decTest	1373	0
+csharp	wrapper	dectest	dqFMA.decTest	1437	0
 csharp	wrapper	dectest	dqLogB.decTest	108	0
 csharp	wrapper	dectest	dqMax.decTest	255	20
 csharp	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -757,7 +763,7 @@ csharp	wrapper	dectest	dqMultiply.decTest	471	0
 csharp	wrapper	dectest	dqNextMinus.decTest	83	0
 csharp	wrapper	dectest	dqNextPlus.decTest	83	0
 csharp	wrapper	dectest	dqPlus.decTest	0	0
-csharp	wrapper	dectest	dqQuantize.decTest	609	0
+csharp	wrapper	dectest	dqQuantize.decTest	674	0
 csharp	wrapper	dectest	dqReduce.decTest	133	0
 csharp	wrapper	dectest	dqRemainder.decTest	498	7
 csharp	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -765,7 +771,7 @@ csharp	wrapper	dectest	dqSameQuantum.decTest	333	0
 csharp	wrapper	dectest	dqScaleB.decTest	202	42
 csharp	wrapper	dectest	dqShift.decTest	0	0
 csharp	wrapper	dectest	dqSubtract.decTest	518	0
-csharp	wrapper	dectest	dqToIntegral.decTest	166	0
+csharp	wrapper	dectest	dqToIntegral.decTest	172	0
 csharp	wrapper	dectest	exp.decTest	41	0
 csharp	wrapper	dectest	ln.decTest	42	0
 csharp	wrapper	dectest	log10.decTest	51	1
@@ -790,6 +796,8 @@ csharp	wrapper	native	fma2.txt	45	0
 csharp	wrapper	native	formatstyle.txt	188	0
 csharp	wrapper	native	from_bid64.txt	152	0
 csharp	wrapper	native	from_dpd64.txt	10	0
+csharp	wrapper	native	gdas_rounding.txt	2320	0
+csharp	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 csharp	wrapper	native	isequal.txt	32	0
 csharp	wrapper	native	isless.txt	34	0
 csharp	wrapper	native	minmax.txt	63	0
@@ -935,8 +943,8 @@ csharp-bid	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 csharp-bid	core	dectest	_754_2019.dectest	100	0
 csharp-bid	core	dectest	decQuad.decTest	0	0
 csharp-bid	core	dectest	dqAbs.decTest	74	4
-csharp-bid	core	dectest	dqAdd.decTest	976	0
-csharp-bid	core	dectest	dqBase.decTest	906	3
+csharp-bid	core	dectest	dqAdd.decTest	1002	0
+csharp-bid	core	dectest	dqBase.decTest	916	3
 csharp-bid	core	dectest	dqCanonical.decTest	244	0
 csharp-bid	core	dectest	dqClass.decTest	42	0
 csharp-bid	core	dectest	dqCompare.decTest	657	0
@@ -950,7 +958,7 @@ csharp-bid	core	dectest	dqCopySign.decTest	107	0
 csharp-bid	core	dectest	dqDivide.decTest	685	0
 csharp-bid	core	dectest	dqDivideInt.decTest	372	0
 csharp-bid	core	dectest	dqEncode.decTest	368	0
-csharp-bid	core	dectest	dqFMA.decTest	1373	0
+csharp-bid	core	dectest	dqFMA.decTest	1437	0
 csharp-bid	core	dectest	dqLogB.decTest	108	0
 csharp-bid	core	dectest	dqMax.decTest	255	20
 csharp-bid	core	dectest	dqMaxMag.decTest	241	20
@@ -961,7 +969,7 @@ csharp-bid	core	dectest	dqMultiply.decTest	471	0
 csharp-bid	core	dectest	dqNextMinus.decTest	83	0
 csharp-bid	core	dectest	dqNextPlus.decTest	83	0
 csharp-bid	core	dectest	dqPlus.decTest	0	0
-csharp-bid	core	dectest	dqQuantize.decTest	609	0
+csharp-bid	core	dectest	dqQuantize.decTest	674	0
 csharp-bid	core	dectest	dqReduce.decTest	133	0
 csharp-bid	core	dectest	dqRemainder.decTest	498	7
 csharp-bid	core	dectest	dqRemainderNear.decTest	528	7
@@ -969,7 +977,7 @@ csharp-bid	core	dectest	dqSameQuantum.decTest	333	0
 csharp-bid	core	dectest	dqScaleB.decTest	202	42
 csharp-bid	core	dectest	dqShift.decTest	0	0
 csharp-bid	core	dectest	dqSubtract.decTest	518	0
-csharp-bid	core	dectest	dqToIntegral.decTest	166	0
+csharp-bid	core	dectest	dqToIntegral.decTest	172	0
 csharp-bid	core	dectest	exp.decTest	41	0
 csharp-bid	core	dectest	ln.decTest	42	0
 csharp-bid	core	dectest	log10.decTest	51	1
@@ -994,6 +1002,8 @@ csharp-bid	core	native	fma2.txt	45	0
 csharp-bid	core	native	formatstyle.txt	188	0
 csharp-bid	core	native	from_bid64.txt	152	0
 csharp-bid	core	native	from_dpd64.txt	10	0
+csharp-bid	core	native	gdas_rounding.txt	2320	0
+csharp-bid	core	native	gdas_rounding_transcendental.txt	3794	0
 csharp-bid	core	native	isequal.txt	32	0
 csharp-bid	core	native	isless.txt	34	0
 csharp-bid	core	native	minmax.txt	63	0
@@ -1139,8 +1149,8 @@ csharp-bid	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 csharp-bid	wrapper	dectest	_754_2019.dectest	100	0
 csharp-bid	wrapper	dectest	decQuad.decTest	0	0
 csharp-bid	wrapper	dectest	dqAbs.decTest	74	4
-csharp-bid	wrapper	dectest	dqAdd.decTest	976	0
-csharp-bid	wrapper	dectest	dqBase.decTest	906	3
+csharp-bid	wrapper	dectest	dqAdd.decTest	1002	0
+csharp-bid	wrapper	dectest	dqBase.decTest	916	3
 csharp-bid	wrapper	dectest	dqCanonical.decTest	244	0
 csharp-bid	wrapper	dectest	dqClass.decTest	42	0
 csharp-bid	wrapper	dectest	dqCompare.decTest	657	0
@@ -1154,7 +1164,7 @@ csharp-bid	wrapper	dectest	dqCopySign.decTest	107	0
 csharp-bid	wrapper	dectest	dqDivide.decTest	685	0
 csharp-bid	wrapper	dectest	dqDivideInt.decTest	372	0
 csharp-bid	wrapper	dectest	dqEncode.decTest	368	0
-csharp-bid	wrapper	dectest	dqFMA.decTest	1373	0
+csharp-bid	wrapper	dectest	dqFMA.decTest	1437	0
 csharp-bid	wrapper	dectest	dqLogB.decTest	108	0
 csharp-bid	wrapper	dectest	dqMax.decTest	255	20
 csharp-bid	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -1165,7 +1175,7 @@ csharp-bid	wrapper	dectest	dqMultiply.decTest	471	0
 csharp-bid	wrapper	dectest	dqNextMinus.decTest	83	0
 csharp-bid	wrapper	dectest	dqNextPlus.decTest	83	0
 csharp-bid	wrapper	dectest	dqPlus.decTest	0	0
-csharp-bid	wrapper	dectest	dqQuantize.decTest	609	0
+csharp-bid	wrapper	dectest	dqQuantize.decTest	674	0
 csharp-bid	wrapper	dectest	dqReduce.decTest	133	0
 csharp-bid	wrapper	dectest	dqRemainder.decTest	498	7
 csharp-bid	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -1173,7 +1183,7 @@ csharp-bid	wrapper	dectest	dqSameQuantum.decTest	333	0
 csharp-bid	wrapper	dectest	dqScaleB.decTest	202	42
 csharp-bid	wrapper	dectest	dqShift.decTest	0	0
 csharp-bid	wrapper	dectest	dqSubtract.decTest	518	0
-csharp-bid	wrapper	dectest	dqToIntegral.decTest	166	0
+csharp-bid	wrapper	dectest	dqToIntegral.decTest	172	0
 csharp-bid	wrapper	dectest	exp.decTest	41	0
 csharp-bid	wrapper	dectest	ln.decTest	42	0
 csharp-bid	wrapper	dectest	log10.decTest	51	1
@@ -1198,6 +1208,8 @@ csharp-bid	wrapper	native	fma2.txt	45	0
 csharp-bid	wrapper	native	formatstyle.txt	188	0
 csharp-bid	wrapper	native	from_bid64.txt	152	0
 csharp-bid	wrapper	native	from_dpd64.txt	10	0
+csharp-bid	wrapper	native	gdas_rounding.txt	2320	0
+csharp-bid	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 csharp-bid	wrapper	native	isequal.txt	32	0
 csharp-bid	wrapper	native	isless.txt	34	0
 csharp-bid	wrapper	native	minmax.txt	63	0
@@ -1343,8 +1355,8 @@ go	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 go	core	dectest	_754_2019.dectest	100	0
 go	core	dectest	decQuad.decTest	0	0
 go	core	dectest	dqAbs.decTest	74	4
-go	core	dectest	dqAdd.decTest	976	0
-go	core	dectest	dqBase.decTest	906	3
+go	core	dectest	dqAdd.decTest	1002	0
+go	core	dectest	dqBase.decTest	916	3
 go	core	dectest	dqCanonical.decTest	244	0
 go	core	dectest	dqClass.decTest	42	0
 go	core	dectest	dqCompare.decTest	657	0
@@ -1358,7 +1370,7 @@ go	core	dectest	dqCopySign.decTest	107	0
 go	core	dectest	dqDivide.decTest	685	0
 go	core	dectest	dqDivideInt.decTest	372	0
 go	core	dectest	dqEncode.decTest	368	0
-go	core	dectest	dqFMA.decTest	1373	0
+go	core	dectest	dqFMA.decTest	1437	0
 go	core	dectest	dqLogB.decTest	108	0
 go	core	dectest	dqMax.decTest	255	20
 go	core	dectest	dqMaxMag.decTest	241	20
@@ -1369,7 +1381,7 @@ go	core	dectest	dqMultiply.decTest	471	0
 go	core	dectest	dqNextMinus.decTest	83	0
 go	core	dectest	dqNextPlus.decTest	83	0
 go	core	dectest	dqPlus.decTest	0	0
-go	core	dectest	dqQuantize.decTest	609	0
+go	core	dectest	dqQuantize.decTest	674	0
 go	core	dectest	dqReduce.decTest	133	0
 go	core	dectest	dqRemainder.decTest	498	7
 go	core	dectest	dqRemainderNear.decTest	528	7
@@ -1377,7 +1389,7 @@ go	core	dectest	dqSameQuantum.decTest	333	0
 go	core	dectest	dqScaleB.decTest	202	42
 go	core	dectest	dqShift.decTest	0	0
 go	core	dectest	dqSubtract.decTest	518	0
-go	core	dectest	dqToIntegral.decTest	166	0
+go	core	dectest	dqToIntegral.decTest	172	0
 go	core	dectest	exp.decTest	41	0
 go	core	dectest	ln.decTest	42	0
 go	core	dectest	log10.decTest	51	1
@@ -1402,6 +1414,8 @@ go	core	native	fma2.txt	45	0
 go	core	native	formatstyle.txt	188	0
 go	core	native	from_bid64.txt	152	0
 go	core	native	from_dpd64.txt	10	0
+go	core	native	gdas_rounding.txt	2320	0
+go	core	native	gdas_rounding_transcendental.txt	3794	0
 go	core	native	isequal.txt	32	0
 go	core	native	isless.txt	34	0
 go	core	native	minmax.txt	63	0
@@ -1548,8 +1562,8 @@ go	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 go	wrapper	dectest	_754_2019.dectest	100	0
 go	wrapper	dectest	decQuad.decTest	0	0
 go	wrapper	dectest	dqAbs.decTest	74	4
-go	wrapper	dectest	dqAdd.decTest	976	0
-go	wrapper	dectest	dqBase.decTest	906	3
+go	wrapper	dectest	dqAdd.decTest	1002	0
+go	wrapper	dectest	dqBase.decTest	916	3
 go	wrapper	dectest	dqCanonical.decTest	244	0
 go	wrapper	dectest	dqClass.decTest	42	0
 go	wrapper	dectest	dqCompare.decTest	657	0
@@ -1563,7 +1577,7 @@ go	wrapper	dectest	dqCopySign.decTest	107	0
 go	wrapper	dectest	dqDivide.decTest	685	0
 go	wrapper	dectest	dqDivideInt.decTest	372	0
 go	wrapper	dectest	dqEncode.decTest	368	0
-go	wrapper	dectest	dqFMA.decTest	1373	0
+go	wrapper	dectest	dqFMA.decTest	1437	0
 go	wrapper	dectest	dqLogB.decTest	108	0
 go	wrapper	dectest	dqMax.decTest	255	20
 go	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -1574,7 +1588,7 @@ go	wrapper	dectest	dqMultiply.decTest	471	0
 go	wrapper	dectest	dqNextMinus.decTest	83	0
 go	wrapper	dectest	dqNextPlus.decTest	83	0
 go	wrapper	dectest	dqPlus.decTest	0	0
-go	wrapper	dectest	dqQuantize.decTest	609	0
+go	wrapper	dectest	dqQuantize.decTest	674	0
 go	wrapper	dectest	dqReduce.decTest	133	0
 go	wrapper	dectest	dqRemainder.decTest	498	7
 go	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -1582,7 +1596,7 @@ go	wrapper	dectest	dqSameQuantum.decTest	333	0
 go	wrapper	dectest	dqScaleB.decTest	202	42
 go	wrapper	dectest	dqShift.decTest	0	0
 go	wrapper	dectest	dqSubtract.decTest	518	0
-go	wrapper	dectest	dqToIntegral.decTest	166	0
+go	wrapper	dectest	dqToIntegral.decTest	172	0
 go	wrapper	dectest	exp.decTest	41	0
 go	wrapper	dectest	ln.decTest	42	0
 go	wrapper	dectest	log10.decTest	51	1
@@ -1607,6 +1621,8 @@ go	wrapper	native	fma2.txt	45	0
 go	wrapper	native	formatstyle.txt	188	0
 go	wrapper	native	from_bid64.txt	152	0
 go	wrapper	native	from_dpd64.txt	10	0
+go	wrapper	native	gdas_rounding.txt	2320	0
+go	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 go	wrapper	native	isequal.txt	32	0
 go	wrapper	native	isless.txt	34	0
 go	wrapper	native	minmax.txt	63	0
@@ -1753,8 +1769,8 @@ java	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 java	core	dectest	_754_2019.dectest	100	0
 java	core	dectest	decQuad.decTest	0	0
 java	core	dectest	dqAbs.decTest	74	4
-java	core	dectest	dqAdd.decTest	976	0
-java	core	dectest	dqBase.decTest	906	3
+java	core	dectest	dqAdd.decTest	1002	0
+java	core	dectest	dqBase.decTest	916	3
 java	core	dectest	dqCanonical.decTest	244	0
 java	core	dectest	dqClass.decTest	42	0
 java	core	dectest	dqCompare.decTest	657	0
@@ -1768,7 +1784,7 @@ java	core	dectest	dqCopySign.decTest	107	0
 java	core	dectest	dqDivide.decTest	685	0
 java	core	dectest	dqDivideInt.decTest	372	0
 java	core	dectest	dqEncode.decTest	368	0
-java	core	dectest	dqFMA.decTest	1373	0
+java	core	dectest	dqFMA.decTest	1437	0
 java	core	dectest	dqLogB.decTest	108	0
 java	core	dectest	dqMax.decTest	255	20
 java	core	dectest	dqMaxMag.decTest	241	20
@@ -1779,7 +1795,7 @@ java	core	dectest	dqMultiply.decTest	471	0
 java	core	dectest	dqNextMinus.decTest	83	0
 java	core	dectest	dqNextPlus.decTest	83	0
 java	core	dectest	dqPlus.decTest	0	0
-java	core	dectest	dqQuantize.decTest	609	0
+java	core	dectest	dqQuantize.decTest	674	0
 java	core	dectest	dqReduce.decTest	133	0
 java	core	dectest	dqRemainder.decTest	498	7
 java	core	dectest	dqRemainderNear.decTest	528	7
@@ -1787,7 +1803,7 @@ java	core	dectest	dqSameQuantum.decTest	333	0
 java	core	dectest	dqScaleB.decTest	202	42
 java	core	dectest	dqShift.decTest	0	0
 java	core	dectest	dqSubtract.decTest	518	0
-java	core	dectest	dqToIntegral.decTest	166	0
+java	core	dectest	dqToIntegral.decTest	172	0
 java	core	dectest	exp.decTest	41	0
 java	core	dectest	ln.decTest	42	0
 java	core	dectest	log10.decTest	51	1
@@ -1812,6 +1828,8 @@ java	core	native	fma2.txt	45	0
 java	core	native	formatstyle.txt	188	0
 java	core	native	from_bid64.txt	152	0
 java	core	native	from_dpd64.txt	10	0
+java	core	native	gdas_rounding.txt	2320	0
+java	core	native	gdas_rounding_transcendental.txt	3794	0
 java	core	native	isequal.txt	32	0
 java	core	native	isless.txt	34	0
 java	core	native	minmax.txt	63	0
@@ -1957,8 +1975,8 @@ java	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 java	wrapper	dectest	_754_2019.dectest	100	0
 java	wrapper	dectest	decQuad.decTest	0	0
 java	wrapper	dectest	dqAbs.decTest	74	4
-java	wrapper	dectest	dqAdd.decTest	976	0
-java	wrapper	dectest	dqBase.decTest	906	3
+java	wrapper	dectest	dqAdd.decTest	1002	0
+java	wrapper	dectest	dqBase.decTest	916	3
 java	wrapper	dectest	dqCanonical.decTest	244	0
 java	wrapper	dectest	dqClass.decTest	42	0
 java	wrapper	dectest	dqCompare.decTest	657	0
@@ -1972,7 +1990,7 @@ java	wrapper	dectest	dqCopySign.decTest	107	0
 java	wrapper	dectest	dqDivide.decTest	685	0
 java	wrapper	dectest	dqDivideInt.decTest	372	0
 java	wrapper	dectest	dqEncode.decTest	368	0
-java	wrapper	dectest	dqFMA.decTest	1373	0
+java	wrapper	dectest	dqFMA.decTest	1437	0
 java	wrapper	dectest	dqLogB.decTest	108	0
 java	wrapper	dectest	dqMax.decTest	255	20
 java	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -1983,7 +2001,7 @@ java	wrapper	dectest	dqMultiply.decTest	471	0
 java	wrapper	dectest	dqNextMinus.decTest	83	0
 java	wrapper	dectest	dqNextPlus.decTest	83	0
 java	wrapper	dectest	dqPlus.decTest	0	0
-java	wrapper	dectest	dqQuantize.decTest	609	0
+java	wrapper	dectest	dqQuantize.decTest	674	0
 java	wrapper	dectest	dqReduce.decTest	133	0
 java	wrapper	dectest	dqRemainder.decTest	498	7
 java	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -1991,7 +2009,7 @@ java	wrapper	dectest	dqSameQuantum.decTest	333	0
 java	wrapper	dectest	dqScaleB.decTest	202	42
 java	wrapper	dectest	dqShift.decTest	0	0
 java	wrapper	dectest	dqSubtract.decTest	518	0
-java	wrapper	dectest	dqToIntegral.decTest	166	0
+java	wrapper	dectest	dqToIntegral.decTest	172	0
 java	wrapper	dectest	exp.decTest	41	0
 java	wrapper	dectest	ln.decTest	42	0
 java	wrapper	dectest	log10.decTest	51	1
@@ -2016,6 +2034,8 @@ java	wrapper	native	fma2.txt	45	0
 java	wrapper	native	formatstyle.txt	188	0
 java	wrapper	native	from_bid64.txt	152	0
 java	wrapper	native	from_dpd64.txt	10	0
+java	wrapper	native	gdas_rounding.txt	2320	0
+java	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 java	wrapper	native	isequal.txt	32	0
 java	wrapper	native	isless.txt	34	0
 java	wrapper	native	minmax.txt	63	0
@@ -2161,8 +2181,8 @@ kotlin	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 kotlin	core	dectest	_754_2019.dectest	100	0
 kotlin	core	dectest	decQuad.decTest	0	0
 kotlin	core	dectest	dqAbs.decTest	74	4
-kotlin	core	dectest	dqAdd.decTest	976	0
-kotlin	core	dectest	dqBase.decTest	906	3
+kotlin	core	dectest	dqAdd.decTest	1002	0
+kotlin	core	dectest	dqBase.decTest	916	3
 kotlin	core	dectest	dqCanonical.decTest	244	0
 kotlin	core	dectest	dqClass.decTest	42	0
 kotlin	core	dectest	dqCompare.decTest	657	0
@@ -2176,7 +2196,7 @@ kotlin	core	dectest	dqCopySign.decTest	107	0
 kotlin	core	dectest	dqDivide.decTest	685	0
 kotlin	core	dectest	dqDivideInt.decTest	372	0
 kotlin	core	dectest	dqEncode.decTest	368	0
-kotlin	core	dectest	dqFMA.decTest	1373	0
+kotlin	core	dectest	dqFMA.decTest	1437	0
 kotlin	core	dectest	dqLogB.decTest	108	0
 kotlin	core	dectest	dqMax.decTest	255	20
 kotlin	core	dectest	dqMaxMag.decTest	241	20
@@ -2187,7 +2207,7 @@ kotlin	core	dectest	dqMultiply.decTest	471	0
 kotlin	core	dectest	dqNextMinus.decTest	83	0
 kotlin	core	dectest	dqNextPlus.decTest	83	0
 kotlin	core	dectest	dqPlus.decTest	0	0
-kotlin	core	dectest	dqQuantize.decTest	609	0
+kotlin	core	dectest	dqQuantize.decTest	674	0
 kotlin	core	dectest	dqReduce.decTest	133	0
 kotlin	core	dectest	dqRemainder.decTest	498	7
 kotlin	core	dectest	dqRemainderNear.decTest	528	7
@@ -2195,7 +2215,7 @@ kotlin	core	dectest	dqSameQuantum.decTest	333	0
 kotlin	core	dectest	dqScaleB.decTest	202	42
 kotlin	core	dectest	dqShift.decTest	0	0
 kotlin	core	dectest	dqSubtract.decTest	518	0
-kotlin	core	dectest	dqToIntegral.decTest	166	0
+kotlin	core	dectest	dqToIntegral.decTest	172	0
 kotlin	core	dectest	exp.decTest	41	0
 kotlin	core	dectest	ln.decTest	42	0
 kotlin	core	dectest	log10.decTest	51	1
@@ -2220,6 +2240,8 @@ kotlin	core	native	fma2.txt	45	0
 kotlin	core	native	formatstyle.txt	188	0
 kotlin	core	native	from_bid64.txt	152	0
 kotlin	core	native	from_dpd64.txt	10	0
+kotlin	core	native	gdas_rounding.txt	2320	0
+kotlin	core	native	gdas_rounding_transcendental.txt	3794	0
 kotlin	core	native	isequal.txt	32	0
 kotlin	core	native	isless.txt	34	0
 kotlin	core	native	minmax.txt	63	0
@@ -2365,8 +2387,8 @@ kotlin	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 kotlin	wrapper	dectest	_754_2019.dectest	100	0
 kotlin	wrapper	dectest	decQuad.decTest	0	0
 kotlin	wrapper	dectest	dqAbs.decTest	74	4
-kotlin	wrapper	dectest	dqAdd.decTest	976	0
-kotlin	wrapper	dectest	dqBase.decTest	906	3
+kotlin	wrapper	dectest	dqAdd.decTest	1002	0
+kotlin	wrapper	dectest	dqBase.decTest	916	3
 kotlin	wrapper	dectest	dqCanonical.decTest	244	0
 kotlin	wrapper	dectest	dqClass.decTest	42	0
 kotlin	wrapper	dectest	dqCompare.decTest	657	0
@@ -2380,7 +2402,7 @@ kotlin	wrapper	dectest	dqCopySign.decTest	107	0
 kotlin	wrapper	dectest	dqDivide.decTest	685	0
 kotlin	wrapper	dectest	dqDivideInt.decTest	372	0
 kotlin	wrapper	dectest	dqEncode.decTest	368	0
-kotlin	wrapper	dectest	dqFMA.decTest	1373	0
+kotlin	wrapper	dectest	dqFMA.decTest	1437	0
 kotlin	wrapper	dectest	dqLogB.decTest	108	0
 kotlin	wrapper	dectest	dqMax.decTest	255	20
 kotlin	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -2391,7 +2413,7 @@ kotlin	wrapper	dectest	dqMultiply.decTest	471	0
 kotlin	wrapper	dectest	dqNextMinus.decTest	83	0
 kotlin	wrapper	dectest	dqNextPlus.decTest	83	0
 kotlin	wrapper	dectest	dqPlus.decTest	0	0
-kotlin	wrapper	dectest	dqQuantize.decTest	609	0
+kotlin	wrapper	dectest	dqQuantize.decTest	674	0
 kotlin	wrapper	dectest	dqReduce.decTest	133	0
 kotlin	wrapper	dectest	dqRemainder.decTest	498	7
 kotlin	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -2399,7 +2421,7 @@ kotlin	wrapper	dectest	dqSameQuantum.decTest	333	0
 kotlin	wrapper	dectest	dqScaleB.decTest	202	42
 kotlin	wrapper	dectest	dqShift.decTest	0	0
 kotlin	wrapper	dectest	dqSubtract.decTest	518	0
-kotlin	wrapper	dectest	dqToIntegral.decTest	166	0
+kotlin	wrapper	dectest	dqToIntegral.decTest	172	0
 kotlin	wrapper	dectest	exp.decTest	41	0
 kotlin	wrapper	dectest	ln.decTest	42	0
 kotlin	wrapper	dectest	log10.decTest	51	1
@@ -2424,6 +2446,8 @@ kotlin	wrapper	native	fma2.txt	45	0
 kotlin	wrapper	native	formatstyle.txt	188	0
 kotlin	wrapper	native	from_bid64.txt	152	0
 kotlin	wrapper	native	from_dpd64.txt	10	0
+kotlin	wrapper	native	gdas_rounding.txt	2320	0
+kotlin	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 kotlin	wrapper	native	isequal.txt	32	0
 kotlin	wrapper	native	isless.txt	34	0
 kotlin	wrapper	native	minmax.txt	63	0
@@ -2569,8 +2593,8 @@ python	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 python	wrapper	dectest	_754_2019.dectest	100	0
 python	wrapper	dectest	decQuad.decTest	0	0
 python	wrapper	dectest	dqAbs.decTest	74	4
-python	wrapper	dectest	dqAdd.decTest	976	0
-python	wrapper	dectest	dqBase.decTest	906	3
+python	wrapper	dectest	dqAdd.decTest	1002	0
+python	wrapper	dectest	dqBase.decTest	916	3
 python	wrapper	dectest	dqCanonical.decTest	244	0
 python	wrapper	dectest	dqClass.decTest	42	0
 python	wrapper	dectest	dqCompare.decTest	657	0
@@ -2584,7 +2608,7 @@ python	wrapper	dectest	dqCopySign.decTest	107	0
 python	wrapper	dectest	dqDivide.decTest	685	0
 python	wrapper	dectest	dqDivideInt.decTest	372	0
 python	wrapper	dectest	dqEncode.decTest	368	0
-python	wrapper	dectest	dqFMA.decTest	1373	0
+python	wrapper	dectest	dqFMA.decTest	1437	0
 python	wrapper	dectest	dqLogB.decTest	108	0
 python	wrapper	dectest	dqMax.decTest	255	20
 python	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -2595,7 +2619,7 @@ python	wrapper	dectest	dqMultiply.decTest	471	0
 python	wrapper	dectest	dqNextMinus.decTest	83	0
 python	wrapper	dectest	dqNextPlus.decTest	83	0
 python	wrapper	dectest	dqPlus.decTest	0	0
-python	wrapper	dectest	dqQuantize.decTest	609	0
+python	wrapper	dectest	dqQuantize.decTest	674	0
 python	wrapper	dectest	dqReduce.decTest	133	0
 python	wrapper	dectest	dqRemainder.decTest	498	7
 python	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -2603,7 +2627,7 @@ python	wrapper	dectest	dqSameQuantum.decTest	333	0
 python	wrapper	dectest	dqScaleB.decTest	202	42
 python	wrapper	dectest	dqShift.decTest	0	0
 python	wrapper	dectest	dqSubtract.decTest	518	0
-python	wrapper	dectest	dqToIntegral.decTest	166	0
+python	wrapper	dectest	dqToIntegral.decTest	172	0
 python	wrapper	dectest	exp.decTest	41	0
 python	wrapper	dectest	ln.decTest	42	0
 python	wrapper	dectest	log10.decTest	51	1
@@ -2628,6 +2652,8 @@ python	wrapper	native	fma2.txt	45	0
 python	wrapper	native	formatstyle.txt	188	0
 python	wrapper	native	from_bid64.txt	152	0
 python	wrapper	native	from_dpd64.txt	10	0
+python	wrapper	native	gdas_rounding.txt	2320	0
+python	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 python	wrapper	native	isequal.txt	32	0
 python	wrapper	native	isless.txt	34	0
 python	wrapper	native	minmax.txt	63	0
@@ -2773,8 +2799,8 @@ rust	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 rust	core	dectest	_754_2019.dectest	100	0
 rust	core	dectest	decQuad.decTest	0	0
 rust	core	dectest	dqAbs.decTest	74	4
-rust	core	dectest	dqAdd.decTest	976	0
-rust	core	dectest	dqBase.decTest	906	3
+rust	core	dectest	dqAdd.decTest	1002	0
+rust	core	dectest	dqBase.decTest	916	3
 rust	core	dectest	dqCanonical.decTest	244	0
 rust	core	dectest	dqClass.decTest	42	0
 rust	core	dectest	dqCompare.decTest	657	0
@@ -2788,7 +2814,7 @@ rust	core	dectest	dqCopySign.decTest	107	0
 rust	core	dectest	dqDivide.decTest	685	0
 rust	core	dectest	dqDivideInt.decTest	372	0
 rust	core	dectest	dqEncode.decTest	368	0
-rust	core	dectest	dqFMA.decTest	1373	0
+rust	core	dectest	dqFMA.decTest	1437	0
 rust	core	dectest	dqLogB.decTest	108	0
 rust	core	dectest	dqMax.decTest	255	20
 rust	core	dectest	dqMaxMag.decTest	241	20
@@ -2799,7 +2825,7 @@ rust	core	dectest	dqMultiply.decTest	471	0
 rust	core	dectest	dqNextMinus.decTest	83	0
 rust	core	dectest	dqNextPlus.decTest	83	0
 rust	core	dectest	dqPlus.decTest	0	0
-rust	core	dectest	dqQuantize.decTest	609	0
+rust	core	dectest	dqQuantize.decTest	674	0
 rust	core	dectest	dqReduce.decTest	133	0
 rust	core	dectest	dqRemainder.decTest	498	7
 rust	core	dectest	dqRemainderNear.decTest	528	7
@@ -2807,7 +2833,7 @@ rust	core	dectest	dqSameQuantum.decTest	333	0
 rust	core	dectest	dqScaleB.decTest	202	42
 rust	core	dectest	dqShift.decTest	0	0
 rust	core	dectest	dqSubtract.decTest	518	0
-rust	core	dectest	dqToIntegral.decTest	166	0
+rust	core	dectest	dqToIntegral.decTest	172	0
 rust	core	dectest	exp.decTest	41	0
 rust	core	dectest	ln.decTest	42	0
 rust	core	dectest	log10.decTest	51	1
@@ -2832,6 +2858,8 @@ rust	core	native	fma2.txt	45	0
 rust	core	native	formatstyle.txt	188	0
 rust	core	native	from_bid64.txt	152	0
 rust	core	native	from_dpd64.txt	10	0
+rust	core	native	gdas_rounding.txt	2320	0
+rust	core	native	gdas_rounding_transcendental.txt	3794	0
 rust	core	native	isequal.txt	32	0
 rust	core	native	isless.txt	34	0
 rust	core	native	minmax.txt	63	0
@@ -2978,8 +3006,8 @@ rust	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 rust	wrapper	dectest	_754_2019.dectest	100	0
 rust	wrapper	dectest	decQuad.decTest	0	0
 rust	wrapper	dectest	dqAbs.decTest	74	4
-rust	wrapper	dectest	dqAdd.decTest	976	0
-rust	wrapper	dectest	dqBase.decTest	906	3
+rust	wrapper	dectest	dqAdd.decTest	1002	0
+rust	wrapper	dectest	dqBase.decTest	916	3
 rust	wrapper	dectest	dqCanonical.decTest	244	0
 rust	wrapper	dectest	dqClass.decTest	42	0
 rust	wrapper	dectest	dqCompare.decTest	657	0
@@ -2993,7 +3021,7 @@ rust	wrapper	dectest	dqCopySign.decTest	107	0
 rust	wrapper	dectest	dqDivide.decTest	685	0
 rust	wrapper	dectest	dqDivideInt.decTest	372	0
 rust	wrapper	dectest	dqEncode.decTest	368	0
-rust	wrapper	dectest	dqFMA.decTest	1373	0
+rust	wrapper	dectest	dqFMA.decTest	1437	0
 rust	wrapper	dectest	dqLogB.decTest	108	0
 rust	wrapper	dectest	dqMax.decTest	255	20
 rust	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -3004,7 +3032,7 @@ rust	wrapper	dectest	dqMultiply.decTest	471	0
 rust	wrapper	dectest	dqNextMinus.decTest	83	0
 rust	wrapper	dectest	dqNextPlus.decTest	83	0
 rust	wrapper	dectest	dqPlus.decTest	0	0
-rust	wrapper	dectest	dqQuantize.decTest	609	0
+rust	wrapper	dectest	dqQuantize.decTest	674	0
 rust	wrapper	dectest	dqReduce.decTest	133	0
 rust	wrapper	dectest	dqRemainder.decTest	498	7
 rust	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -3012,7 +3040,7 @@ rust	wrapper	dectest	dqSameQuantum.decTest	333	0
 rust	wrapper	dectest	dqScaleB.decTest	202	42
 rust	wrapper	dectest	dqShift.decTest	0	0
 rust	wrapper	dectest	dqSubtract.decTest	518	0
-rust	wrapper	dectest	dqToIntegral.decTest	166	0
+rust	wrapper	dectest	dqToIntegral.decTest	172	0
 rust	wrapper	dectest	exp.decTest	41	0
 rust	wrapper	dectest	ln.decTest	42	0
 rust	wrapper	dectest	log10.decTest	51	1
@@ -3037,6 +3065,8 @@ rust	wrapper	native	fma2.txt	45	0
 rust	wrapper	native	formatstyle.txt	188	0
 rust	wrapper	native	from_bid64.txt	152	0
 rust	wrapper	native	from_dpd64.txt	10	0
+rust	wrapper	native	gdas_rounding.txt	2320	0
+rust	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 rust	wrapper	native	isequal.txt	32	0
 rust	wrapper	native	isless.txt	34	0
 rust	wrapper	native	minmax.txt	63	0
@@ -3183,8 +3213,8 @@ swift	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 swift	core	dectest	_754_2019.dectest	100	0
 swift	core	dectest	decQuad.decTest	0	0
 swift	core	dectest	dqAbs.decTest	74	4
-swift	core	dectest	dqAdd.decTest	976	0
-swift	core	dectest	dqBase.decTest	906	3
+swift	core	dectest	dqAdd.decTest	1002	0
+swift	core	dectest	dqBase.decTest	916	3
 swift	core	dectest	dqCanonical.decTest	244	0
 swift	core	dectest	dqClass.decTest	42	0
 swift	core	dectest	dqCompare.decTest	657	0
@@ -3198,7 +3228,7 @@ swift	core	dectest	dqCopySign.decTest	107	0
 swift	core	dectest	dqDivide.decTest	685	0
 swift	core	dectest	dqDivideInt.decTest	372	0
 swift	core	dectest	dqEncode.decTest	368	0
-swift	core	dectest	dqFMA.decTest	1373	0
+swift	core	dectest	dqFMA.decTest	1437	0
 swift	core	dectest	dqLogB.decTest	108	0
 swift	core	dectest	dqMax.decTest	255	20
 swift	core	dectest	dqMaxMag.decTest	241	20
@@ -3209,7 +3239,7 @@ swift	core	dectest	dqMultiply.decTest	471	0
 swift	core	dectest	dqNextMinus.decTest	83	0
 swift	core	dectest	dqNextPlus.decTest	83	0
 swift	core	dectest	dqPlus.decTest	0	0
-swift	core	dectest	dqQuantize.decTest	609	0
+swift	core	dectest	dqQuantize.decTest	674	0
 swift	core	dectest	dqReduce.decTest	133	0
 swift	core	dectest	dqRemainder.decTest	498	7
 swift	core	dectest	dqRemainderNear.decTest	528	7
@@ -3217,7 +3247,7 @@ swift	core	dectest	dqSameQuantum.decTest	333	0
 swift	core	dectest	dqScaleB.decTest	202	42
 swift	core	dectest	dqShift.decTest	0	0
 swift	core	dectest	dqSubtract.decTest	518	0
-swift	core	dectest	dqToIntegral.decTest	166	0
+swift	core	dectest	dqToIntegral.decTest	172	0
 swift	core	dectest	exp.decTest	41	0
 swift	core	dectest	ln.decTest	42	0
 swift	core	dectest	log10.decTest	51	1
@@ -3242,6 +3272,8 @@ swift	core	native	fma2.txt	45	0
 swift	core	native	formatstyle.txt	188	0
 swift	core	native	from_bid64.txt	152	0
 swift	core	native	from_dpd64.txt	10	0
+swift	core	native	gdas_rounding.txt	2320	0
+swift	core	native	gdas_rounding_transcendental.txt	3794	0
 swift	core	native	isequal.txt	32	0
 swift	core	native	isless.txt	34	0
 swift	core	native	minmax.txt	63	0
@@ -3388,8 +3420,8 @@ swift	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 swift	wrapper	dectest	_754_2019.dectest	100	0
 swift	wrapper	dectest	decQuad.decTest	0	0
 swift	wrapper	dectest	dqAbs.decTest	74	4
-swift	wrapper	dectest	dqAdd.decTest	976	0
-swift	wrapper	dectest	dqBase.decTest	906	3
+swift	wrapper	dectest	dqAdd.decTest	1002	0
+swift	wrapper	dectest	dqBase.decTest	916	3
 swift	wrapper	dectest	dqCanonical.decTest	244	0
 swift	wrapper	dectest	dqClass.decTest	42	0
 swift	wrapper	dectest	dqCompare.decTest	657	0
@@ -3403,7 +3435,7 @@ swift	wrapper	dectest	dqCopySign.decTest	107	0
 swift	wrapper	dectest	dqDivide.decTest	685	0
 swift	wrapper	dectest	dqDivideInt.decTest	372	0
 swift	wrapper	dectest	dqEncode.decTest	368	0
-swift	wrapper	dectest	dqFMA.decTest	1373	0
+swift	wrapper	dectest	dqFMA.decTest	1437	0
 swift	wrapper	dectest	dqLogB.decTest	108	0
 swift	wrapper	dectest	dqMax.decTest	255	20
 swift	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -3414,7 +3446,7 @@ swift	wrapper	dectest	dqMultiply.decTest	471	0
 swift	wrapper	dectest	dqNextMinus.decTest	83	0
 swift	wrapper	dectest	dqNextPlus.decTest	83	0
 swift	wrapper	dectest	dqPlus.decTest	0	0
-swift	wrapper	dectest	dqQuantize.decTest	609	0
+swift	wrapper	dectest	dqQuantize.decTest	674	0
 swift	wrapper	dectest	dqReduce.decTest	133	0
 swift	wrapper	dectest	dqRemainder.decTest	498	7
 swift	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -3422,7 +3454,7 @@ swift	wrapper	dectest	dqSameQuantum.decTest	333	0
 swift	wrapper	dectest	dqScaleB.decTest	202	42
 swift	wrapper	dectest	dqShift.decTest	0	0
 swift	wrapper	dectest	dqSubtract.decTest	518	0
-swift	wrapper	dectest	dqToIntegral.decTest	166	0
+swift	wrapper	dectest	dqToIntegral.decTest	172	0
 swift	wrapper	dectest	exp.decTest	41	0
 swift	wrapper	dectest	ln.decTest	42	0
 swift	wrapper	dectest	log10.decTest	51	1
@@ -3447,6 +3479,8 @@ swift	wrapper	native	fma2.txt	45	0
 swift	wrapper	native	formatstyle.txt	188	0
 swift	wrapper	native	from_bid64.txt	152	0
 swift	wrapper	native	from_dpd64.txt	10	0
+swift	wrapper	native	gdas_rounding.txt	2320	0
+swift	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 swift	wrapper	native	isequal.txt	32	0
 swift	wrapper	native	isless.txt	34	0
 swift	wrapper	native	minmax.txt	63	0
@@ -3593,8 +3627,8 @@ zig	core	cairo	2011_11_d128_div_zeros.txt	50700	0
 zig	core	dectest	_754_2019.dectest	100	0
 zig	core	dectest	decQuad.decTest	0	0
 zig	core	dectest	dqAbs.decTest	74	4
-zig	core	dectest	dqAdd.decTest	976	0
-zig	core	dectest	dqBase.decTest	906	3
+zig	core	dectest	dqAdd.decTest	1002	0
+zig	core	dectest	dqBase.decTest	916	3
 zig	core	dectest	dqCanonical.decTest	244	0
 zig	core	dectest	dqClass.decTest	42	0
 zig	core	dectest	dqCompare.decTest	657	0
@@ -3608,7 +3642,7 @@ zig	core	dectest	dqCopySign.decTest	107	0
 zig	core	dectest	dqDivide.decTest	685	0
 zig	core	dectest	dqDivideInt.decTest	372	0
 zig	core	dectest	dqEncode.decTest	368	0
-zig	core	dectest	dqFMA.decTest	1373	0
+zig	core	dectest	dqFMA.decTest	1437	0
 zig	core	dectest	dqLogB.decTest	108	0
 zig	core	dectest	dqMax.decTest	255	20
 zig	core	dectest	dqMaxMag.decTest	241	20
@@ -3619,7 +3653,7 @@ zig	core	dectest	dqMultiply.decTest	471	0
 zig	core	dectest	dqNextMinus.decTest	83	0
 zig	core	dectest	dqNextPlus.decTest	83	0
 zig	core	dectest	dqPlus.decTest	0	0
-zig	core	dectest	dqQuantize.decTest	609	0
+zig	core	dectest	dqQuantize.decTest	674	0
 zig	core	dectest	dqReduce.decTest	133	0
 zig	core	dectest	dqRemainder.decTest	498	7
 zig	core	dectest	dqRemainderNear.decTest	528	7
@@ -3627,7 +3661,7 @@ zig	core	dectest	dqSameQuantum.decTest	333	0
 zig	core	dectest	dqScaleB.decTest	202	42
 zig	core	dectest	dqShift.decTest	0	0
 zig	core	dectest	dqSubtract.decTest	518	0
-zig	core	dectest	dqToIntegral.decTest	166	0
+zig	core	dectest	dqToIntegral.decTest	172	0
 zig	core	dectest	exp.decTest	41	0
 zig	core	dectest	ln.decTest	42	0
 zig	core	dectest	log10.decTest	51	1
@@ -3652,6 +3686,8 @@ zig	core	native	fma2.txt	45	0
 zig	core	native	formatstyle.txt	188	0
 zig	core	native	from_bid64.txt	152	0
 zig	core	native	from_dpd64.txt	10	0
+zig	core	native	gdas_rounding.txt	2320	0
+zig	core	native	gdas_rounding_transcendental.txt	3794	0
 zig	core	native	isequal.txt	32	0
 zig	core	native	isless.txt	34	0
 zig	core	native	minmax.txt	63	0
@@ -3798,8 +3834,8 @@ zig	wrapper	cairo	2011_11_d128_div_zeros.txt	50700	0
 zig	wrapper	dectest	_754_2019.dectest	100	0
 zig	wrapper	dectest	decQuad.decTest	0	0
 zig	wrapper	dectest	dqAbs.decTest	74	4
-zig	wrapper	dectest	dqAdd.decTest	976	0
-zig	wrapper	dectest	dqBase.decTest	906	3
+zig	wrapper	dectest	dqAdd.decTest	1002	0
+zig	wrapper	dectest	dqBase.decTest	916	3
 zig	wrapper	dectest	dqCanonical.decTest	244	0
 zig	wrapper	dectest	dqClass.decTest	42	0
 zig	wrapper	dectest	dqCompare.decTest	657	0
@@ -3813,7 +3849,7 @@ zig	wrapper	dectest	dqCopySign.decTest	107	0
 zig	wrapper	dectest	dqDivide.decTest	685	0
 zig	wrapper	dectest	dqDivideInt.decTest	372	0
 zig	wrapper	dectest	dqEncode.decTest	368	0
-zig	wrapper	dectest	dqFMA.decTest	1373	0
+zig	wrapper	dectest	dqFMA.decTest	1437	0
 zig	wrapper	dectest	dqLogB.decTest	108	0
 zig	wrapper	dectest	dqMax.decTest	255	20
 zig	wrapper	dectest	dqMaxMag.decTest	241	20
@@ -3824,7 +3860,7 @@ zig	wrapper	dectest	dqMultiply.decTest	471	0
 zig	wrapper	dectest	dqNextMinus.decTest	83	0
 zig	wrapper	dectest	dqNextPlus.decTest	83	0
 zig	wrapper	dectest	dqPlus.decTest	0	0
-zig	wrapper	dectest	dqQuantize.decTest	609	0
+zig	wrapper	dectest	dqQuantize.decTest	674	0
 zig	wrapper	dectest	dqReduce.decTest	133	0
 zig	wrapper	dectest	dqRemainder.decTest	498	7
 zig	wrapper	dectest	dqRemainderNear.decTest	528	7
@@ -3832,7 +3868,7 @@ zig	wrapper	dectest	dqSameQuantum.decTest	333	0
 zig	wrapper	dectest	dqScaleB.decTest	202	42
 zig	wrapper	dectest	dqShift.decTest	0	0
 zig	wrapper	dectest	dqSubtract.decTest	518	0
-zig	wrapper	dectest	dqToIntegral.decTest	166	0
+zig	wrapper	dectest	dqToIntegral.decTest	172	0
 zig	wrapper	dectest	exp.decTest	41	0
 zig	wrapper	dectest	ln.decTest	42	0
 zig	wrapper	dectest	log10.decTest	51	1
@@ -3857,6 +3893,8 @@ zig	wrapper	native	fma2.txt	45	0
 zig	wrapper	native	formatstyle.txt	188	0
 zig	wrapper	native	from_bid64.txt	152	0
 zig	wrapper	native	from_dpd64.txt	10	0
+zig	wrapper	native	gdas_rounding.txt	2320	0
+zig	wrapper	native	gdas_rounding_transcendental.txt	3794	0
 zig	wrapper	native	isequal.txt	32	0
 zig	wrapper	native	isless.txt	34	0
 zig	wrapper	native	minmax.txt	63	0
